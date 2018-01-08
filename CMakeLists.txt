@@ -135,4 +135,4 @@ add_executable(malloc
         libft/src/typedefined/lst/ft_lstlen.c
         libft/src/typedefined/lst/ft_lstmap.c
         libft/src/typedefined/lst/ft_lstnew.c
-        libft/src/typedefined/lst/ft_lstnewstak.c incl/malloc.h)
+        libft/src/typedefined/lst/ft_lstnewstak.c incl/malloc.h src/find_block.c)
