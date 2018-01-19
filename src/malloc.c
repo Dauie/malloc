@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/07 19:55:21 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/01/08 09:46:14 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void *alloc_small(t_mgr *mgr, size_t size)
 {
 	t_block	*blk;
 
-	if (!(blk = find_smlblk(mgr, size)))
+	if (!(blk = find_smlblk(mgr)))
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
@@ -33,7 +33,7 @@ static void *alloc_tiny(t_mgr *mgr, size_t size)
 {
 	t_block	*blk;
 
-	if (!(blk = find_tnyblk(mgr, size)))
+	if (!(blk = find_tnyblk(mgr)))
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;

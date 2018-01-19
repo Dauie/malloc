@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 10:25:30 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/07 18:49:30 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/01/18 14:59:34 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
 
+typedef struct		s_hash
+{
+	void			*data;
+	void			*meta;
+	struct s_hash	*next;
+}					t_hash;
 
 typedef struct		s_block
 {
@@ -74,6 +80,7 @@ typedef struct      s_slab
 	size_t			freed_bytes;
 	size_t			total_allocs;
 	size_t			allocated_bytes;
+	t_hash			**map;
 }                   t_slab;
 
 typedef struct		s_mgr
@@ -92,8 +99,8 @@ t_slab	*get_slabs(void);
 void	init_mgr(t_mgr *mgr);
 void	init_slab(t_slab *slab);
 void	init_block(t_block *blk, size_t size);
-t_slab		*create_slab(void);
-t_block *find_smlblk(t_mgr *mgr, size_t size);
-t_block *find_tnyblk(t_mgr *mgr, size_t size);
+t_slab	*create_slab(void);
+t_block *find_smlblk(t_mgr *mgr);
+t_block *find_tnyblk(t_mgr *mgr);
 
 #endif

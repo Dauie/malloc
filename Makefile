@@ -9,7 +9,7 @@ CC = gcc
 
 CCFLAGS = -Wall -Werror -Wextra -g -O0 -shared
 
-SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c
+SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c src/find_block.c
 
 OBJ = *.o
 

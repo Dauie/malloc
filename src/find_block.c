@@ -6,13 +6,13 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/07 20:21:34 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/01/18 13:27:56 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
 
-t_block *find_smlblk(t_mgr *mgr, size_t size)
+t_block *find_smlblk(t_mgr *mgr)
 {
 	mgr->s = mgr->head_slab;
 	while (mgr->b == NULL)
@@ -41,7 +41,7 @@ t_block *find_smlblk(t_mgr *mgr, size_t size)
 	return (NULL);
 }
 
-t_block *find_tnyblk(t_mgr *mgr, size_t size)
+t_block *find_tnyblk(t_mgr *mgr)
 {
 	mgr->s = mgr->head_slab;
 	while (mgr->b == NULL)

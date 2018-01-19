@@ -47,7 +47,6 @@ t_slab		*create_slab(void)
 	t_slab	*n_slab;
 	t_slab	copy;
 
-	n_slab = NULL;
 	init_slab(&copy);
 	n_slab = mmap(0, SLBSZ, PROT_READ | PROT_WRITE,
 				   MAP_ANON | MAP_PRIVATE, -1, 0);

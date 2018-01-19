@@ -4,6 +4,7 @@ project(malloc)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(malloc
+        incl/malloc.h
         libft/incl/bool.h
         libft/incl/char.h
         libft/incl/cnvrsn.h
@@ -135,4 +136,13 @@ add_executable(malloc
         libft/src/typedefined/lst/ft_lstlen.c
         libft/src/typedefined/lst/ft_lstmap.c
         libft/src/typedefined/lst/ft_lstnew.c
-        libft/src/typedefined/lst/ft_lstnewstak.c incl/malloc.h src/find_block.c)
+        libft/src/typedefined/lst/ft_lstnewstak.c
+        src/allocator.c
+        src/calloc.c
+        src/find_block.c
+        src/free.c
+        src/hashmap.c
+        src/malloc.c
+        src/realloc.c
+        src/struct_init.c
+        main.c)
