@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 21:48:05 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/07 18:41:08 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/01/19 12:49:34 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ void		link_blocks(t_block *group, size_t count, size_t size)
 void		prep_slab(t_slab *slab)
 {
 	slab->small = (t_block *)(slab + 1);
-	slab->tiny = (t_block *)((char *)slab->small + ((SMLSZ + sizeof(t_block)) * BLKCNT));
+	slab->small_end = (void *)(((char*)slab->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
+	slab->tiny = (t_block *)(((char *)slab->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
+	slab->tiny_end = (void *)(((char*)slab->tiny + 1) + ((TNYSZ + SBLKSZ) * BLKCNT));
 	link_blocks(slab->small, BLKCNT, SMLSZ);
 	link_blocks(slab->tiny, BLKCNT, TNYSZ);
 }
@@ -51,6 +53,7 @@ t_slab		*create_slab(t_mgr *mgr)
 	prep_slab(n_slab);
 	if (!mgr->head_slab)
 		mgr->head_slab = n_slab;
+	mgr->head_slab->slab_cnt += 1;
 	mgr->head_slab->allocated_bytes += SLBSZ;
 	return (n_slab);
 }
@@ -60,7 +63,6 @@ t_slab		*get_slabs(t_mgr *mgr, t_blean debug)
 	if (!g_slabs && !debug)
 	{
 		g_slabs = create_slab(mgr);
-		g_slabs->slab_cnt = 1;
 		g_slabs->allocated_bytes = SLBSZ;
 	}
 	return (g_slabs);

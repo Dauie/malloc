@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /nfs/2016/r/rlutt/code/malloc
+"/Users/dauie/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/173.4127.32/CLion.app/Contents/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/dauie/code/malloc
 -- Configuring done
 -- Generating done
--- Build files have been written to: /nfs/2016/r/rlutt/code/malloc/cmake-build-debug
+-- Build files have been written to: /Users/dauie/code/malloc/cmake-build-debug

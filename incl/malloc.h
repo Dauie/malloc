@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 10:25:30 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/18 14:59:34 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 12:57:49 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@
  *
  * */
 
-# define TNYSZ 64
+# define TNYSZ 128
 # define SMLSZ 512
-# define BLKCNT 142
+# define BLKCNT 200
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
@@ -65,8 +65,10 @@ typedef struct      s_slab
     struct s_slab   *next;
 	size_t 			slab_cnt;
 	t_block			*tiny;
+	void			*tiny_end;
 	size_t			tiny_avail;
 	t_block			*small;
+	void			*small_end;
 	size_t			small_avail;
 	t_block			*large;
 	size_t			large_cnt;

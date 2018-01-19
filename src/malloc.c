@@ -6,14 +6,13 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/08 09:46:14 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 10:58:27 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
 
-static void update_mgr(t_mgr *mgr, size_t actual, size_t req) {
-	mgr->head_slab->allocated_bytes += actual;
+static void update_mgr(t_mgr *mgr, size_t req) {
 	mgr->head_slab->requested_bytes += req;
 	mgr->head_slab->total_allocs += 1;
 }
@@ -26,7 +25,7 @@ static void *alloc_large(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	update_mgr(mgr, size + sizeof(t_block), size);
+	update_mgr(mgr, size);
 	return (blk->data);
 }
 
@@ -38,7 +37,7 @@ static void *alloc_small(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	update_mgr(mgr, SMLSZ, size);
+	update_mgr(mgr, size);
 	return (blk->data);
 }
 
@@ -50,7 +49,7 @@ static void *alloc_tiny(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	update_mgr(mgr, TNYSZ, size);
+	update_mgr(mgr, size);
 	return (blk->data);
 }
 

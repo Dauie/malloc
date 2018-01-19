@@ -6,7 +6,7 @@
 /*   By: dauie <dauie@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 13:39:48 by dauie             #+#    #+#             */
-/*   Updated: 2018/01/08 09:46:14 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 12:52:10 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,31 @@ int		main(void) {
 	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
 	ft_printf("%s %zu\n", "actual slab size", ret);
 	ft_printf("%s %zu\n", "data overhead:", sizeof(t_slab) + (sizeof(t_block) * BLKCNT));
-//	ft_printf("%s %f\n", "slabsize / pagesize:", (float)ret / getpagesize());
-	char *test;
-	char str[] = "Fella Fella Fella";
-	for(int i = 0; i < 200; i++) {
-		test = ft_strdup(str);
+
+
+
+
+
+
+
+
+
+	int fd = open("CMakeLists.txt", O_RDONLY);
+	char *str;
+//	char *str2;
+
+	//GNL TEST
+	while(gnl(fd, &str)) {
+		ft_printf("%s\n", str);
+		free(str);
 	}
+	close(fd);
+
+	//MALLOC LOTS TEST
+//	for (int i = 0; i < 1000; i++){
+//		str2 = ft_strdup("hahah");
+//		str = ft_strdup("blahasd asldkfjals dfjlasdk fasldkfj asdlfkj asldfasdlfjas dflksadfj alsdfjasldkf ajsdfl;k jasdflkajsd flaksdjf alsdfkjas dlfkjasdflkajsdfl ksadjflkasdfjasl;dkfj sadl;fjasdfl;asdjf als;dfjalsdk fj as dlfkj sad lf;kj sdflkjs adfl kasjdflksadjflsadkjf alsdkfjasdlf");
+//	}
+
     show_alloc_mem();
 }
