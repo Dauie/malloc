@@ -17,15 +17,12 @@ t_slab *g_slabs = NULL;
 void		link_blocks(t_block *group, size_t count, size_t size)
 {
 	t_block *p;
-	t_block	blk;
 
 	p = group;
-	init_block(&blk, size);
 	while (count--)
 	{
-		ft_memcpy(p, (const void *)&blk, sizeof(t_block));
+		init_block(p, size);
 		p->data = p + 1;
-		p->data_size = count;
 		p->next = (t_block *)((char *)p->data + size);
 		if (count == 0)
 			p->next = NULL;
@@ -42,26 +39,27 @@ void		prep_slab(t_slab *slab)
 	link_blocks(slab->tiny, BLKCNT, TNYSZ);
 }
 
-t_slab		*create_slab(void)
+t_slab		*create_slab(t_mgr *mgr)
 {
 	t_slab	*n_slab;
-	t_slab	copy;
 
-	init_slab(&copy);
 	n_slab = mmap(0, SLBSZ, PROT_READ | PROT_WRITE,
 				   MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (n_slab == MAP_FAILED)
 		return (NULL);
-	ft_memcpy(n_slab, (const void *)&copy, sizeof(t_slab));
+	init_slab(n_slab);
 	prep_slab(n_slab);
+	if (!mgr->head_slab)
+		mgr->head_slab = n_slab;
+	mgr->head_slab->allocated_bytes += SLBSZ;
 	return (n_slab);
 }
 
-t_slab		*get_slabs(void)
+t_slab		*get_slabs(t_mgr *mgr, t_blean debug)
 {
-	if (!g_slabs)
+	if (!g_slabs && !debug)
 	{
-		g_slabs = create_slab();
+		g_slabs = create_slab(mgr);
 		g_slabs->slab_cnt = 1;
 		g_slabs->allocated_bytes = SLBSZ;
 	}

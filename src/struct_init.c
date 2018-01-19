@@ -44,4 +44,5 @@ void		init_slab(t_slab *slab)
 	slab->total_allocs = 0;
 	slab->total_frees = 0;
 	slab->allocated_bytes = 0;
+	slab->requested_bytes = 0;
 }

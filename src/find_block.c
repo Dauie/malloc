@@ -12,6 +12,30 @@
 
 #include "../incl/malloc.h"
 
+t_block *find_lrgblk(t_mgr *mgr, size_t size)
+{
+	t_block		*p;
+
+	p = NULL;
+	mgr->b = mgr->head_slab->large;
+	while (mgr->b)
+	{
+		if (mgr->b->data_size >= size && mgr->b->avail)
+			return (mgr->b);
+		p = mgr->b;
+		mgr->b = mgr->b->next;
+	}
+	mgr->b = mmap(0, size + SBLKSZ, PROT_READ | PROT_WRITE,
+				  MAP_ANON | MAP_PRIVATE, -1, 0);
+	if (mgr->b == MAP_FAILED)
+		return (NULL);
+	init_block(mgr->b, size);
+	mgr->b->data = mgr->b + 1;
+	if (p)
+		p->next = mgr->b;
+	return(mgr->b);
+}
+
 t_block *find_smlblk(t_mgr *mgr)
 {
 	mgr->s = mgr->head_slab;
@@ -27,10 +51,8 @@ t_block *find_smlblk(t_mgr *mgr)
 			mgr->s = mgr->s->next;
 		}
 		if (mgr->s == NULL)
-			mgr->s = create_slab();
+			mgr->s = create_slab(mgr);
 	}
-	mgr->head_slab->total_allocs+= 1;
-	mgr->head_slab->allocated_bytes+= SMLSZ;
 	mgr->s->small_avail -= 1;
 	while (mgr->b)
 	{
@@ -56,10 +78,8 @@ t_block *find_tnyblk(t_mgr *mgr)
 			mgr->s = mgr->s->next;
 		}
 		if (mgr->s == NULL)
-			mgr->s = create_slab();
+			mgr->s = create_slab(mgr);
 	}
-	mgr->head_slab->total_allocs+= 1;
-	mgr->head_slab->allocated_bytes+= TNYSZ;
 	mgr->s->tiny_avail -= 1;
 	while (mgr->b)
 	{

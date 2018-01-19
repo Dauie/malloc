@@ -12,10 +12,23 @@
 
 #include "../incl/malloc.h"
 
-//static void *alloc_large(t_mgr *mgr, size_t size)
-//{
-//
-//}
+static void update_mgr(t_mgr *mgr, size_t actual, size_t req) {
+	mgr->head_slab->allocated_bytes += actual;
+	mgr->head_slab->requested_bytes += req;
+	mgr->head_slab->total_allocs += 1;
+}
+
+static void *alloc_large(t_mgr *mgr, size_t size)
+{
+	t_block	*blk;
+
+	if (!(blk = find_lrgblk(mgr, size)))
+		return (NULL);
+	blk->avail = FALSE;
+	blk->data_size = size;
+	update_mgr(mgr, size + sizeof(t_block), size);
+	return (blk->data);
+}
 
 static void *alloc_small(t_mgr *mgr, size_t size)
 {
@@ -25,7 +38,7 @@ static void *alloc_small(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	mgr->head_slab->allocated_bytes+= SMLSZ;
+	update_mgr(mgr, SMLSZ, size);
 	return (blk->data);
 }
 
@@ -37,6 +50,7 @@ static void *alloc_tiny(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
+	update_mgr(mgr, TNYSZ, size);
 	return (blk->data);
 }
 
@@ -44,15 +58,15 @@ void    	*malloc(size_t size)
 {
 	t_mgr	mgr;
 
+    // ft_printf("Malloc Called");
 	if (size <= 0)
 		return(NULL);
 	init_mgr(&mgr);
-	if (!(mgr.head_slab = get_slabs()))
+	if (!(mgr.head_slab = get_slabs(&mgr, FALSE)))
 		return(NULL);
 	if (size < TNYSZ)
 		return (alloc_tiny(&mgr, size));
 	else if (size < SMLSZ)
 		return (alloc_small(&mgr, size));
-	return (NULL);
-//	return (alloc_large(&mgr));
+	return (alloc_large(&mgr, size));
 }

@@ -15,16 +15,7 @@
 //#include <unistd.h>
 
 //int		main(void) {
-//	printf("%s %i\n", "page size:", getpagesize());
-//	printf("%s %i\n", "defined slab size", SLABSIZE);
-//	size_t ret = sizeof(t_slab) +
-//			(((sizeof(t_block) + TINYSIZE) * BLOCKCOUNT) +
-//			((sizeof(t_block) + SMALLSIZE) * BLOCKCOUNT));
-//	printf("%s %zu\n", "tblock size:", sizeof(t_block));
-//	printf("%s %zu\n", "tslab size:", sizeof(t_slab));
-//	printf("%s %zu\n", "actual slab size", ret);
-//	printf("%s %zu\n", "data overhead:", sizeof(t_slab) + (sizeof(t_block) * BLOCKCOUNT));
-//	printf("%s %f\n", "slabsize / pagesize:", (float)ret / getpagesize());
+
 //	size_t blocksize = 100;
 //	while (blocksize < 256) {
 //		ret = sizeof(t_slab) +
@@ -36,10 +27,20 @@
 //}
 
 int		main(void) {
+	ft_printf("%s %i\n", "page size:", getpagesize());
+	ft_printf("%s %i\n", "defined slab size", SLBSZ);
+	size_t ret = sizeof(t_slab) +
+				 (((sizeof(t_block) + TNYSZ) * BLKCNT) +
+				  ((sizeof(t_block) + SMLSZ) * BLKCNT));
+	ft_printf("%s %zu\n", "tblock size:", sizeof(t_block));
+	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
+	ft_printf("%s %zu\n", "actual slab size", ret);
+	ft_printf("%s %zu\n", "data overhead:", sizeof(t_slab) + (sizeof(t_block) * BLKCNT));
+//	ft_printf("%s %f\n", "slabsize / pagesize:", (float)ret / getpagesize());
 	char *test;
-	char str[] = "hella hella hella";
-	while (1) {
+	char str[] = "Fella Fella Fella";
+	for(int i = 0; i < 200; i++) {
 		test = ft_strdup(str);
-		ft_printf("%s\n", test);
 	}
+    show_alloc_mem();
 }
