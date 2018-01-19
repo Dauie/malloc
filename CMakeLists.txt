@@ -51,7 +51,6 @@ add_executable(malloc
         libft/src/primitive/cnvrsn/ft_itoa.c
         libft/src/primitive/cnvrsn/ft_itoabse.c
         libft/src/primitive/mem/ft_bzero.c
-        libft/src/primitive/mem/ft_calloc.c
         libft/src/primitive/mem/ft_memalloc.c
         libft/src/primitive/mem/ft_memccpy.c
         libft/src/primitive/mem/ft_memchr.c
@@ -60,7 +59,6 @@ add_executable(malloc
         libft/src/primitive/mem/ft_memdel.c
         libft/src/primitive/mem/ft_memmove.c
         libft/src/primitive/mem/ft_memset.c
-        libft/src/primitive/mem/ft_realloc.c
         libft/src/primitive/num/ft_numlen.c
         libft/src/primitive/put/ft_putchar.c
         libft/src/primitive/put/ft_putchar_fd.c

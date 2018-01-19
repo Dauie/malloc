@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 10:25:30 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 12:57:49 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 15:13:46 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,34 +43,25 @@
  *
  * */
 
-# define TNYSZ 128
-# define SMLSZ 512
+# define TNYSZ 64
+# define SMLSZ 256
 # define BLKCNT 200
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
 
 
-typedef struct		s_block
-{
-	struct s_block	*next;
-	t_blean			avail;
-	size_t			blk_size;
-	size_t 			data_size;
-	void			*data;
-}					t_block;
-
 typedef struct      s_slab
 {
     struct s_slab   *next;
 	size_t 			slab_cnt;
-	t_block			*tiny;
+	struct s_block			*tiny;
 	void			*tiny_end;
 	size_t			tiny_avail;
-	t_block			*small;
+	struct s_block			*small;
 	void			*small_end;
 	size_t			small_avail;
-	t_block			*large;
+	struct s_block		*large;
 	size_t			large_cnt;
 	size_t			total_frees;
 	size_t			freed_bytes;
@@ -78,6 +69,16 @@ typedef struct      s_slab
 	size_t			allocated_bytes;
 	size_t 			requested_bytes;
 }                   t_slab;
+
+typedef struct		s_block
+{
+	struct s_block	*next;
+	struct s_slab   *mgr;
+	t_blean			avail;
+	size_t			blk_size;
+	size_t 			data_size;
+	void			*data;
+}					t_block;
 
 typedef struct		s_mgr
 {

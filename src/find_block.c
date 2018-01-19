@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 10:49:30 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 14:44:16 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 	mgr->b->data = mgr->b + 1;
 	if (p)
 		p->next = mgr->b;
+	mgr->head_slab->large_cnt += 1;
+	mgr->head_slab->allocated_bytes += size;
 	return(mgr->b);
 }
 

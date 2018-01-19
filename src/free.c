@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 13:11:37 by dauie             #+#    #+#             */
-/*   Updated: 2018/01/19 10:49:30 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 15:01:17 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,8 @@ void 		free(void *ptr)
     mgr.b->avail = TRUE;
     mgr.head_slab->freed_bytes += mgr.b->data_size;
     mgr.head_slab->total_frees += 1;
+	if (mgr.b->blk_size == SMLSZ)
+		mgr.b->mgr->small_avail += 1;
+	else if (mgr.b->blk_size == TNYSZ)
+		mgr.b->mgr->tiny_avail += 1;
 }

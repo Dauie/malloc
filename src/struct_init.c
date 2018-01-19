@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 11:30:11 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 10:49:30 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 10:58:27 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		init_mgr(t_mgr *mgr)
 void		init_block(t_block *blk, size_t size)
 {
 	blk->next = NULL;
+	blk->mgr = NULL;
 	blk->avail = TRUE;
 	blk->blk_size = size;
 	blk->data_size = 0;

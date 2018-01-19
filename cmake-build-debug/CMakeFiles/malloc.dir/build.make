@@ -897,33 +897,9 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.o.provides: CMakeFiles/
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.o.provides.build: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.o
 
 
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o: CMakeFiles/malloc.dir/flags.make
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o: ../libft/src/primitive/mem/ft_calloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_calloc.c
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dauie/code/malloc/libft/src/primitive/mem/ft_calloc.c > CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.i
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dauie/code/malloc/libft/src/primitive/mem/ft_calloc.c -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.s
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.requires:
-
-.PHONY : CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.requires
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.provides: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.requires
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.provides.build
-.PHONY : CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.provides
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.provides.build: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o
-
-
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o: ../libft/src/primitive/mem/ft_memalloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memalloc.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.i: cmake_force
@@ -947,7 +923,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o: ../libft/src/primitive/mem/ft_memccpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memccpy.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.i: cmake_force
@@ -971,7 +947,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o: ../libft/src/primitive/mem/ft_memchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memchr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.i: cmake_force
@@ -995,7 +971,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.o: ../libft/src/primitive/mem/ft_memcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memcmp.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.i: cmake_force
@@ -1019,7 +995,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcmp.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o: ../libft/src/primitive/mem/ft_memcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memcpy.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.i: cmake_force
@@ -1043,7 +1019,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o: ../libft/src/primitive/mem/ft_memdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memdel.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.i: cmake_force
@@ -1067,7 +1043,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o: ../libft/src/primitive/mem/ft_memmove.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memmove.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.i: cmake_force
@@ -1091,7 +1067,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o: ../libft/src/primitive/mem/ft_memset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_memset.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.i: cmake_force
@@ -1113,33 +1089,9 @@ CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o.provides: CMakeFiles
 CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o.provides.build: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o
 
 
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o: CMakeFiles/malloc.dir/flags.make
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o: ../libft/src/primitive/mem/ft_realloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/mem/ft_realloc.c
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dauie/code/malloc/libft/src/primitive/mem/ft_realloc.c > CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.i
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dauie/code/malloc/libft/src/primitive/mem/ft_realloc.c -o CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.s
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.requires:
-
-.PHONY : CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.requires
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.provides: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.requires
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.provides.build
-.PHONY : CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.provides
-
-CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.provides.build: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o
-
-
 CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o: ../libft/src/primitive/num/ft_numlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/num/ft_numlen.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.i: cmake_force
@@ -1163,7 +1115,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o: ../libft/src/primitive/put/ft_putchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putchar.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.i: cmake_force
@@ -1187,7 +1139,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o: ../libft/src/primitive/put/ft_putchar_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putchar_fd.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.i: cmake_force
@@ -1211,7 +1163,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.o: ../libft/src/primitive/put/ft_putclst.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putclst.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.i: cmake_force
@@ -1235,7 +1187,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putclst.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.o: ../libft/src/primitive/put/ft_putendl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putendl.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.i: cmake_force
@@ -1259,7 +1211,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.o: ../libft/src/primitive/put/ft_putendl_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putendl_fd.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.i: cmake_force
@@ -1283,7 +1235,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putendl_fd.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.o: ../libft/src/primitive/put/ft_puterror.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_puterror.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.i: cmake_force
@@ -1307,7 +1259,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puterror.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.o: ../libft/src/primitive/put/ft_putnbr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putnbr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.i: cmake_force
@@ -1331,7 +1283,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.o: ../libft/src/primitive/put/ft_putnbr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putnbr_fd.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.i: cmake_force
@@ -1355,7 +1307,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnbr_fd.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.o: ../libft/src/primitive/put/ft_putnlst.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putnlst.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.i: cmake_force
@@ -1379,7 +1331,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putnlst.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.o: ../libft/src/primitive/put/ft_putstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putstr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.i: cmake_force
@@ -1403,7 +1355,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.o: ../libft/src/primitive/put/ft_putstr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putstr_fd.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.i: cmake_force
@@ -1427,7 +1379,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstr_fd.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.o: ../libft/src/primitive/put/ft_putstrrev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_putstrrev.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.i: cmake_force
@@ -1451,7 +1403,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putstrrev.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.o: ../libft/src/primitive/put/ft_puttbl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/put/ft_puttbl.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.i: cmake_force
@@ -1475,7 +1427,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/put/ft_puttbl.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.o: ../libft/src/primitive/str/ft_cntbnespc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_cntbnespc.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.i: cmake_force
@@ -1499,7 +1451,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbnespc.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.o: ../libft/src/primitive/str/ft_cntbspc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_cntbspc.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.i: cmake_force
@@ -1523,7 +1475,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntbspc.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.o: ../libft/src/primitive/str/ft_cnttotspc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_cnttotspc.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.i: cmake_force
@@ -1547,7 +1499,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cnttotspc.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.o: ../libft/src/primitive/str/ft_cntwrds.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_cntwrds.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.i: cmake_force
@@ -1571,7 +1523,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_cntwrds.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.o: ../libft/src/primitive/str/ft_dirjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_dirjoin.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.i: cmake_force
@@ -1595,7 +1547,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_dirjoin.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.o: ../libft/src/primitive/str/ft_isstralnum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_isstralnum.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.i: cmake_force
@@ -1619,7 +1571,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralnum.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.o: ../libft/src/primitive/str/ft_isstralpha.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_isstralpha.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.i: cmake_force
@@ -1643,7 +1595,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstralpha.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.o: ../libft/src/primitive/str/ft_isstrascii.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_isstrascii.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.i: cmake_force
@@ -1667,7 +1619,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrascii.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.o: ../libft/src/primitive/str/ft_isstrdigit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_isstrdigit.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.i: cmake_force
@@ -1691,7 +1643,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrdigit.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.o: ../libft/src/primitive/str/ft_isstrprint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_isstrprint.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.i: cmake_force
@@ -1715,7 +1667,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_isstrprint.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.o: ../libft/src/primitive/str/ft_nxtwrdlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_nxtwrdlen.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.i: cmake_force
@@ -1739,7 +1691,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_nxtwrdlen.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.o: ../libft/src/primitive/str/ft_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strcat.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.i: cmake_force
@@ -1763,7 +1715,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcat.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.o: ../libft/src/primitive/str/ft_strchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strchr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.i: cmake_force
@@ -1787,7 +1739,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strchr.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.o: ../libft/src/primitive/str/ft_strclr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strclr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.i: cmake_force
@@ -1811,7 +1763,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strclr.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.o: ../libft/src/primitive/str/ft_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strcmp.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.i: cmake_force
@@ -1835,7 +1787,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcmp.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.o: ../libft/src/primitive/str/ft_strcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strcpy.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.i: cmake_force
@@ -1859,7 +1811,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strcpy.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.o: ../libft/src/primitive/str/ft_strdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strdel.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.i: cmake_force
@@ -1883,7 +1835,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdel.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.o: ../libft/src/primitive/str/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strdup.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.i: cmake_force
@@ -1907,7 +1859,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strdup.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.o: ../libft/src/primitive/str/ft_strequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strequ.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.i: cmake_force
@@ -1931,7 +1883,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strequ.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.o: ../libft/src/primitive/str/ft_striter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_striter.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.i: cmake_force
@@ -1955,7 +1907,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striter.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.o: ../libft/src/primitive/str/ft_striteri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_striteri.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.i: cmake_force
@@ -1979,7 +1931,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_striteri.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.o: ../libft/src/primitive/str/ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strjoin.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.i: cmake_force
@@ -2003,7 +1955,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strjoin.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.o: ../libft/src/primitive/str/ft_strlcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strlcat.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.i: cmake_force
@@ -2027,7 +1979,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlcat.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.o: ../libft/src/primitive/str/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strlen.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.i: cmake_force
@@ -2051,7 +2003,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strlen.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.o: ../libft/src/primitive/str/ft_strmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strmap.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.i: cmake_force
@@ -2075,7 +2027,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmap.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.o: ../libft/src/primitive/str/ft_strmapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strmapi.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.i: cmake_force
@@ -2099,7 +2051,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strmapi.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.o: ../libft/src/primitive/str/ft_strncat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strncat.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.i: cmake_force
@@ -2123,7 +2075,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncat.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.o: ../libft/src/primitive/str/ft_strncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strncmp.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.i: cmake_force
@@ -2147,7 +2099,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncmp.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.o: ../libft/src/primitive/str/ft_strncpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strncpy.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.i: cmake_force
@@ -2171,7 +2123,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strncpy.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.o: ../libft/src/primitive/str/ft_strndup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strndup.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.i: cmake_force
@@ -2195,7 +2147,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strndup.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.o: ../libft/src/primitive/str/ft_strnequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strnequ.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.i: cmake_force
@@ -2219,7 +2171,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnequ.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.o: ../libft/src/primitive/str/ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strnew.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.i: cmake_force
@@ -2243,7 +2195,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnew.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.o: ../libft/src/primitive/str/ft_strnstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strnstr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.i: cmake_force
@@ -2267,7 +2219,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strnstr.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.o: ../libft/src/primitive/str/ft_strrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strrchr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.i: cmake_force
@@ -2291,7 +2243,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrchr.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.o: ../libft/src/primitive/str/ft_strrev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strrev.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.i: cmake_force
@@ -2315,7 +2267,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strrev.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.o: ../libft/src/primitive/str/ft_strsplit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strsplit.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.i: cmake_force
@@ -2339,7 +2291,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsplit.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.o: ../libft/src/primitive/str/ft_strstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strstr.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.i: cmake_force
@@ -2363,7 +2315,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstr.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.o: ../libft/src/primitive/str/ft_strstrip.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strstrip.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.i: cmake_force
@@ -2387,7 +2339,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strstrip.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.o: ../libft/src/primitive/str/ft_strsub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strsub.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.i: cmake_force
@@ -2411,7 +2363,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strsub.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.o: ../libft/src/primitive/str/ft_strtrim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_strtrim.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.i: cmake_force
@@ -2435,7 +2387,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_strtrim.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.o: ../libft/src/primitive/str/ft_tolower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_tolower.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.i: cmake_force
@@ -2459,7 +2411,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_tolower.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.o: ../libft/src/primitive/str/ft_toupper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/str/ft_toupper.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.i: cmake_force
@@ -2483,7 +2435,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/str/ft_toupper.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.o: ../libft/src/primitive/tbl/ft_crafttbl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_crafttbl.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.i: cmake_force
@@ -2507,7 +2459,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_crafttbl.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.o: ../libft/src/primitive/tbl/ft_itbllen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_itbllen.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.i: cmake_force
@@ -2531,7 +2483,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_itbllen.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.o: ../libft/src/primitive/tbl/ft_tbladdl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tbladdl.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.i: cmake_force
@@ -2555,7 +2507,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbladdl.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.o: ../libft/src/primitive/tbl/ft_tblcnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tblcnew.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.i: cmake_force
@@ -2579,7 +2531,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblcnew.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.o: ../libft/src/primitive/tbl/ft_tbldel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tbldel.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.i: cmake_force
@@ -2603,7 +2555,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldel.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.o: ../libft/src/primitive/tbl/ft_tbldup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tbldup.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.i: cmake_force
@@ -2627,7 +2579,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbldup.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.o: ../libft/src/primitive/tbl/ft_tbllen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tbllen.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.i: cmake_force
@@ -2651,7 +2603,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tbllen.c.o.provides.build: CMak
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.o: ../libft/src/primitive/tbl/ft_tblnnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tblnnew.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.i: cmake_force
@@ -2675,7 +2627,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblnnew.c.o.provides.build: CMa
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.o: ../libft/src/primitive/tbl/ft_tblrepline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tblrepline.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.i: cmake_force
@@ -2699,7 +2651,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrepline.c.o.provides.build: 
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.o: ../libft/src/primitive/tbl/ft_tblrmline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.o   -c /Users/dauie/code/malloc/libft/src/primitive/tbl/ft_tblrmline.c
 
 CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.i: cmake_force
@@ -2723,7 +2675,7 @@ CMakeFiles/malloc.dir/libft/src/primitive/tbl/ft_tblrmline.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.o: ../libft/src/typedefined/lst/ft_lstadd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstadd.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.i: cmake_force
@@ -2747,7 +2699,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstadd.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.o: ../libft/src/typedefined/lst/ft_lstdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstdel.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.i: cmake_force
@@ -2771,7 +2723,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdel.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.o: ../libft/src/typedefined/lst/ft_lstdelone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstdelone.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.i: cmake_force
@@ -2795,7 +2747,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdelone.c.o.provides.build:
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.o: ../libft/src/typedefined/lst/ft_lstdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstdup.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.i: cmake_force
@@ -2819,7 +2771,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstdup.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.o: ../libft/src/typedefined/lst/ft_lsteadd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lsteadd.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.i: cmake_force
@@ -2843,7 +2795,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lsteadd.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.o: ../libft/src/typedefined/lst/ft_lstiter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstiter.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.i: cmake_force
@@ -2867,7 +2819,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstiter.c.o.provides.build: C
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.o: ../libft/src/typedefined/lst/ft_lstlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstlen.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.i: cmake_force
@@ -2891,7 +2843,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstlen.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.o: ../libft/src/typedefined/lst/ft_lstmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstmap.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.i: cmake_force
@@ -2915,7 +2867,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstmap.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o: ../libft/src/typedefined/lst/ft_lstnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstnew.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.i: cmake_force
@@ -2939,7 +2891,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o.provides.build: CM
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o: ../libft/src/typedefined/lst/ft_lstnewstak.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o   -c /Users/dauie/code/malloc/libft/src/typedefined/lst/ft_lstnewstak.c
 
 CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.i: cmake_force
@@ -2963,7 +2915,7 @@ CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o.provides.build
 
 CMakeFiles/malloc.dir/src/allocator.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/allocator.c.o: ../src/allocator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/malloc.dir/src/allocator.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/malloc.dir/src/allocator.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/allocator.c.o   -c /Users/dauie/code/malloc/src/allocator.c
 
 CMakeFiles/malloc.dir/src/allocator.c.i: cmake_force
@@ -2987,7 +2939,7 @@ CMakeFiles/malloc.dir/src/allocator.c.o.provides.build: CMakeFiles/malloc.dir/sr
 
 CMakeFiles/malloc.dir/src/calloc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/calloc.c.o: ../src/calloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/malloc.dir/src/calloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/malloc.dir/src/calloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/calloc.c.o   -c /Users/dauie/code/malloc/src/calloc.c
 
 CMakeFiles/malloc.dir/src/calloc.c.i: cmake_force
@@ -3011,7 +2963,7 @@ CMakeFiles/malloc.dir/src/calloc.c.o.provides.build: CMakeFiles/malloc.dir/src/c
 
 CMakeFiles/malloc.dir/src/find_block.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/find_block.c.o: ../src/find_block.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/malloc.dir/src/find_block.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/malloc.dir/src/find_block.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/find_block.c.o   -c /Users/dauie/code/malloc/src/find_block.c
 
 CMakeFiles/malloc.dir/src/find_block.c.i: cmake_force
@@ -3035,7 +2987,7 @@ CMakeFiles/malloc.dir/src/find_block.c.o.provides.build: CMakeFiles/malloc.dir/s
 
 CMakeFiles/malloc.dir/src/free.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/free.c.o: ../src/free.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/malloc.dir/src/free.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/malloc.dir/src/free.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/free.c.o   -c /Users/dauie/code/malloc/src/free.c
 
 CMakeFiles/malloc.dir/src/free.c.i: cmake_force
@@ -3059,7 +3011,7 @@ CMakeFiles/malloc.dir/src/free.c.o.provides.build: CMakeFiles/malloc.dir/src/fre
 
 CMakeFiles/malloc.dir/src/malloc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/malloc.c.o: ../src/malloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/malloc.dir/src/malloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/malloc.dir/src/malloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/malloc.c.o   -c /Users/dauie/code/malloc/src/malloc.c
 
 CMakeFiles/malloc.dir/src/malloc.c.i: cmake_force
@@ -3083,7 +3035,7 @@ CMakeFiles/malloc.dir/src/malloc.c.o.provides.build: CMakeFiles/malloc.dir/src/m
 
 CMakeFiles/malloc.dir/src/realloc.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/realloc.c.o: ../src/realloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/malloc.dir/src/realloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/malloc.dir/src/realloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/realloc.c.o   -c /Users/dauie/code/malloc/src/realloc.c
 
 CMakeFiles/malloc.dir/src/realloc.c.i: cmake_force
@@ -3107,7 +3059,7 @@ CMakeFiles/malloc.dir/src/realloc.c.o.provides.build: CMakeFiles/malloc.dir/src/
 
 CMakeFiles/malloc.dir/src/show_alloc_mem.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/show_alloc_mem.c.o: ../src/show_alloc_mem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/malloc.dir/src/show_alloc_mem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/malloc.dir/src/show_alloc_mem.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/show_alloc_mem.c.o   -c /Users/dauie/code/malloc/src/show_alloc_mem.c
 
 CMakeFiles/malloc.dir/src/show_alloc_mem.c.i: cmake_force
@@ -3131,7 +3083,7 @@ CMakeFiles/malloc.dir/src/show_alloc_mem.c.o.provides.build: CMakeFiles/malloc.d
 
 CMakeFiles/malloc.dir/src/struct_init.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/src/struct_init.c.o: ../src/struct_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/malloc.dir/src/struct_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/malloc.dir/src/struct_init.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/src/struct_init.c.o   -c /Users/dauie/code/malloc/src/struct_init.c
 
 CMakeFiles/malloc.dir/src/struct_init.c.i: cmake_force
@@ -3155,7 +3107,7 @@ CMakeFiles/malloc.dir/src/struct_init.c.o.provides.build: CMakeFiles/malloc.dir/
 
 CMakeFiles/malloc.dir/main.c.o: CMakeFiles/malloc.dir/flags.make
 CMakeFiles/malloc.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/malloc.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/malloc.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/main.c.o   -c /Users/dauie/code/malloc/main.c
 
 CMakeFiles/malloc.dir/main.c.i: cmake_force
@@ -3214,7 +3166,6 @@ malloc_OBJECTS = \
 "CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_itoa.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_itoabse.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.o" \
-"CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o" \
@@ -3223,7 +3174,6 @@ malloc_OBJECTS = \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o" \
-"CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o" \
 "CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o" \
@@ -3348,7 +3298,6 @@ malloc: CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_atoi.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_itoa.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_itoabse.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.o
-malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o
@@ -3357,7 +3306,6 @@ malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memcpy.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o
-malloc: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o
 malloc: CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o
@@ -3445,7 +3393,7 @@ malloc: CMakeFiles/malloc.dir/src/struct_init.c.o
 malloc: CMakeFiles/malloc.dir/main.c.o
 malloc: CMakeFiles/malloc.dir/build.make
 malloc: CMakeFiles/malloc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Linking C executable malloc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dauie/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Linking C executable malloc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/malloc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -3488,7 +3436,6 @@ CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_itoa.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/cnvrsn/ft_itoabse.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.o.requires
-CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memalloc.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memccpy.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memchr.c.o.requires
@@ -3497,7 +3444,6 @@ CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memdel.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memmove.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.o.requires
-CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/num/ft_numlen.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/libft/src/primitive/put/ft_putchar_fd.c.o.requires

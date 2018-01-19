@@ -1068,33 +1068,6 @@ libft/src/primitive/mem/ft_bzero.c.s:
 	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_bzero.c.s
 .PHONY : libft/src/primitive/mem/ft_bzero.c.s
 
-libft/src/primitive/mem/ft_calloc.o: libft/src/primitive/mem/ft_calloc.c.o
-
-.PHONY : libft/src/primitive/mem/ft_calloc.o
-
-# target to build an object file
-libft/src/primitive/mem/ft_calloc.c.o:
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.o
-.PHONY : libft/src/primitive/mem/ft_calloc.c.o
-
-libft/src/primitive/mem/ft_calloc.i: libft/src/primitive/mem/ft_calloc.c.i
-
-.PHONY : libft/src/primitive/mem/ft_calloc.i
-
-# target to preprocess a source file
-libft/src/primitive/mem/ft_calloc.c.i:
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.i
-.PHONY : libft/src/primitive/mem/ft_calloc.c.i
-
-libft/src/primitive/mem/ft_calloc.s: libft/src/primitive/mem/ft_calloc.c.s
-
-.PHONY : libft/src/primitive/mem/ft_calloc.s
-
-# target to generate assembly for a file
-libft/src/primitive/mem/ft_calloc.c.s:
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_calloc.c.s
-.PHONY : libft/src/primitive/mem/ft_calloc.c.s
-
 libft/src/primitive/mem/ft_memalloc.o: libft/src/primitive/mem/ft_memalloc.c.o
 
 .PHONY : libft/src/primitive/mem/ft_memalloc.o
@@ -1310,33 +1283,6 @@ libft/src/primitive/mem/ft_memset.s: libft/src/primitive/mem/ft_memset.c.s
 libft/src/primitive/mem/ft_memset.c.s:
 	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_memset.c.s
 .PHONY : libft/src/primitive/mem/ft_memset.c.s
-
-libft/src/primitive/mem/ft_realloc.o: libft/src/primitive/mem/ft_realloc.c.o
-
-.PHONY : libft/src/primitive/mem/ft_realloc.o
-
-# target to build an object file
-libft/src/primitive/mem/ft_realloc.c.o:
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.o
-.PHONY : libft/src/primitive/mem/ft_realloc.c.o
-
-libft/src/primitive/mem/ft_realloc.i: libft/src/primitive/mem/ft_realloc.c.i
-
-.PHONY : libft/src/primitive/mem/ft_realloc.i
-
-# target to preprocess a source file
-libft/src/primitive/mem/ft_realloc.c.i:
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.i
-.PHONY : libft/src/primitive/mem/ft_realloc.c.i
-
-libft/src/primitive/mem/ft_realloc.s: libft/src/primitive/mem/ft_realloc.c.s
-
-.PHONY : libft/src/primitive/mem/ft_realloc.s
-
-# target to generate assembly for a file
-libft/src/primitive/mem/ft_realloc.c.s:
-	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/libft/src/primitive/mem/ft_realloc.c.s
-.PHONY : libft/src/primitive/mem/ft_realloc.c.s
 
 libft/src/primitive/num/ft_numlen.o: libft/src/primitive/num/ft_numlen.c.o
 
@@ -3747,9 +3693,6 @@ help:
 	@echo "... libft/src/primitive/mem/ft_bzero.o"
 	@echo "... libft/src/primitive/mem/ft_bzero.i"
 	@echo "... libft/src/primitive/mem/ft_bzero.s"
-	@echo "... libft/src/primitive/mem/ft_calloc.o"
-	@echo "... libft/src/primitive/mem/ft_calloc.i"
-	@echo "... libft/src/primitive/mem/ft_calloc.s"
 	@echo "... libft/src/primitive/mem/ft_memalloc.o"
 	@echo "... libft/src/primitive/mem/ft_memalloc.i"
 	@echo "... libft/src/primitive/mem/ft_memalloc.s"
@@ -3774,9 +3717,6 @@ help:
 	@echo "... libft/src/primitive/mem/ft_memset.o"
 	@echo "... libft/src/primitive/mem/ft_memset.i"
 	@echo "... libft/src/primitive/mem/ft_memset.s"
-	@echo "... libft/src/primitive/mem/ft_realloc.o"
-	@echo "... libft/src/primitive/mem/ft_realloc.i"
-	@echo "... libft/src/primitive/mem/ft_realloc.s"
 	@echo "... libft/src/primitive/num/ft_numlen.o"
 	@echo "... libft/src/primitive/num/ft_numlen.i"
 	@echo "... libft/src/primitive/num/ft_numlen.s"

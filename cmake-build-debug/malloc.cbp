@@ -223,9 +223,6 @@
 		<Unit filename="/Users/dauie/code/malloc/libft/src/primitive/mem/ft_bzero.c">
 			<Option target="malloc"/>
 		</Unit>
-		<Unit filename="/Users/dauie/code/malloc/libft/src/primitive/mem/ft_calloc.c">
-			<Option target="malloc"/>
-		</Unit>
 		<Unit filename="/Users/dauie/code/malloc/libft/src/primitive/mem/ft_memalloc.c">
 			<Option target="malloc"/>
 		</Unit>
@@ -248,9 +245,6 @@
 			<Option target="malloc"/>
 		</Unit>
 		<Unit filename="/Users/dauie/code/malloc/libft/src/primitive/mem/ft_memset.c">
-			<Option target="malloc"/>
-		</Unit>
-		<Unit filename="/Users/dauie/code/malloc/libft/src/primitive/mem/ft_realloc.c">
 			<Option target="malloc"/>
 		</Unit>
 		<Unit filename="/Users/dauie/code/malloc/libft/src/primitive/num/ft_numlen.c">
