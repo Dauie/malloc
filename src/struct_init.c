@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 11:30:11 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 10:58:27 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 14:56:25 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void		init_slab(t_slab *slab)
 	slab->small_avail = BLKCNT;
 	slab->large = NULL;
 	slab->large_cnt = 0;
+	slab->large_frees = 0;
 	slab->total_frees = 0;
 	slab->freed_bytes = 0;
 	slab->total_allocs = 0;

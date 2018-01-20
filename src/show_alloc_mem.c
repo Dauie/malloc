@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:17:53 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 14:42:39 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 14:43:11 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	            show_alloc_mem()
 			  head->total_allocs, head->total_frees, head->total_allocs - head->total_frees,
               head->requested_bytes - head->freed_bytes, head->freed_bytes);
 	ft_printf("Total large allocs:\t\t%zu\n", head->large_cnt);
+	ft_printf("Total large frees:\t\t%zu\n", head->large_frees);
 	ft_printf("Total memory requested\t\t%zu\n", head->requested_bytes);
 	ft_printf("Slab count:\t\t\t%zu\n", head->slab_cnt);
 	ft_printf("Memory mapped:\t\t\t%zu\n", head->allocated_bytes);

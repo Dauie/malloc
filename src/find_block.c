@@ -6,11 +6,34 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 14:44:16 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 22:40:14 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
+
+static void	optimize_slab( t_slab *slb)
+{
+	t_block *s;
+	t_block *t;
+
+	s = slb->small;
+	t = slb->tiny;
+	if (slb->tiny_avail == 0 && slb->small_avail >= BLKCNT * .75)
+	{
+		ft_printf("\n\nOPTIMIZING\n\n");
+		while (s && !s->avail)
+			s = s->next;
+		while (t)
+			t = t->next;
+		if (s->prev && s->next)
+			s->prev->next = s->next;
+		link_blocks(slb, s, SMLSZ / (SBLKSZ + TNYSZ), TNYSZ);
+		t->next = s;
+		slb->small_avail -= 1;
+		slb->tiny_avail += SMLSZ / (SBLKSZ + TNYSZ);
+	}
+}
 
 t_block *find_lrgblk(t_mgr *mgr, size_t size)
 {
@@ -70,6 +93,7 @@ t_block *find_tnyblk(t_mgr *mgr)
 	mgr->s = mgr->head_slab;
 	while (mgr->b == NULL)
 	{
+		optimize_slab(mgr->s);
 		while (mgr->s)
 		{
 			if (mgr->s->tiny_avail > 0)
@@ -91,3 +115,5 @@ t_block *find_tnyblk(t_mgr *mgr)
 	}
 	return(NULL);
 }
+
+

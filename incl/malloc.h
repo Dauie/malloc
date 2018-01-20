@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 10:25:30 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 15:13:46 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 21:58:57 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@
 
 /**
  * 							SLAB DESIGN
- * Each slab will be a total of 93224 bytes (22.76 pages on the average OS)
+ *
  * Each slab will be divided into 'tiny' and 'medium' sections
- * the tiny sections will be 64 bytes totaling 8192 bytes, medium will be
- * 512 totaling 65536 bytes, adding to the grand 73,728.
- * tiny sections will start at the end of the memory space, and medium
+ * the tiny sections will be 64 bytes, medium will be 1024
+ * tiny sections will start at the end of the memory space, and small
  * at the begining.
  * block splitting will be implemented to reclaim memory
- * from the medium section and grant it to the tiny if possible
+ * from the small section and grant it to the tiny if possible
  *
  * All large allocations will only reside in the head slab node.
  *
@@ -44,8 +43,8 @@
  * */
 
 # define TNYSZ 64
-# define SMLSZ 256
-# define BLKCNT 200
+# define SMLSZ 1024
+# define BLKCNT 232
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
@@ -55,15 +54,16 @@ typedef struct      s_slab
 {
     struct s_slab   *next;
 	size_t 			slab_cnt;
-	struct s_block			*tiny;
+	struct s_block	*tiny;
 	void			*tiny_end;
 	size_t			tiny_avail;
-	struct s_block			*small;
+	struct s_block	*small;
 	void			*small_end;
 	size_t			small_avail;
-	struct s_block		*large;
+	struct s_block	*large;
 	size_t			large_cnt;
 	size_t			total_frees;
+	size_t 			large_frees;
 	size_t			freed_bytes;
 	size_t			total_allocs;
 	size_t			allocated_bytes;
@@ -73,6 +73,7 @@ typedef struct      s_slab
 typedef struct		s_block
 {
 	struct s_block	*next;
+	struct s_block	*prev;
 	struct s_slab   *mgr;
 	t_blean			avail;
 	size_t			blk_size;
@@ -100,5 +101,6 @@ t_slab	*create_slab(t_mgr *mgr);
 t_block *find_smlblk(t_mgr *mgr);
 t_block *find_tnyblk(t_mgr *mgr);
 t_block *find_lrgblk(t_mgr *mgr, size_t size);
+void	link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size);
 
 #endif

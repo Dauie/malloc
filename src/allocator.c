@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 21:48:05 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 12:51:26 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 19:39:47 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,22 @@ t_slab *g_slabs = NULL;
 
 void		link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size)
 {
+	t_block *h;
 	t_block *p;
 
-	p = group;
+	h = group;
+	p = h;
 	while (count--)
 	{
-		init_block(p, size);
-		p->data = p + 1;
-		p->next = (t_block *)((char *)p->data + size);
-		p->mgr = mgr;
+		init_block(h, size);
+		h->data = h + 1;
+		h->next = (t_block *)((char *)h->data + size);
+		h->mgr = mgr;
 		if (count == 0)
-			p->next = NULL;
+			h->next = NULL;
 		else
-			p = p->next;
+			h = h->next;
+		h->prev = p;
 	}
 }
 
@@ -45,8 +48,11 @@ void		prep_slab(t_slab *slab)
 t_slab		*create_slab(t_mgr *mgr)
 {
 	t_slab	*n_slab;
+	size_t 	slbsz;
 
-	n_slab = mmap(0, SLBSZ, PROT_READ | PROT_WRITE,
+	slbsz = SLBSZ;
+	slbsz += slbsz % getpagesize();
+	n_slab = mmap(0, slbsz, PROT_READ | PROT_WRITE,
 				   MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (n_slab == MAP_FAILED)
 		return (NULL);
