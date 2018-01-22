@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 13:11:37 by dauie             #+#    #+#             */
-/*   Updated: 2018/01/19 19:44:09 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/20 19:32:12 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,15 @@ void 		free(void *ptr)
 	if (mgr.b->blk_size > SMLSZ)
 		free_lrg_blk(&mgr, mgr.b);
 	else if (mgr.b->blk_size == SMLSZ)
+	{
 		mgr.b->mgr->small_avail += 1;
+		if (!mgr.b->mgr->small_que)
+			mgr.b->mgr->small_que = mgr.b;
+	}
 	else if (mgr.b->blk_size == TNYSZ)
+	{
 		mgr.b->mgr->tiny_avail += 1;
+		if (!mgr.b->mgr->tiny_que)
+			mgr.b->mgr->tiny_que = mgr.b;
+	}
 }

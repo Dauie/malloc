@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 10:58:27 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/19 11:02:36 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ void    	*malloc(size_t size)
 	init_mgr(&mgr);
 	if (!(mgr.head_slab = get_slabs(&mgr, FALSE)))
 		return(NULL);
-	if (size < TNYSZ)
+	if (size <= TNYSZ)
 		return (alloc_tiny(&mgr, size));
-	else if (size < SMLSZ)
+	else if (size <= SMLSZ)
 		return (alloc_small(&mgr, size));
 	return (alloc_large(&mgr, size));
 }

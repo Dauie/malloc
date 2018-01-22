@@ -1,4 +1,6 @@
-//
-// Created by Dauie on 1/5/18.
-//
+#include "../incl/malloc.h"
 
+//void		*realloc(void *mem, size_t size)
+//{
+//
+//}

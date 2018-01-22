@@ -6,33 +6,34 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 22:40:14 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/20 18:01:20 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
 
-static void	optimize_slab( t_slab *slb)
-{
-	t_block *s;
-	t_block *t;
 
-	s = slb->small;
-	t = slb->tiny;
-	if (slb->tiny_avail == 0 && slb->small_avail >= BLKCNT * .75)
+t_slab	*find_slab(t_mgr *mgr, size_t size)
+{
+	t_slab *slab;
+
+	slab = mgr->head_slab;
+	mgr->s = slab;
+
+	while (slab)
 	{
-		ft_printf("\n\nOPTIMIZING\n\n");
-		while (s && !s->avail)
-			s = s->next;
-		while (t)
-			t = t->next;
-		if (s->prev && s->next)
-			s->prev->next = s->next;
-		link_blocks(slb, s, SMLSZ / (SBLKSZ + TNYSZ), TNYSZ);
-		t->next = s;
-		slb->small_avail -= 1;
-		slb->tiny_avail += SMLSZ / (SBLKSZ + TNYSZ);
+		if (size == TNYSZ)
+			optimize_slab(slab);
+		if (size == SMLSZ && slab->small_avail > 0)
+			return (slab);
+		else if (size == TNYSZ && slab->tiny_avail > 0)
+			return (slab);
+		mgr->s = slab;
+		slab = slab->next;
 	}
+	slab = create_slab(mgr);
+	mgr->s->next = slab;
+	return (slab);
 }
 
 t_block *find_lrgblk(t_mgr *mgr, size_t size)
@@ -63,57 +64,43 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 
 t_block *find_smlblk(t_mgr *mgr)
 {
-	mgr->s = mgr->head_slab;
-	while (mgr->b == NULL)
+	mgr->b = NULL;
+
+	mgr->s = find_slab(mgr, SMLSZ);
+	if (!(mgr->b = check_queue(mgr->s, SMLSZ)))
 	{
-		while (mgr->s)
+		mgr->b = mgr->s->small;
+		while (mgr->b)
 		{
-			if (mgr->s->small_avail > 0)
+			if (mgr->b->avail == TRUE)
 			{
-				mgr->b = mgr->s->small;
-				break;
+				mgr->b->mgr->small_avail -= 1;
+				return (mgr->b);
 			}
-			mgr->s = mgr->s->next;
+			mgr->b = mgr->b->next;
 		}
-		if (mgr->s == NULL)
-			mgr->s = create_slab(mgr);
 	}
-	mgr->s->small_avail -= 1;
-	while (mgr->b)
-	{
-		if (mgr->b->avail == TRUE)
-			return (mgr->b);
-		mgr->b = mgr->b->next;
-	}
-	return (NULL);
+	return (mgr->b);
 }
 
 t_block *find_tnyblk(t_mgr *mgr)
 {
-	mgr->s = mgr->head_slab;
-	while (mgr->b == NULL)
-	{
-		optimize_slab(mgr->s);
-		while (mgr->s)
-		{
-			if (mgr->s->tiny_avail > 0)
-			{
-				mgr->b = mgr->s->tiny;
-				break;
-			}
-			mgr->s = mgr->s->next;
-		}
-		if (mgr->s == NULL)
-			mgr->s = create_slab(mgr);
-	}
-	mgr->s->tiny_avail -= 1;
-	while (mgr->b)
-	{
-		if (mgr->b->avail == TRUE)
-			return (mgr->b);
-		mgr->b = mgr->b->next;
-	}
-	return(NULL);
-}
+	mgr->b = NULL;
 
+	mgr->s = find_slab(mgr, TNYSZ);
+	if (!(mgr->b = check_queue(mgr->s, TNYSZ)))
+	{
+		mgr->b = mgr->s->tiny;
+		while (mgr->b)
+		{
+			if (mgr->b->avail == TRUE)
+			{
+				mgr->b->mgr->tiny_avail -= 1;
+				return (mgr->b);
+			}
+			mgr->b = mgr->b->next;
+		}
+	}
+	return (mgr->b);
+}
 

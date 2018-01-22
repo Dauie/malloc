@@ -6,7 +6,7 @@
 /*   By: dauie <dauie@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 13:39:48 by dauie             #+#    #+#             */
-/*   Updated: 2018/01/19 22:26:54 by dauie            ###   ########.fr       */
+/*   Updated: 2018/01/21 12:58:33 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,44 +28,109 @@
 //		printf("%s %zu %f\n", "blockcount:", blocksize, (float) ret / getpagesize());
 //		blocksize++;
 //	}
+//////	 Data Structure sizes
+//	ft_printf("%s %i\n", "page size:", getpagesize());
+//	ft_printf("%s %i\n", "defined slab size", SLBSZ);
+//	     ret = sizeof(t_slab) +
+//				 (((sizeof(t_block) + TNYSZ) * BLKCNT) +
+//				  ((sizeof(t_block) + SMLSZ) * BLKCNT));
+//	ft_printf("%s %zu\n", "tblock size:", sizeof(t_block));
+//	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
+//	ft_printf("%s %zu\n", "actual slab size", ret);
 //}
-
+//
 char	*randString(void){
-
-	int len = rand() % 50;
-	char *ret = ft_strnew(len);
-	for (int i = 0; i < len; i++) {
-		ret[i] = (char)(rand() % (char)122);
-	}
-	return (ret);
+	return ((char *)malloc(rand() % 1254));
 }
 
+//			Randomly Generated String Test
 int		main(void) {
-	srand(time(NULL));
-	show_alloc_mem();
+	srand(1234);
+//	show_alloc_mem();
 
-////	 Data Structure sizes
-	ft_printf("%s %i\n", "page size:", getpagesize());
-	ft_printf("%s %i\n", "defined slab size", SLBSZ);
-	size_t ret = sizeof(t_slab) +
-				 (((sizeof(t_block) + TNYSZ) * BLKCNT) +
-				  ((sizeof(t_block) + SMLSZ) * BLKCNT));
-	ft_printf("%s %zu\n", "tblock size:", sizeof(t_block));
-	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
-	ft_printf("%s %zu\n", "actual slab size", ret);
+
 
 	char **str;
 	int size = 20000;
-	str = ft_memalloc(sizeof(char *) * (size + 1));
-	for(int i = 0; i < size; i++) {
-		str[i] = randString();
-	}
-	for(int i = 0; i < size; i++) {
-		ft_printf("%s\n", str[i]);
-	}
-	for(int i = 0; i < size; i++) {
-		free(str[i]);
-	}
+	str = malloc(sizeof(char *) * (size + 1));
+		for(int i = 0; i < 42; i ++) {
+			for (int i = 0; i < size; i++) {
+				str[i] = randString();
+			}
+			for (int i = 0; i < size; i++) {
+				free(str[i]);
+			}
+			for (int i = 0; i < size; i++) {
+				str[i] = randString();
+			}
+			for (int i = 0; i < size; i++) {
+				free(str[i]);
+			}
+			for (int i = 0; i < size; i++) {
+				str[i] = randString();
+			}
+			for (int i = 0; i < size; i++) {
+				free(str[i]);
+			}
+			for (int i = 0; i < size; i++) {
+				str[i] = randString();
+			}
+			for (int i = 0; i < size; i++) {
+				free(str[i]);
+			}
+		}
 	free(str);
-	show_alloc_mem();
+//	show_alloc_mem();
 }
+
+
+//int 		main(void){
+//	int fd = 0;
+//	char *ret;
+//	char **tbl;
+//	char **tmp;
+//
+//	tbl = NULL;
+//	fd = open("test.txt", O_RDONLY);
+//	while (gnl(fd, &ret)){
+//		tmp = tbl;
+//		tbl = ft_tbladdl(tbl,ret);
+//		ft_tbldel(tmp, (int)ft_tbllen(tmp));
+//		free(ret);
+//	}
+//	close(fd);
+//	fd = open("test.txt", O_RDONLY);
+//	while (gnl(fd, &ret)){
+//		tmp = tbl;
+//		tbl = ft_tbladdl(tbl,ret);
+//		ft_tbldel(tmp, (int)ft_tbllen(tmp));
+//		free(ret);
+//	}
+//	close(fd);
+//	fd = open("test.txt", O_RDONLY);
+//	while (gnl(fd, &ret)){
+//		tmp = tbl;
+//		tbl = ft_tbladdl(tbl,ret);
+//		ft_tbldel(tmp, (int)ft_tbllen(tmp));
+//		free(ret);
+//	}
+//	while (gnl(fd, &ret)){
+//		tmp = tbl;
+//		tbl = ft_tbladdl(tbl,ret);
+//		ft_tbldel(tmp, (int)ft_tbllen(tmp));
+//		free(ret);
+//	}
+//	close(fd);
+//	fd = open("test.txt", O_RDONLY);
+//	while (gnl(fd, &ret)){
+//		tmp = tbl;
+//		tbl = ft_tbladdl(tbl,ret);
+//		ft_tbldel(tmp, (int)ft_tbllen(tmp));
+//		free(ret);
+//	}
+//	for (int i = 0; i < (int)ft_tbllen(tbl); i++){
+//		ft_printf("%s\n", tbl[i]);
+//	}
+//	ft_tbldel(tbl, (int)ft_tbllen(tbl));
+//	show_alloc_mem();
+//}
