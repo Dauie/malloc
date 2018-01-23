@@ -80,7 +80,7 @@ int		main(void) {
 			}
 		}
 	free(str);
-//	show_alloc_mem();
+	show_alloc_mem();
 }
 
 

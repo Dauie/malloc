@@ -19,11 +19,12 @@ t_slab	*find_slab(t_mgr *mgr, size_t size)
 
 	slab = mgr->head_slab;
 	mgr->s = slab;
-
 	while (slab)
 	{
 		if (size == TNYSZ)
-			optimize_slab(slab);
+			convert_to_tiny(slab);
+		else
+			convert_to_small(slab);
 		if (size == SMLSZ && slab->small_avail > 0)
 			return (slab);
 		else if (size == TNYSZ && slab->tiny_avail > 0)

@@ -105,6 +105,8 @@ t_block *find_tnyblk(t_mgr *mgr);
 t_block *find_lrgblk(t_mgr *mgr, size_t size);
 void	link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size);
 t_block	*check_queue(t_slab *mgr, size_t blksz);
-void	optimize_slab( t_slab *slb);
+void	convert_to_tiny(t_slab *slb);
+void 	convert_to_small(t_slab *slb);
+
 
 #endif

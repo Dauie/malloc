@@ -140,6 +140,7 @@ add_executable(malloc
         src/find_block.c
         src/free.c
         src/malloc.c
+        src/optimize.c
         src/realloc.c
         src/show_alloc_mem.c
         src/struct_init.c
