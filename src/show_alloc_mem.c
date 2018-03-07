@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:17:53 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 14:43:11 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/06 19:21:39 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,16 @@ void	            show_alloc_mem()
 		return;
 	}
 	head = mgr.head_slab;
-	ft_printf("HEAD - %p\n", head);
-	ft_printf("SMALL - %p\n%p - %p\n", head->small, head->small, head->small_end);
-	ft_printf("TINY - %p\n%p - %p\n", head->tiny, head->tiny, head->tiny_end);
-    ft_printf("Total allocations:\t\t%zu\nTotal frees:\t\t\t%zu\nTotal leaks:\t\t\t%zu\nTotal unfreed bytes:\t\t%zu\nTotal freed bytes:\t\t%zu\n",
+	mgr.s = mgr.head_slab;
+	mgr.b = mgr.head_slab->large;
+	while (mgr.s)
+	{
+		ft_printf("SMALL - %p\n%p - %p\n", mgr.s->small, mgr.s->small, mgr.s->small_end);
+		ft_printf("TINY - %p\n%p - %p\n", mgr.s->tiny, mgr.s->tiny, mgr.s->tiny_end);
+		mgr.s = mgr.s->next;
+	}
+    ft_printf("Total allocations:\t\t%zu\nTotal frees:\t\t\t%zu\nTotal leaks:\t\t\t%zu\n"
+					  "Total unfreed bytes:\t\t%zu\nTotal freed bytes:\t\t%zu\n",
 			  head->total_allocs, head->total_frees, head->total_allocs - head->total_frees,
               head->requested_bytes - head->freed_bytes, head->freed_bytes);
 	ft_printf("Total large allocs:\t\t%zu\n", head->large_cnt);

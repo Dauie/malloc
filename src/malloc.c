@@ -25,6 +25,8 @@ static void *alloc_large(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
+	mgr->head_slab->large_cnt += 1;
+	mgr->head_slab->allocated_bytes += size;
 	update_mgr(mgr, size);
 	return (blk->data);
 }

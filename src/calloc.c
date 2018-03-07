@@ -13,7 +13,7 @@
 #include "../incl/malloc.h"
 
 
-//void		*calloc(size_t count, size_t size)
-//{
-//	return (malloc(count * size));
-//}
+void		*calloc(size_t count, size_t size)
+{
+	return (malloc(count * size));
+}

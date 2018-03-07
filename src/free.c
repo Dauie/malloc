@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 13:11:37 by dauie             #+#    #+#             */
-/*   Updated: 2018/01/20 19:32:12 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/06 18:59:00 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,23 @@ void 		free(void *ptr)
     if (!ptr || !(mgr.head_slab = get_slabs(&mgr, TRUE)))
         return;
     mgr.b = (t_block*)ptr - 1;
-    mgr.b->avail = TRUE;
-    mgr.head_slab->freed_bytes += mgr.b->data_size;
-    mgr.head_slab->total_frees += 1;
-	if (mgr.b->blk_size > SMLSZ)
-		free_lrg_blk(&mgr, mgr.b);
-	else if (mgr.b->blk_size == SMLSZ)
-	{
-		mgr.b->mgr->small_avail += 1;
-		if (!mgr.b->mgr->small_que)
-			mgr.b->mgr->small_que = mgr.b;
-	}
-	else if (mgr.b->blk_size == TNYSZ)
-	{
-		mgr.b->mgr->tiny_avail += 1;
-		if (!mgr.b->mgr->tiny_que)
-			mgr.b->mgr->tiny_que = mgr.b;
+	if (mgr.b->avail == FALSE) {
+		mgr.b->avail = TRUE;
+		mgr.head_slab->freed_bytes += mgr.b->data_size;
+		mgr.head_slab->total_frees += 1;
+		if (mgr.b->blk_size > SMLSZ)
+			free_lrg_blk(&mgr, mgr.b);
+		else if (mgr.b->blk_size == SMLSZ)
+		{
+			mgr.b->mgr->small_avail += 1;
+			if (!mgr.b->mgr->small_que)
+				mgr.b->mgr->small_que = mgr.b;
+		}
+		else if (mgr.b->blk_size == TNYSZ)
+		{
+			mgr.b->mgr->tiny_avail += 1;
+			if (!mgr.b->mgr->tiny_que)
+				mgr.b->mgr->tiny_que = mgr.b;
+		}
 	}
 }

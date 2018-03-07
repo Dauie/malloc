@@ -6,7 +6,7 @@
 /*   By: dauie <dauie@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 13:39:48 by dauie             #+#    #+#             */
-/*   Updated: 2018/03/01 14:45:06 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/06 20:48:17 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,33 +51,21 @@ int		main(void) {
 
 
 	char **str;
-	int size = 20000;
+	int size = 1000;
 	str = malloc(sizeof(char *) * (size + 1));
-		for(int i = 0; i < 42; i ++) {
+	char *reStr = NULL;
+		for(int i = 0; i < size; i ++) {
 			for (int i = 0; i < size; i++) {
 				str[i] = randString();
 			}
 			for (int i = 0; i < size; i++) {
 				free(str[i]);
 			}
-			for (int i = 0; i < size; i++) {
-				str[i] = randString();
-			}
-			for (int i = 0; i < size; i++) {
-				free(str[i]);
-			}
-			for (int i = 0; i < size; i++) {
-				str[i] = randString();
-			}
-			for (int i = 0; i < size; i++) {
-				free(str[i]);
-			}
-			for (int i = 0; i < size; i++) {
-				str[i] = randString();
-			}
-			for (int i = 0; i < size; i++) {
-				free(str[i]);
-			}
+			reStr = randString();
+			reStr = realloc(reStr, ft_strlen(reStr) + 42);
+			ft_strcpy(reStr + ft_strlen(reStr), "helllllllllla");
+			reStr = realloc(reStr, ft_strlen(reStr) + 84);
+			free(reStr);
 		}
 	free(str);
 	show_alloc_mem();

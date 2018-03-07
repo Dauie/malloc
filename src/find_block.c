@@ -56,8 +56,6 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 	mgr->b->data = mgr->b + 1;
 	if (p)
 		p->next = mgr->b;
-	mgr->head_slab->large_cnt += 1;
-	mgr->head_slab->allocated_bytes += size;
 	return(mgr->b);
 }
 
