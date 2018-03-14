@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/01/19 11:02:36 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/14 14:27:43 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void    	*malloc(size_t size)
 {
 	t_mgr	mgr;
 
-    // ft_printf("Malloc Called");
 	if (size <= 0)
 		return(NULL);
 	init_mgr(&mgr);

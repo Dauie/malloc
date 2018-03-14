@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 10:25:30 by rlutt             #+#    #+#             */
-/*   Updated: 2018/03/01 14:45:06 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/14 15:20:08 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@
  *
  * */
 
-# define TNYSZ 64
-# define SMLSZ 1024
-# define BLKCNT 133
+# define TNYSZ 16
+# define SMLSZ 512
+# define BLKCNT 112
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))

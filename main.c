@@ -6,28 +6,28 @@
 /*   By: dauie <dauie@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 13:39:48 by dauie             #+#    #+#             */
-/*   Updated: 2018/03/06 20:48:17 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/14 15:15:15 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 #include <time.h>
 #include "incl/malloc.h"
-//#include <unistd.h>
+#include <unistd.h>
 
-//int		main(void) {
-//	size_t ret;
-//	size_t blocksize = 100;
-//	ft_printf("struct:\t%zu\n", SBLKSZ);
-//	ft_printf("tinyzs:\t%zu\n", TNYSZ);
-//	ft_printf("combin:\t%zu\n", TNYSZ + SBLKSZ);
-//	while (blocksize < 512) {
-//		ret = sizeof(t_slab) +
-//			  (((sizeof(t_block) + TNYSZ) * blocksize) +
-//			   ((sizeof(t_block) + SMLSZ) * blocksize));
-//		printf("%s %zu %f\n", "blockcount:", blocksize, (float) ret / getpagesize());
-//		blocksize++;
-//	}
+int		main(void) {
+	size_t ret;
+	size_t blocksize = 100;
+	ft_printf("struct:\t%zu\n", SBLKSZ);
+	ft_printf("tinyzs:\t%zu\n", TNYSZ);
+	ft_printf("combin:\t%zu\n", TNYSZ + SBLKSZ);
+	while (blocksize < 512) {
+		ret = sizeof(t_slab) +
+			  (((sizeof(t_block) + TNYSZ) * blocksize) +
+			   ((sizeof(t_block) + SMLSZ) * blocksize));
+		printf("%s %zu %f\n", "blockcount:", blocksize, (float) ret / getpagesize());
+		blocksize++;
+	}
 //////	 Data Structure sizes
 //	ft_printf("%s %i\n", "page size:", getpagesize());
 //	ft_printf("%s %i\n", "defined slab size", SLBSZ);
@@ -37,39 +37,39 @@
 //	ft_printf("%s %zu\n", "tblock size:", sizeof(t_block));
 //	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
 //	ft_printf("%s %zu\n", "actual slab size", ret);
+}
+
+//char	*randString(void){
+//	return ((char *)malloc(rand() % 1254));
 //}
 //
-char	*randString(void){
-	return ((char *)malloc(rand() % 1254));
-}
-
-//			Randomly Generated String Test
-int		main(void) {
-	srand(1234);
+////			Randomly Generated String Test
+//int		main(void) {
+//	srand(1234);
+////	show_alloc_mem();
+//
+//
+//
+//	char **str;
+//	int size = 1000;
+//	str = malloc(sizeof(char *) * (size + 1));
+//	char *reStr = NULL;
+//		for(int i = 0; i < size; i ++) {
+//			for (int i = 0; i < size; i++) {
+//				str[i] = randString();
+//			}
+//			for (int i = 0; i < size; i++) {
+//				free(str[i]);
+//			}
+//			reStr = randString();
+//			reStr = realloc(reStr, ft_strlen(reStr) + 42);
+//			ft_strcpy(reStr + ft_strlen(reStr), "helllllllllla");
+//			reStr = realloc(reStr, ft_strlen(reStr) + 84);
+//			free(reStr);
+//		}
+//	free(str);
 //	show_alloc_mem();
-
-
-
-	char **str;
-	int size = 1000;
-	str = malloc(sizeof(char *) * (size + 1));
-	char *reStr = NULL;
-		for(int i = 0; i < size; i ++) {
-			for (int i = 0; i < size; i++) {
-				str[i] = randString();
-			}
-			for (int i = 0; i < size; i++) {
-				free(str[i]);
-			}
-			reStr = randString();
-			reStr = realloc(reStr, ft_strlen(reStr) + 42);
-			ft_strcpy(reStr + ft_strlen(reStr), "helllllllllla");
-			reStr = realloc(reStr, ft_strlen(reStr) + 84);
-			free(reStr);
-		}
-	free(str);
-	show_alloc_mem();
-}
+//}
 
 
 //int 		main(void){
