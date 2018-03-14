@@ -2,7 +2,7 @@ ifeq ($(HOSTTYPE),)
 HOSTTYPE := $(shell uname -m)_$(shell uname -s)
 endif
 
-NAME = libft_malloc_$HOSTTYPE.so
+NAME = libft_malloc_$(HOSTTYPE).so
 
 CC = gcc
 
@@ -10,7 +10,7 @@ CC = gcc
 CCFLAGS = -Wall -Werror -Wextra -g -O0 -shared
 
 SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c src/find_block.c \
-        src/show_alloc_mem.c
+        src/show_alloc_mem.c src/optimize.c
 
 OBJ = *.o
 
