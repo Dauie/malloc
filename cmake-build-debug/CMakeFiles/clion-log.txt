@@ -1,4 +1,0 @@
-"/Users/dauie/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/173.4127.32/CLion.app/Contents/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/dauie/code/malloc
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/dauie/code/malloc/cmake-build-debug
