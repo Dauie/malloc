@@ -42,9 +42,9 @@
  *
  * */
 
-# define TNYSZ 16
-# define SMLSZ 512
-# define BLKCNT 112
+# define TNYSZ 32
+# define SMLSZ 768
+# define BLKCNT 100
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
@@ -53,23 +53,14 @@
 typedef struct      s_slab
 {
     struct s_slab   *next;
-	size_t 			slab_cnt;
 	struct s_block	*tiny;
-	void			*tiny_end;
 	struct s_block	*tiny_que;
 	size_t			tiny_avail;
 	struct s_block	*small;
-	void			*small_end;
 	struct s_block	*small_que;
 	size_t			small_avail;
 	struct s_block	*large;
 	size_t			large_cnt;
-	size_t			total_frees;
-	size_t 			large_frees;
-	size_t			freed_bytes;
-	size_t			total_allocs;
-	size_t			allocated_bytes;
-	size_t 			requested_bytes;
 }                   t_slab;
 
 typedef struct		s_block
@@ -78,7 +69,6 @@ typedef struct		s_block
 	struct s_block	*prev;
 	struct s_slab   *mgr;
 	t_blean			avail;
-	size_t			blk_size;
 	size_t 			data_size;
 	void			*data;
 }					t_block;
@@ -88,6 +78,12 @@ typedef struct		s_mgr
 	t_slab			*head_slab;
 	t_block			*b;
 	t_slab			*s;
+    size_t			total_frees;
+    size_t 			large_frees;
+    size_t			freed_bytes;
+    size_t			total_allocs;
+    size_t			allocated_bytes;
+    size_t 			requested_bytes;
 }					t_mgr;
 
 void	free(void *ptr);
@@ -95,18 +91,19 @@ void	*malloc(size_t size);
 void	*realloc(void *ptr, size_t size);
 void	*calloc(size_t count, size_t size);
 void	show_alloc_mem(void);
-t_slab	*get_slabs(t_mgr *mgr, t_blean debug);
+t_mgr	*get_mgr(t_blean debug);
 void	init_mgr(t_mgr *mgr);
 void	init_slab(t_slab *slab);
-void	init_block(t_block *blk, size_t size);
+void	init_block(t_block *blk);
 t_slab	*create_slab(t_mgr *mgr);
 t_block *find_smlblk(t_mgr *mgr);
 t_block *find_tnyblk(t_mgr *mgr);
 t_block *find_lrgblk(t_mgr *mgr, size_t size);
 void	link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size);
-t_block	*check_queue(t_slab *mgr, size_t blksz);
+t_block	*check_queue(t_slab *slb, size_t blksz);
 void	convert_to_tiny(t_slab *slb);
 void 	convert_to_small(t_slab *slb);
+int     slab_len(t_slab *list);
 
 
 #endif

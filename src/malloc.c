@@ -13,8 +13,8 @@
 #include "../incl/malloc.h"
 
 static void update_mgr(t_mgr *mgr, size_t req) {
-	mgr->head_slab->requested_bytes += req;
-	mgr->head_slab->total_allocs += 1;
+	mgr->requested_bytes += req;
+	mgr->total_allocs += 1;
 }
 
 static void *alloc_large(t_mgr *mgr, size_t size)
@@ -26,7 +26,7 @@ static void *alloc_large(t_mgr *mgr, size_t size)
 	blk->avail = FALSE;
 	blk->data_size = size;
 	mgr->head_slab->large_cnt += 1;
-	mgr->head_slab->allocated_bytes += size;
+	mgr->allocated_bytes += size;
 	update_mgr(mgr, size);
 	return (blk->data);
 }
@@ -57,16 +57,16 @@ static void *alloc_tiny(t_mgr *mgr, size_t size)
 
 void    	*malloc(size_t size)
 {
-	t_mgr	mgr;
+	t_mgr	*mgr;
 
+    mgr = NULL;
 	if (size <= 0)
 		return(NULL);
-	init_mgr(&mgr);
-	if (!(mgr.head_slab = get_slabs(&mgr, FALSE)))
+	if (!(mgr = get_mgr(FALSE)))
 		return(NULL);
 	if (size <= TNYSZ)
-		return (alloc_tiny(&mgr, size));
+		return (alloc_tiny(mgr, size));
 	else if (size <= SMLSZ)
-		return (alloc_small(&mgr, size));
-	return (alloc_large(&mgr, size));
+		return (alloc_small(mgr, size));
+	return (alloc_large(mgr, size));
 }

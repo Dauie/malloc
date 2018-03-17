@@ -12,33 +12,53 @@
 
 #include "../incl/malloc.h"
 
+
+//slab->tiny_end = (void *)(((char*)slab->tiny + 1) + ((TNYSZ + SBLKSZ) * BLKCNT));
+//slab->small_end = (void *)(((char*)slab->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
+
+static void                range_print(t_slab *head)
+{
+    t_slab  *slb;
+    void    *sml_end;
+    void    *tny_end;
+
+    slb = head;
+    sml_end = NULL;
+    tny_end = NULL;
+    if (!slb)
+        return;
+    while (slb)
+    {
+        sml_end = (void *)(((char*)slb->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
+        tny_end = (void *)(((char*)slb->tiny + 1) + ((TNYSZ + SBLKSZ) * BLKCNT));
+        ft_printf("SMALL - %p\n%p - %p\n", slb->small, slb->small, sml_end);
+        ft_printf("TINY - %p\n%p - %p\n", slb->tiny, slb->tiny, tny_end);
+        slb = slb->next;
+    }
+}
+
 void	            show_alloc_mem()
 {
-   	t_mgr	mgr;
+   	t_mgr	*mgr;
 	t_slab	*head;
 
-	init_mgr(&mgr);
-    if (!(mgr.head_slab = get_slabs(&mgr, TRUE)))
+    mgr = NULL;
+    if (!(mgr = get_mgr(TRUE)))
 	{
 		ft_printf("No memory allocated\n");
 		return;
 	}
-	head = mgr.head_slab;
-	mgr.s = mgr.head_slab;
-	mgr.b = mgr.head_slab->large;
-	while (mgr.s)
-	{
-		ft_printf("SMALL - %p\n%p - %p\n", mgr.s->small, mgr.s->small, mgr.s->small_end);
-		ft_printf("TINY - %p\n%p - %p\n", mgr.s->tiny, mgr.s->tiny, mgr.s->tiny_end);
-		mgr.s = mgr.s->next;
-	}
+	head = mgr->head_slab;
+	mgr->s = mgr->head_slab;
+	mgr->b = mgr->head_slab->large;
+    range_print(head);
     ft_printf("Total allocations:\t\t%zu\nTotal frees:\t\t\t%zu\nTotal leaks:\t\t\t%zu\n"
 					  "Total unfreed bytes:\t\t%zu\nTotal freed bytes:\t\t%zu\n",
-			  head->total_allocs, head->total_frees, head->total_allocs - head->total_frees,
-              head->requested_bytes - head->freed_bytes, head->freed_bytes);
+			  mgr->total_allocs, mgr->total_frees, mgr->total_allocs - mgr->total_frees,
+              mgr->requested_bytes - mgr->freed_bytes, mgr->freed_bytes);
 	ft_printf("Total large allocs:\t\t%zu\n", head->large_cnt);
-	ft_printf("Total large frees:\t\t%zu\n", head->large_frees);
-	ft_printf("Total memory requested\t\t%zu\n", head->requested_bytes);
-	ft_printf("Slab count:\t\t\t%zu\n", head->slab_cnt);
-	ft_printf("Memory mapped:\t\t\t%zu\n", head->allocated_bytes);
+	ft_printf("Total large frees:\t\t%zu\n", mgr->large_frees);
+	ft_printf("Total memory requested\t\t%zu\n", mgr->requested_bytes);
+	ft_printf("Slab count:\t\t\t%zu\n", slab_len(head));
+	ft_printf("Memory mapped:\t\t\t%zu\n", mgr->allocated_bytes);
 }

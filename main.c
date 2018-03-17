@@ -15,58 +15,61 @@
 #include "incl/malloc.h"
 #include <unistd.h>
 
+
 int		main(void) {
 	size_t ret;
 	size_t blocksize = 100;
-	ft_printf("struct:\t%zu\n", SBLKSZ);
-	ft_printf("tinyzs:\t%zu\n", TNYSZ);
-	ft_printf("combin:\t%zu\n", TNYSZ + SBLKSZ);
+	ft_printf("blkStructSz: %zu\n", SBLKSZ);
+	ft_printf("slbStructSz:\t%zu\n", TNYSZ);
+	ft_printf("tiny combin:\t%zu\n", TNYSZ + SBLKSZ);
+	ft_printf("small combin:\t%zu\n", SMLSZ + SBLKSZ);
+    ft_printf("tiny total:\t%zu\n", (TNYSZ + SBLKSZ) * BLKCNT);
+    ft_printf("small total:\t%zu\n", (SMLSZ + SBLKSZ) * BLKCNT);
+    ft_printf("total divided:\t%zu\n",  (((SMLSZ + SBLKSZ) * BLKCNT) + (((SMLSZ + SBLKSZ) * BLKCNT)) + SSLBSZ) / 4096);
 	while (blocksize < 512) {
 		ret = sizeof(t_slab) +
 			  (((sizeof(t_block) + TNYSZ) * blocksize) +
 			   ((sizeof(t_block) + SMLSZ) * blocksize));
-		printf("%s %zu %f\n", "blockcount:", blocksize, (float) ret / getpagesize());
+        size_t smallSlab = (sizeof(t_block) + SMLSZ) * blocksize;
+        size_t tinySlab = (sizeof(t_block) + TNYSZ) * blocksize;
+		printf("%s %zu pages: %f - %zu bytes - small: %zu : %f tiny: %zu : %f\n", "blockcount:", blocksize, (float) ret / getpagesize(),  ret, smallSlab, (float)smallSlab / getpagesize(), tinySlab, (float)tinySlab / getpagesize());
 		blocksize++;
 	}
-//////	 Data Structure sizes
-//	ft_printf("%s %i\n", "page size:", getpagesize());
-//	ft_printf("%s %i\n", "defined slab size", SLBSZ);
-//	     ret = sizeof(t_slab) +
-//				 (((sizeof(t_block) + TNYSZ) * BLKCNT) +
-//				  ((sizeof(t_block) + SMLSZ) * BLKCNT));
-//	ft_printf("%s %zu\n", "tblock size:", sizeof(t_block));
-//	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
-//	ft_printf("%s %zu\n", "actual slab size", ret);
+////	 Data Structure sizes
+	ft_printf("%s %i\n", "page size:", getpagesize());
+	     ret = sizeof(t_slab) +
+				 (((sizeof(t_block) + TNYSZ) * BLKCNT) +
+				  ((sizeof(t_block) + SMLSZ) * BLKCNT));
+	ft_printf("%s %zu\n", "tblock size:", sizeof(t_block));
+	ft_printf("%s %zu\n", "tslab size:", sizeof(t_slab));
+	ft_printf("%s %zu\n", "actual slab size", ret);
 }
 
 //char	*randString(void){
 //	return ((char *)malloc(rand() % 1254));
 //}
 //
-////			Randomly Generated String Test
+//////			Randomly Generated String Test
 //int		main(void) {
 //	srand(1234);
-////	show_alloc_mem();
-//
-//
 //
 //	char **str;
 //	int size = 1000;
 //	str = malloc(sizeof(char *) * (size + 1));
 //	char *reStr = NULL;
-//		for(int i = 0; i < size; i ++) {
-//			for (int i = 0; i < size; i++) {
-//				str[i] = randString();
-//			}
-//			for (int i = 0; i < size; i++) {
-//				free(str[i]);
-//			}
-//			reStr = randString();
-//			reStr = realloc(reStr, ft_strlen(reStr) + 42);
-//			ft_strcpy(reStr + ft_strlen(reStr), "helllllllllla");
-//			reStr = realloc(reStr, ft_strlen(reStr) + 84);
-//			free(reStr);
+//	for(int i = 0; i < size; i ++) {
+//		for (int i = 0; i < size; i++) {
+//			str[i] = randString();
 //		}
+//		for (int i = 0; i < size; i++) {
+//			free(str[i]);
+//		}
+//		reStr = randString();
+//		reStr = realloc(reStr, ft_strlen(reStr) + 42);
+//		ft_strcpy(reStr + ft_strlen(reStr), "helllllllllla");
+//		reStr = realloc(reStr, ft_strlen(reStr) + 84);
+//		free(reStr);
+//	}
 //	free(str);
 //	show_alloc_mem();
 //}

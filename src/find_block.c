@@ -12,6 +12,7 @@
 
 #include "../incl/malloc.h"
 
+// you're lookin here.
 
 t_slab	*find_slab(t_mgr *mgr, size_t size)
 {
@@ -52,7 +53,7 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 				  MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (mgr->b == MAP_FAILED)
 		return (NULL);
-	init_block(mgr->b, size);
+	init_block(mgr->b);
 	mgr->b->data = mgr->b + 1;
 	if (p)
 		p->next = mgr->b;
@@ -62,7 +63,6 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 t_block *find_smlblk(t_mgr *mgr)
 {
 	mgr->b = NULL;
-
 	mgr->s = find_slab(mgr, SMLSZ);
 	if (!(mgr->b = check_queue(mgr->s, SMLSZ)))
 	{
@@ -83,7 +83,6 @@ t_block *find_smlblk(t_mgr *mgr)
 t_block *find_tnyblk(t_mgr *mgr)
 {
 	mgr->b = NULL;
-
 	mgr->s = find_slab(mgr, TNYSZ);
 	if (!(mgr->b = check_queue(mgr->s, TNYSZ)))
 	{

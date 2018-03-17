@@ -12,9 +12,9 @@
 
 #include "../incl/malloc.h"
 
-t_slab *g_slabs = NULL;
+t_mgr *g_mgr = NULL;
 
-void		link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size)
+void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 {
 	t_block *h;
 	t_block *p;
@@ -23,10 +23,10 @@ void		link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size)
 	p = NULL;
 	while (count--)
 	{
-		init_block(h, size);
+		init_block(h);
 		h->data = h + 1;
 		h->next = (t_block *)((char *)h->data + size);
-		h->mgr = mgr;
+		h->mgr = slb;
 		if (count == 0)
 			h->next = NULL;
 		else
@@ -40,10 +40,8 @@ void		prep_slab(t_slab *slab)
 {
 	slab->small = (t_block *)(slab + 1);
 	slab->small_que = slab->small;
-	slab->small_end = (void *)(((char*)slab->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
 	slab->tiny = (t_block *)(((char *)slab->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
 	slab->tiny_que = slab->tiny;
-	slab->tiny_end = (void *)(((char*)slab->tiny + 1) + ((TNYSZ + SBLKSZ) * BLKCNT));
 	link_blocks(slab, slab->small, BLKCNT, SMLSZ);
 	link_blocks(slab, slab->tiny, BLKCNT, TNYSZ);
 }
@@ -63,18 +61,22 @@ t_slab		*create_slab(t_mgr *mgr)
 	prep_slab(n_slab);
 	if (!mgr->head_slab)
 		mgr->head_slab = n_slab;
-	mgr->head_slab->slab_cnt += 1;
-	mgr->head_slab->allocated_bytes += SLBSZ;
+	mgr->allocated_bytes += SLBSZ;
 	return (n_slab);
 }
 
-t_slab		*get_slabs(t_mgr *mgr, t_blean debug)
+t_mgr		*get_mgr(t_blean debug)
 {
-	if (!g_slabs && !debug)
+
+	if (!g_mgr && !debug)
 	{
-		g_slabs = create_slab(mgr);
-		g_slabs->allocated_bytes += SLBSZ;
+        g_mgr = mmap(0, sizeof(t_mgr), PROT_READ | PROT_WRITE,
+                     MAP_ANON | MAP_PRIVATE, -1, 0);
+        if (g_mgr == MAP_FAILED)
+            return (NULL);
+        init_mgr(g_mgr);
+		g_mgr->head_slab = create_slab(g_mgr);
 	}
-	return (g_slabs);
+	return (g_mgr);
 }
 

@@ -7,10 +7,10 @@ NAME = libft_malloc_$(HOSTTYPE).so
 CC = gcc
 
 
-CCFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -Os -shared
+CCFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -O0 -shared
 
 SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c src/find_block.c \
-        src/show_alloc_mem.c src/optimize.c
+        src/show_alloc_mem.c src/optimize.c src/utility.c
 
 OBJ = *.o
 

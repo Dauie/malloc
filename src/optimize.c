@@ -67,7 +67,7 @@ void convert_to_small(t_slab *slb)
 			t->prev->next = (t_block *)((char *)t + ((SBLKSZ + TNYSZ) * 8));
 			((t_block *)((char *)t + ((SBLKSZ + TNYSZ) * 8)))->prev = t->prev;
 		}
-		init_block(t, SMLSZ);
+		init_block(t);
 		s->next = t;
 		t->prev = s;
 		slb->tiny_avail -= 8;
@@ -79,26 +79,26 @@ void convert_to_small(t_slab *slb)
 
 
 
-t_block	*check_queue(t_slab *mgr, size_t blksz)
+t_block	*check_queue(t_slab *slb, size_t blksz)
 {
 	t_block *p;
 
 	p = NULL;
-	if (blksz == SMLSZ && mgr->small_que){
-		p = mgr->small_que;
-		mgr->small_avail -= 1;
-		if (p->next && p->next->avail == TRUE)
-			mgr->small_que = p->next;
+	if (blksz == SMLSZ && slb->small_que){
+		p = slb->small_que;
+		slb->small_avail -= 1;
+		if (p && p->next && p->next->avail == TRUE)
+			slb->small_que = p->next;
 		else
-			mgr->small_que = NULL;
+			slb->small_que = NULL;
 	}
-	if (blksz == TNYSZ && mgr->tiny_que){
-		p = mgr->tiny_que;
-		mgr->tiny_avail -= 1;
-		if (p->next && p->next->avail == TRUE)
-			mgr->tiny_que = p->next;
+	if (blksz == TNYSZ && slb->tiny_que){
+		p = slb->tiny_que;
+		slb->tiny_avail -= 1;
+		if (p && p->next && p->next->avail == TRUE)
+			slb->tiny_que = p->next;
 		else
-			mgr->tiny_que = NULL;
+			slb->tiny_que = NULL;
 	}
 	return (p);
 }
