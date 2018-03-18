@@ -42,9 +42,9 @@
  *
  * */
 
-# define TNYSZ 32
-# define SMLSZ 768
-# define BLKCNT 100
+# define TNYSZ 88
+# define SMLSZ 1048
+# define BLKCNT 128
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
@@ -60,7 +60,7 @@ typedef struct      s_slab
 	struct s_block	*small_que;
 	size_t			small_avail;
 	struct s_block	*large;
-	size_t			large_cnt;
+
 }                   t_slab;
 
 typedef struct		s_block
@@ -70,7 +70,6 @@ typedef struct		s_block
 	struct s_slab   *mgr;
 	t_blean			avail;
 	size_t 			data_size;
-	void			*data;
 }					t_block;
 
 typedef struct		s_mgr
@@ -78,6 +77,7 @@ typedef struct		s_mgr
 	t_slab			*head_slab;
 	t_block			*b;
 	t_slab			*s;
+    size_t			large_cnt;
     size_t			total_frees;
     size_t 			large_frees;
     size_t			freed_bytes;

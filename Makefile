@@ -19,6 +19,7 @@ RM = -rm -fr
 $(NAME):
 		$(MAKE) -C ./libft/ re
 		$(CC) $(CCFLAGS) $(SRC) ./libft/libftprintf.a -o $(NAME)
+		ln -s $(NAME) libft_malloc.so
 
 clean:
 		$(RM) $(OBJ)

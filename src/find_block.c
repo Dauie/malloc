@@ -50,11 +50,10 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 		mgr->b = mgr->b->next;
 	}
 	mgr->b = mmap(0, size + SBLKSZ, PROT_READ | PROT_WRITE,
-				  MAP_ANON | MAP_PRIVATE, -1, 0);
+				  MAP_ANON | MAP_PRIVATE | MAP_NOCACHE, -1, 0);
 	if (mgr->b == MAP_FAILED)
 		return (NULL);
 	init_block(mgr->b);
-	mgr->b->data = mgr->b + 1;
 	if (p)
 		p->next = mgr->b;
 	return(mgr->b);

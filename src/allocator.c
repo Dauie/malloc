@@ -14,18 +14,18 @@
 
 t_mgr *g_mgr = NULL;
 
-void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
+
+void		    link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 {
-	t_block *h;
-	t_block *p;
+	t_block     *h;
+	t_block     *p;
 
 	h = group;
 	p = NULL;
 	while (count--)
 	{
 		init_block(h);
-		h->data = h + 1;
-		h->next = (t_block *)((char *)h->data + size);
+		h->next = (t_block *)((char *)h + (size + sizeof(t_block)));
 		h->mgr = slb;
 		if (count == 0)
 			h->next = NULL;
@@ -54,7 +54,7 @@ t_slab		*create_slab(t_mgr *mgr)
 	slbsz = SLBSZ;
 	slbsz += slbsz % getpagesize();
 	n_slab = mmap(0, slbsz, PROT_READ | PROT_WRITE,
-				   MAP_ANON | MAP_PRIVATE, -1, 0);
+				   MAP_ANON | MAP_PRIVATE | MAP_NOCACHE , -1, 0);
 	if (n_slab == MAP_FAILED)
 		return (NULL);
 	init_slab(n_slab);
@@ -67,11 +67,10 @@ t_slab		*create_slab(t_mgr *mgr)
 
 t_mgr		*get_mgr(t_blean debug)
 {
-
 	if (!g_mgr && !debug)
 	{
         g_mgr = mmap(0, sizeof(t_mgr), PROT_READ | PROT_WRITE,
-                     MAP_ANON | MAP_PRIVATE, -1, 0);
+                     MAP_ANON | MAP_PRIVATE | MAP_NOCACHE, -1, 0);
         if (g_mgr == MAP_FAILED)
             return (NULL);
         init_mgr(g_mgr);
@@ -79,4 +78,3 @@ t_mgr		*get_mgr(t_blean debug)
 	}
 	return (g_mgr);
 }
-

@@ -89,7 +89,9 @@ If the functions are not exported, defense stops.
  Yes
  No
 Feature's testing
-Start by creating a script that will only modify the environment variables while you run a test program. It will be named run.sh, and be executable: $> cat run.sh #!/bin/sh export DYLD_LIBRARY_PATH=. export DYLD_INSERT_LIBRARIES="libft_malloc.so" export DYLD_FORCE_FLAT_NAMESPACE=1 $@
+Start by creating a script that will only modify the environment variables while you run a test program.
+It will be named run.sh, and be executable: $> cat run.sh #!/bin/sh export DYLD_LIBRARY_PATH=.
+export DYLD_INSERT_LIBRARIES="libft_malloc.so" export DYLD_FORCE_FLAT_NAMESPACE=1 $@
 
 Malloc test
 

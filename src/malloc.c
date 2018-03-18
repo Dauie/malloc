@@ -25,10 +25,10 @@ static void *alloc_large(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	mgr->head_slab->large_cnt += 1;
+	mgr->large_cnt += 1;
 	mgr->allocated_bytes += size;
 	update_mgr(mgr, size);
-	return (blk->data);
+	return (blk + 1);
 }
 
 static void *alloc_small(t_mgr *mgr, size_t size)
@@ -40,7 +40,7 @@ static void *alloc_small(t_mgr *mgr, size_t size)
 	blk->avail = FALSE;
 	blk->data_size = size;
 	update_mgr(mgr, size);
-	return (blk->data);
+	return (blk + 1);
 }
 
 static void *alloc_tiny(t_mgr *mgr, size_t size)
@@ -52,7 +52,7 @@ static void *alloc_tiny(t_mgr *mgr, size_t size)
 	blk->avail = FALSE;
 	blk->data_size = size;
 	update_mgr(mgr, size);
-	return (blk->data);
+	return (blk + 1);
 }
 
 void    	*malloc(size_t size)

@@ -12,10 +12,6 @@
 
 #include "../incl/malloc.h"
 
-
-//slab->tiny_end = (void *)(((char*)slab->tiny + 1) + ((TNYSZ + SBLKSZ) * BLKCNT));
-//slab->small_end = (void *)(((char*)slab->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
-
 static void                range_print(t_slab *head)
 {
     t_slab  *slb;
@@ -56,7 +52,7 @@ void	            show_alloc_mem()
 					  "Total unfreed bytes:\t\t%zu\nTotal freed bytes:\t\t%zu\n",
 			  mgr->total_allocs, mgr->total_frees, mgr->total_allocs - mgr->total_frees,
               mgr->requested_bytes - mgr->freed_bytes, mgr->freed_bytes);
-	ft_printf("Total large allocs:\t\t%zu\n", head->large_cnt);
+	ft_printf("Total large allocs:\t\t%zu\n", mgr->large_cnt);
 	ft_printf("Total large frees:\t\t%zu\n", mgr->large_frees);
 	ft_printf("Total memory requested\t\t%zu\n", mgr->requested_bytes);
 	ft_printf("Slab count:\t\t\t%zu\n", slab_len(head));
