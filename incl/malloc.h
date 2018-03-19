@@ -14,8 +14,9 @@
 #ifndef MALLOC_H
 #define MALLOC_H
 
-# include "../libft/incl/printf.h"
+# include <pthread.h>
 # include <sys/mman.h>
+# include "../libft/incl/printf.h"
 
 /**
  * 							SLAB DESIGN
@@ -29,7 +30,7 @@
  *
  * All large allocations will only reside in the head slab node.
  *
- * */
+ **/
 
 /**
  * 							NAMING EXPLAINATION
@@ -40,7 +41,7 @@
  * SSLBSZ:	Size of the t_slab struct
  * SLBSZ:	Size of an entire 'slab'
  *
- * */
+ **/
 
 # define TNYSZ 88
 # define SMLSZ 1048
@@ -85,6 +86,10 @@ typedef struct		s_mgr
     size_t			allocated_bytes;
     size_t 			requested_bytes;
 }					t_mgr;
+
+
+t_mgr *g_mgr = NULL;
+pthread_mutex_t g_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void	free(void *ptr);
 void	*malloc(size_t size);

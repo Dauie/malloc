@@ -58,15 +58,21 @@ static void *alloc_tiny(t_mgr *mgr, size_t size)
 void    	*malloc(size_t size)
 {
 	t_mgr	*mgr;
+    void    *ret;
 
     mgr = NULL;
+    ret = NULL;
 	if (size <= 0)
 		return(NULL);
+    pthread_mutex_lock(&g_mutex);
 	if (!(mgr = get_mgr(FALSE)))
 		return(NULL);
 	if (size <= TNYSZ)
-		return (alloc_tiny(mgr, size));
+		ret = alloc_tiny(mgr, size);
 	else if (size <= SMLSZ)
-		return (alloc_small(mgr, size));
-	return (alloc_large(mgr, size));
+		ret = alloc_small(mgr, size);
+    else
+        ret = alloc_large(mgr, size);
+    pthread_mutex_unlock(&g_mutex);
+    return ()
 }

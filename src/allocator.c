@@ -12,8 +12,6 @@
 
 #include "../incl/malloc.h"
 
-t_mgr *g_mgr = NULL;
-
 
 void		    link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 {
