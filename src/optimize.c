@@ -84,7 +84,7 @@ t_block	*check_queue(t_slab *slb, size_t blksz)
 	t_block *p;
 
 	p = NULL;
-	if (blksz == SMLSZ && slb->small_que){
+	if (blksz > TNYSZ && blksz <= SMLSZ && slb->small_que){
 		p = slb->small_que;
 		slb->small_avail -= 1;
 		if (p && p->next && p->next->avail == TRUE)
@@ -92,7 +92,7 @@ t_block	*check_queue(t_slab *slb, size_t blksz)
 		else
 			slb->small_que = NULL;
 	}
-	if (blksz == TNYSZ && slb->tiny_que){
+	else if (blksz <= TNYSZ && slb->tiny_que){
 		p = slb->tiny_que;
 		slb->tiny_avail -= 1;
 		if (p && p->next && p->next->avail == TRUE)

@@ -6,13 +6,11 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/03/01 14:45:06 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/20 12:04:03 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
-
-// you're lookin here.
 
 t_slab	*find_slab(t_mgr *mgr, size_t size)
 {
@@ -22,11 +20,11 @@ t_slab	*find_slab(t_mgr *mgr, size_t size)
 	mgr->s = slab;
 	while (slab)
 	{
-		if (size == TNYSZ)
+		if (size <= TNYSZ && slab->tiny_avail == 0)
 			convert_to_tiny(slab);
-		if (size == SMLSZ && slab->small_avail > 0)
+		if (size <= TNYSZ && slab->tiny_avail > 0)
 			return (slab);
-		else if (size == TNYSZ && slab->tiny_avail > 0)
+		else if (size > TNYSZ && size <= SMLSZ && slab->small_avail > 0)
 			return (slab);
 		mgr->s = slab;
 		slab = slab->next;
@@ -59,38 +57,24 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 	return(mgr->b);
 }
 
-t_block *find_smlblk(t_mgr *mgr)
+t_block *find_slb_blk(t_mgr *mgr, size_t size)
 {
 	mgr->b = NULL;
-	mgr->s = find_slab(mgr, SMLSZ);
-	if (!(mgr->b = check_queue(mgr->s, SMLSZ)))
+	mgr->s = find_slab(mgr, size);
+	if (!(mgr->b = check_queue(mgr->s, size)))
 	{
-		mgr->b = mgr->s->small;
+		if (size <= TNYSZ)
+			mgr->b = mgr->s->tiny;
+		else
+			mgr->b = mgr->s->small;
 		while (mgr->b)
 		{
 			if (mgr->b->avail == TRUE)
 			{
-				mgr->b->mgr->small_avail -= 1;
-				return (mgr->b);
-			}
-			mgr->b = mgr->b->next;
-		}
-	}
-	return (mgr->b);
-}
-
-t_block *find_tnyblk(t_mgr *mgr)
-{
-	mgr->b = NULL;
-	mgr->s = find_slab(mgr, TNYSZ);
-	if (!(mgr->b = check_queue(mgr->s, TNYSZ)))
-	{
-		mgr->b = mgr->s->tiny;
-		while (mgr->b)
-		{
-			if (mgr->b->avail == TRUE)
-			{
-				mgr->b->mgr->tiny_avail -= 1;
+				if (size <= TNYSZ)
+					mgr->b->mgr->tiny_avail -= 1;
+				else
+					mgr->b->mgr->small_avail -= 1;
 				return (mgr->b);
 			}
 			mgr->b = mgr->b->next;

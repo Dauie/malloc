@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.9)
 project(malloc)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES
+add_executable(malloc
         incl/malloc.h
         libft/incl/bool.h
         libft/incl/char.h
@@ -152,5 +152,3 @@ set(SOURCE_FILES
         main4.c
         main5.c
         main6.c)
-
-add_executable(malloc ${SOURCE_FILES})

@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 10:25:30 by rlutt             #+#    #+#             */
-/*   Updated: 2018/03/14 15:20:08 by dauie            ###   ########.fr       */
+/*   Updated: 2018/03/20 11:21:33 by dauie            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,7 @@ void	init_mgr(t_mgr *mgr);
 void	init_slab(t_slab *slab);
 void	init_block(t_block *blk);
 t_slab	*create_slab(t_mgr *mgr);
-t_block *find_smlblk(t_mgr *mgr);
-t_block *find_tnyblk(t_mgr *mgr);
+t_block *find_slb_blk(t_mgr *mgr, size_t size);
 t_block *find_lrgblk(t_mgr *mgr, size_t size);
 void	link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size);
 t_block	*check_queue(t_slab *slb, size_t blksz);

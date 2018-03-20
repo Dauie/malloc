@@ -14,43 +14,18 @@ static void         update_block(t_block *blk, size_t size, t_mgr *mgr)
         mgr->large_cnt += 1;
 }
 
-static void        *realloc_tiny(void *mem, size_t size, t_mgr *mgr)
-{
-    t_block *dst;
-    if (!(dst = find_tnyblk(mgr)))
-        return (mem);
-    ft_memcpy(dst + 1, mem, size);
-    pthread_mutex_unlock(&g_mux);
-    free(mem);
-    pthread_mutex_lock(&g_mux);
-    update_block(dst, size, mgr);
-    return (dst + 1);
-}
-
-static void        *realloc_small(void *mem, size_t size, t_mgr *mgr)
+static void        *findncopy(void *mem, size_t size, t_mgr *mgr, t_block *(fn(t_mgr *, size_t)))
 {
     t_block *dst;
 
-    if (!(dst = find_smlblk(mgr)))
+	dst = NULL;
+    if (!(dst = fn(mgr, size)))
         return (mem);
-    ft_memcpy(dst + 1, mem, size);
+	mgr->b = (t_block *)mem - 1;
+    ft_memcpy(dst + 1, mem, mgr->b->data_size);
+    update_block(dst, size, mgr);
     pthread_mutex_unlock(&g_mux);
     free(mem);
-
-    update_block(dst, size, mgr);
-    return (dst + 1);
-}
-
-static void        *realloc_large(void *mem, size_t size, t_mgr *mgr)
-{
-    t_block *dst;
-    if (!(dst = find_lrgblk(mgr, size)))
-        return (mem);
-    ft_memcpy(dst + 1, mem, size);
-    pthread_mutex_unlock(&g_mux);
-    free(mem);
-    pthread_mutex_lock(&g_mux);
-    update_block(dst, size, mgr);
     return (dst + 1);
 }
 
@@ -66,12 +41,11 @@ void		*realloc(void *mem, size_t size)
     mgr->b = (t_block*)mem - 1;
     if (mgr->b->avail == FALSE)
     {
-        if (size <= TNYSZ)
-            ret = realloc_tiny(mem, size, mgr, &find_lrgblk);
-        else if (size <= SMLSZ)
-            ret = realloc_small(mem, size, mgr);
-        else if (size > SMLSZ)
-            ret = realloc_large(mem, size, mgr);
+        if (size <= SMLSZ)
+            ret = findncopy(mem, size, mgr, &find_slb_blk);
+        else
+            ret = findncopy(mem, size, mgr, &find_lrgblk);
     }
+	pthread_mutex_unlock(&g_mux);
     return(ret);
 }
