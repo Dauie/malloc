@@ -39,6 +39,7 @@ void	            show_alloc_mem()
 	t_slab	*head;
 
     mgr = NULL;
+    pthread_mutex_lock(&g_mux);
     if (!(mgr = get_mgr(TRUE)))
 	{
 		ft_printf("No memory allocated\n");
@@ -57,4 +58,5 @@ void	            show_alloc_mem()
 	ft_printf("Total memory requested\t\t%zu\n", mgr->requested_bytes);
 	ft_printf("Slab count:\t\t\t%zu\n", slab_len(head));
 	ft_printf("Memory mapped:\t\t\t%zu\n", mgr->allocated_bytes);
+    pthread_mutex_unlock(&g_mux);
 }

@@ -12,8 +12,6 @@
 
 #include "../incl/malloc.h"
 
-// you gotta munmap the large bits.
-
 static void	free_lrg_blk(t_mgr *mgr, t_block *ptr)
 {
 	if (ptr->prev && ptr->prev->next)
@@ -24,32 +22,43 @@ static void	free_lrg_blk(t_mgr *mgr, t_block *ptr)
 	mgr->large_frees += 1;
 }
 
+static void free_sml_blk(t_mgr *mgr, t_block *ptr)
+{
+    ptr->mgr->small_avail += 1;
+    if (!ptr->mgr->small_que)
+        ptr->mgr->small_que = mgr->b;
+}
+
+static void free_tny_blk(t_mgr *mgr, t_block *ptr)
+{
+    ptr->mgr->tiny_avail += 1;
+    if (!ptr->mgr->tiny_que)
+        ptr->mgr->tiny_que = mgr->b;
+}
 
 void 		free(void *ptr)
 {
     t_mgr *mgr;
 
     mgr = NULL;
+    pthread_mutex_lock(&g_mux);
     if (!ptr || !(mgr = get_mgr(TRUE)))
+    {
+        pthread_mutex_unlock(&g_mux);
         return;
+    }
     mgr->b = (t_block*)ptr - 1;
-	if (mgr->b->avail == FALSE) {
+	if (mgr->b->avail == FALSE)
+    {
 		mgr->b->avail = TRUE;
 		mgr->freed_bytes += mgr->b->data_size;
 		mgr->total_frees += 1;
 		if (mgr->b->data_size > SMLSZ)
 			free_lrg_blk(mgr, mgr->b);
 		else if (mgr->b->data_size <= SMLSZ && mgr->b->data_size > TNYSZ)
-		{
-			mgr->b->mgr->small_avail += 1;
-			if (!mgr->b->mgr->small_que)
-				mgr->b->mgr->small_que = mgr->b;
-		}
+            free_sml_blk(mgr, mgr->b);
 		else if (mgr->b->data_size <= TNYSZ)
-		{
-			mgr->b->mgr->tiny_avail += 1;
-			if (!mgr->b->mgr->tiny_que)
-				mgr->b->mgr->tiny_que = mgr->b;
-		}
+            free_tny_blk(mgr, mgr->b);
 	}
+    pthread_mutex_unlock(&g_mux);
 }

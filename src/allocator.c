@@ -12,6 +12,8 @@
 
 #include "../incl/malloc.h"
 
+t_mgr	*g_mgr = NULL;
+pthread_mutex_t g_mux = PTHREAD_MUTEX_INITIALIZER;
 
 void		    link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 {

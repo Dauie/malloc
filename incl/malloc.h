@@ -50,6 +50,9 @@
 # define SSLBSZ sizeof(t_slab)
 # define SLBSZ (SSLBSZ + (((SBLKSZ + TNYSZ) * BLKCNT) + ((SBLKSZ + SMLSZ) * BLKCNT)))
 
+extern pthread_mutex_t g_mux;
+
+
 
 typedef struct      s_slab
 {
@@ -86,10 +89,6 @@ typedef struct		s_mgr
     size_t			allocated_bytes;
     size_t 			requested_bytes;
 }					t_mgr;
-
-
-t_mgr *g_mgr = NULL;
-pthread_mutex_t g_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void	free(void *ptr);
 void	*malloc(size_t size);
