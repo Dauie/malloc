@@ -1,5 +1,9 @@
 #include "../incl/malloc.h"
 
+
+// get function pointers in here.
+// don't fuck around.
+
 static void         update_block(t_block *blk, size_t size, t_mgr *mgr)
 {
     mgr->total_allocs += 1;
@@ -32,7 +36,7 @@ static void        *realloc_small(void *mem, size_t size, t_mgr *mgr)
     ft_memcpy(dst + 1, mem, size);
     pthread_mutex_unlock(&g_mux);
     free(mem);
-    pthread_mutex_lock(&g_mux);
+
     update_block(dst, size, mgr);
     return (dst + 1);
 }
@@ -63,12 +67,11 @@ void		*realloc(void *mem, size_t size)
     if (mgr->b->avail == FALSE)
     {
         if (size <= TNYSZ)
-            ret = realloc_tiny(mem, size, mgr);
+            ret = realloc_tiny(mem, size, mgr, &find_lrgblk);
         else if (size <= SMLSZ)
             ret = realloc_small(mem, size, mgr);
         else if (size > SMLSZ)
             ret = realloc_large(mem, size, mgr);
     }
-    pthread_mutex_unlock(&g_mux);
     return(ret);
 }
