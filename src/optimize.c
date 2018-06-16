@@ -54,7 +54,6 @@ void convert_to_small(t_slab *slb)
 	t_block *t;
 	t_block *s;
 
-	t = NULL;
 	s = slb->small;
 	if (slb->small_avail == 0 && slb->tiny_avail >= BLKCNT * .50)
 	{

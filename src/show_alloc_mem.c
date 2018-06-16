@@ -19,14 +19,12 @@ static void                range_print(t_slab *head)
     void    *tny_end;
 
     slb = head;
-    sml_end = NULL;
-    tny_end = NULL;
     if (!slb)
         return;
     while (slb)
     {
-        sml_end = (void *)(((char*)slb->small + 1) + ((SMLSZ + SBLKSZ) * BLKCNT));
-        tny_end = (void *)(((char*)slb->tiny + 1) + ((TNYSZ + SBLKSZ) * BLKCNT));
+        sml_end = (void *)(((char*)slb->small + sizeof(t_block)) + ((SMLSZ + SBLKSZ) * BLKCNT));
+        tny_end = (void *)(((char*)slb->tiny + sizeof(t_block)) + ((TNYSZ + SBLKSZ) * BLKCNT));
         ft_printf("SMALL - %p\n%p - %p\n", slb->small, slb->small, sml_end);
         ft_printf("TINY - %p\n%p - %p\n", slb->tiny, slb->tiny, tny_end);
         slb = slb->next;
@@ -38,8 +36,6 @@ void	            show_alloc_mem()
    	t_mgr	*mgr;
 	t_slab	*head;
 
-    mgr = NULL;
-    pthread_mutex_lock(&g_mux);
     if (!(mgr = get_mgr(TRUE)))
 	{
 		ft_printf("No memory allocated\n");
@@ -56,7 +52,6 @@ void	            show_alloc_mem()
 	ft_printf("Total large allocs:\t\t%zu\n", mgr->large_cnt);
 	ft_printf("Total large frees:\t\t%zu\n", mgr->large_frees);
 	ft_printf("Total memory requested\t\t%zu\n", mgr->requested_bytes);
-	ft_printf("Slab count:\t\t\t%zu\n", slab_len(head));
+	ft_printf("Slab count:\t\t\t%d\n", slab_len(head));
 	ft_printf("Memory mapped:\t\t\t%zu\n", mgr->allocated_bytes);
-    pthread_mutex_unlock(&g_mux);
 }

@@ -48,20 +48,18 @@ void    	*malloc(size_t size)
 	t_mgr	*mgr;
     void    *ret;
 
-    mgr = NULL;
-    ret = NULL;
     pthread_mutex_lock(&g_mux);
 	if (size <= 0)
+	{
+		pthread_mutex_unlock(&g_mux);
 		return(NULL);
+	}
 	if (!(mgr = get_mgr(FALSE)))
     {
         pthread_mutex_unlock(&g_mux);
         return (NULL);
     }
-	if (size <= SMLSZ)
-		ret = alloc_block(mgr, size);
-	else
-        ret = alloc_large(mgr, size);
-    pthread_mutex_unlock(&g_mux);
+	ret = size <= SMLSZ ? alloc_block(mgr, size) : alloc_large(mgr, size);
+	pthread_mutex_unlock(&g_mux);
     return (ret);
 }
