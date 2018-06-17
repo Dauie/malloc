@@ -1,12 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utility.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/16 18:51:08 by rlutt             #+#    #+#             */
+/*   Updated: 2018/06/16 18:51:08 by rlutt            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../incl/malloc.h"
 
-int     slab_len(t_slab *list)
+int		slab_len(t_slab *list)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (list && ++i){
-        list = list->next;
-    }
-    return (i);
+	i = 0;
+	while (list && ++i)
+		list = list->next;
+	return (i);
 }

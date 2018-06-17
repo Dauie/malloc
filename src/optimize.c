@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   optimize.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/16 18:45:27 by rlutt             #+#    #+#             */
+/*   Updated: 2018/06/16 18:54:13 by rlutt            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../incl/malloc.h"
 
- void	convert_to_tiny( t_slab *slb)
+void			convert_to_tiny(t_slab *slb)
 {
-	t_block *s;
-	t_block *t;
+	t_block		*s;
+	t_block		*t;
 
 	s = slb->small;
 	t = slb->tiny;
@@ -28,11 +40,11 @@
 	}
 }
 
-static t_block *find_tiny_grouping(t_slab *slb, size_t len)
+static t_block	*find_tiny_grouping(t_slab *slb, size_t len)
 {
-	t_block *i;
-	t_block *ret;
-	size_t 	cnt;
+	t_block		*i;
+	t_block		*ret;
+	size_t		cnt;
 
 	cnt = 0;
 	i = slb->tiny;
@@ -41,24 +53,24 @@ static t_block *find_tiny_grouping(t_slab *slb, size_t len)
 	{
 		if (i->avail && cnt == 0)
 			ret = i;
-		cnt = i->avail ? cnt + 1: 0;
+		cnt = i->avail ? cnt + 1 : 0;
 		if (cnt == len)
-			return(ret);
+			return (ret);
 		i = i->next;
 	}
-	return(NULL);
+	return (NULL);
 }
 
-void convert_to_small(t_slab *slb)
+void			convert_to_small(t_slab *slb)
 {
-	t_block *t;
-	t_block *s;
+	t_block		*t;
+	t_block		*s;
 
 	s = slb->small;
 	if (slb->small_avail == 0 && slb->tiny_avail >= BLKCNT * .50)
 	{
 		if (!(t = find_tiny_grouping(slb, 8)))
-			return;
+			return ;
 		while (s->next)
 			s = s->next;
 		if (t->prev && (t_block*)((char*)t + ((SBLKSZ + TNYSZ) * 8)))
@@ -76,14 +88,13 @@ void convert_to_small(t_slab *slb)
 	}
 }
 
-
-
-t_block	*check_queue(t_slab *slb, size_t blksz)
+t_block			*check_queue(t_slab *slb, size_t blksz)
 {
-	t_block *p;
+	t_block		*p;
 
 	p = NULL;
-	if (blksz > TNYSZ && blksz <= SMLSZ && slb->small_que){
+	if (blksz > TNYSZ && blksz <= SMLSZ && slb->small_que)
+	{
 		p = slb->small_que;
 		slb->small_avail -= 1;
 		if (p && p->next && p->next->avail == TRUE)
@@ -91,7 +102,8 @@ t_block	*check_queue(t_slab *slb, size_t blksz)
 		else
 			slb->small_que = NULL;
 	}
-	else if (blksz <= TNYSZ && slb->tiny_que){
+	else if (blksz <= TNYSZ && slb->tiny_que)
+	{
 		p = slb->tiny_que;
 		slb->tiny_avail -= 1;
 		if (p && p->next && p->next->avail == TRUE)

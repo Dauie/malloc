@@ -6,15 +6,15 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/03/20 12:04:03 by dauie            ###   ########.fr       */
+/*   Updated: 2018/06/16 15:30:39 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
 
-t_slab	*find_slab(t_mgr *mgr, size_t size)
+t_slab			*find_slab(t_mgr *mgr, size_t size)
 {
-	t_slab *slab;
+	t_slab		*slab;
 
 	slab = mgr->head_slab;
 	mgr->s = slab;
@@ -34,7 +34,7 @@ t_slab	*find_slab(t_mgr *mgr, size_t size)
 	return (slab);
 }
 
-t_block *find_lrgblk(t_mgr *mgr, size_t size)
+t_block			*find_lrgblk(t_mgr *mgr, size_t size)
 {
 	t_block		*p;
 
@@ -48,16 +48,16 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size)
 		mgr->b = mgr->b->next;
 	}
 	mgr->b = mmap(0, size + SBLKSZ, PROT_READ | PROT_WRITE,
-				  MAP_ANON | MAP_PRIVATE | MAP_NOCACHE, -1, 0);
+			MAP_ANON | MAP_PRIVATE | MAP_NOCACHE, -1, 0);
 	if (mgr->b == MAP_FAILED)
 		return (NULL);
 	init_block(mgr->b);
 	if (p)
 		p->next = mgr->b;
-	return(mgr->b);
+	return (mgr->b);
 }
 
-t_block *find_slb_blk(t_mgr *mgr, size_t size)
+t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 {
 	mgr->b = NULL;
 	mgr->s = find_slab(mgr, size);
@@ -82,4 +82,3 @@ t_block *find_slb_blk(t_mgr *mgr, size_t size)
 	}
 	return (mgr->b);
 }
-
