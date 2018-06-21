@@ -6,8 +6,8 @@ NAME = libft_malloc_$(HOSTTYPE).so
 
 CC = gcc
 
-
-CCFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -O0 -shared
+CFLAGS = -Wall -Werror -Wextra -g
+LDFLAGS = -shared -ldl
 
 SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c src/find_block.c \
         src/show_alloc_mem.c src/optimize.c src/utility.c
@@ -18,7 +18,8 @@ RM = -rm -fr
 
 $(NAME):
 		$(MAKE) -C ./libft/ re
-		$(CC) $(CCFLAGS) $(SRC) ./libft/libftprintf.a -o $(NAME)
+		$(CC) -fPIC -c $(SRC)
+		$(CC) $(CFLAGS) $(LDFLAGS) ./libft/libftprintf.a $(OBJ) -o $(NAME)
 		ln -s $(NAME) libft_malloc.so
 
 clean:

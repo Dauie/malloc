@@ -21,8 +21,8 @@
 /**
  * 							SLAB DESIGN
  *
- * Each slab will be divided into 'tiny' and 'medium' sections
- * the tiny sections will be 64 bytes, medium will be 1024
+ * Each slab will be divided into 'tiny' and 'small' sections
+ * the tiny sections will be 64 bytes, small will be 1024
  * tiny sections will start at the end of the memory space, and small
  * at the begining.
  * block splitting will be implemented to reclaim memory
@@ -52,11 +52,9 @@
 
 extern pthread_mutex_t g_mux;
 
-
-
-typedef struct      s_slab
+typedef struct		s_slab
 {
-    struct s_slab   *next;
+    struct s_slab	*next;
 	struct s_block	*tiny;
 	struct s_block	*tiny_que;
 	size_t			tiny_avail;
@@ -65,7 +63,7 @@ typedef struct      s_slab
 	size_t			small_avail;
 	struct s_block	*large;
 
-}                   t_slab;
+}					t_slab;
 
 typedef struct		s_block
 {
@@ -105,8 +103,8 @@ t_block *find_lrgblk(t_mgr *mgr, size_t size);
 void	link_blocks(t_slab *mgr, t_block *group, size_t count, size_t size);
 t_block	*check_queue(t_slab *slb, size_t blksz);
 void	convert_to_tiny(t_slab *slb);
-void 	convert_to_small(t_slab *slb);
-int     slab_len(t_slab *list);
+void	convert_to_small(t_slab *slb);
+int		slab_len(t_slab *list);
 
 
 #endif
