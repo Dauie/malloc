@@ -30,4 +30,16 @@ All requests exceeding the size of our small blocks will be mapped separately an
 
 `make`
 
-`Now include the .h file for this malloc in your project, and compile with libft_malloc.so`
+now, depending on your OS, you need to tell your system where this shared library is. Usually you will set an environment variable to tell the system where it can find this dynamic library.
+
+on Mac it would look something like this:
+
+`export DYLD_LIBRARY_PATH="<path-to-libftmalloc.so>:$DYLD_LIBRARY_PATH"`
+
+on Linux:
+
+`export LD_LIBRARY_PATH=<path-to-libftmalloc.so>:$LD_LIBRARY_PATH`
+
+then compile your project:
+
+`gcc -L/path/to/lib -Wall -Werror -Wextra -o test main.c -lft_malloc`
