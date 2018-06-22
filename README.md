@@ -1,6 +1,6 @@
 # Malloc
 
-This is a personal implementation of of the functions: malloc(), free(), realloc(), and calloc()
+This is a personal implementation of the functions: malloc(), free(), realloc(), and calloc()
 
 ## The design
 
