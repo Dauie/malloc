@@ -19,3 +19,16 @@ The manager of these slabs keeps a reference to the next tiny and small blocks t
 ### Large allocations
 
 All requests exceeding the size of our small blocks will be mapped separately and stored together as a linked list. When returned from the user, the resource will be immediately given back to the system.
+
+## How to compile and include:
+
+`git clone <repo>`
+
+
+`cd <repo>`
+
+`git clone https://github.com/dauie/libft.git`
+
+`make`
+
+`Now include the .h file for this malloc in your project, and compile with libft_malloc.so`
