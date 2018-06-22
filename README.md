@@ -22,10 +22,9 @@ All requests exceeding the size of our small blocks will be mapped separately an
 
 ## How to compile and include:
 
-`git clone <repo>`
+`git clone https://github.com/dauie/malloc.git`
 
-
-`cd <repo>`
+`cd malloc`
 
 `git clone https://github.com/dauie/libft.git`
 
