@@ -4,6 +4,8 @@ This is a personal implementation of of the functions: malloc(), free(), realloc
 
 ## The design
 
+![alt text](https://github.com/Dauie/malloc/blob/master/mallocSS.png "Slab design")
+
 ### Tiny and Small allocations
 On the first call to malloc() a "slab" sized chunk of memory will be mapped to the program's memory space. The slab will be
 segmented into 'tiny' and 'small' blocks, and each block with have a portion of meta-data at its head to manage the block.
