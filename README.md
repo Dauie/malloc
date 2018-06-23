@@ -34,11 +34,13 @@ now, depending on your OS, you need to tell your system where this shared librar
 
 on Mac it would look something like this:
 
-`export DYLD_LIBRARY_PATH="<path-to-libftmalloc.so>:$DYLD_LIBRARY_PATH"`
+`export DYLD_LIBRARY_PATH="<path-to-lib>"`
+`export DYLD_INSERT_LIBRARIES="<path-to-lib>/libft_malloc.so"`
+`export DYLD_FORCE_FLAT_NAMESPACE=1`
 
 on Linux:
 
-`export LD_LIBRARY_PATH=<path-to-libftmalloc.so>:$LD_LIBRARY_PATH`
+`export LD_LIBRARY_PATH=<path-to-lib>/libft_malloc.so:$LD_LIBRARY_PATH`
 
 then compile your project:
 
