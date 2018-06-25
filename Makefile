@@ -4,9 +4,12 @@ endif
 
 NAME = libft_malloc_$(HOSTTYPE).so
 
-CC = clang
+CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra
+
+HEADERS = -I./incl -I./libft/incl/
+
 LDFLAGS = -shared -ldl
 
 SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c src/find_block.c \
@@ -18,8 +21,8 @@ RM = -rm -fr
 
 $(NAME):
 		$(MAKE) -C ./libft/ re
-		$(CC) -fPIC -c $(SRC)
-		$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) -o $(NAME)
+		$(CC) -c -fPIC $(CFLAGS) $(SRC)
+		$(CC) $(CFLAGS) $(LDFLAGS) $(HEADERS) -L./libft -lftprintf $(OBJ) -o $(NAME)
 		ln -s $(NAME) libft_malloc.so
 
 clean:
@@ -30,3 +33,4 @@ fclean: clean
 		$(RM) libft_malloc.so
 
 re: fclean $(NAME)
+
