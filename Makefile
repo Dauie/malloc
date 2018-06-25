@@ -4,7 +4,7 @@ endif
 
 NAME = libft_malloc_$(HOSTTYPE).so
 
-CC = gcc
+CC = clang
 
 CFLAGS = -Wall -Werror -Wextra -g
 LDFLAGS = -shared -ldl
@@ -19,7 +19,7 @@ RM = -rm -fr
 $(NAME):
 		$(MAKE) -C ./libft/ re
 		$(CC) -fPIC -c $(SRC)
-		$(CC) $(CFLAGS) $(LDFLAGS) ./libft/libftprintf.a $(OBJ) -o $(NAME)
+		$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) -o $(NAME)
 		ln -s $(NAME) libft_malloc.so
 
 clean:
