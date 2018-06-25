@@ -55,7 +55,7 @@ t_slab		*create_slab(t_mgr *mgr)
 	slbsz = SLBSZ;
 	slbsz += slbsz % getpagesize();
 	n_slab = mmap(0, slbsz, PROT_READ | PROT_WRITE,
-			MAP_ANON | MAP_PRIVATE | MAP_NOCACHE, -1, 0);
+			MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (n_slab == MAP_FAILED)
 		return (NULL);
 	init_slab(n_slab);
@@ -71,7 +71,7 @@ t_mgr		*get_mgr(t_blean debug)
 	if (!g_mgr && !debug)
 	{
 		g_mgr = mmap(0, sizeof(t_mgr), PROT_READ | PROT_WRITE,
-					MAP_ANON | MAP_PRIVATE | MAP_NOCACHE, -1, 0);
+					MAP_ANON | MAP_PRIVATE, -1, 0);
 		if (g_mgr == MAP_FAILED)
 			return (NULL);
 		init_mgr(g_mgr);
