@@ -42,7 +42,7 @@ on Mac it would look something like this:
 
 on Linux:
 
-`export LD_LIBRARY_PATH=<path-to-lib>/libft_malloc.so:$LD_LIBRARY_PATH`
+`export LD_LIBRARY_PATH=<path-to-lib>/:$LD_LIBRARY_PATH`
 
 then compile your project:
 
