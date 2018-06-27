@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="malloc"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="malloc">
+				<Option output="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/malloc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 malloc"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="malloc/fast">
+				<Option output="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/malloc" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/r/rlutt/code/malloc/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 malloc/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/incl/malloc.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/bool.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/char.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/cnvrsn.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/gnl.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/lst.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/mem.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/num.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/printf.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/put.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/str.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/incl/tbl.h">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/ft_printf.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_cast_di.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_cast_oux.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_ihelp.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_initstructs.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_is.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_itoabse.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_mod.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_c.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_i.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_o.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_p.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_perc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_s.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_print_x.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_putchar.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_puterror.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_putnbr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_putstr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_tick.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_typechr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/ft_printf/pf_width.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/futil/gnl/gnl.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isalnum.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isalpha.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isascii.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isdigit.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_islower.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isprint.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isspc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/char/ft_isupper.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/cnvrsn/ft_atoi.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/cnvrsn/ft_itoa.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/cnvrsn/ft_itoabse.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_bzero.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memalloc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memccpy.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memchr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memcmp.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memcpy.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memdel.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memmove.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/mem/ft_memset.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/num/ft_numlen.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putchar.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putchar_fd.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putclst.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putendl.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putendl_fd.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_puterror.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putnbr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putnbr_fd.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putnlst.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putstr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putstr_fd.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_putstrrev.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/put/ft_puttbl.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_cntbnespc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_cntbspc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_cnttotspc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_cntwrds.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_dirjoin.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_isstralnum.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_isstralpha.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_isstrascii.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_isstrdigit.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_isstrprint.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_nxtwrdlen.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strcat.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strchr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strclr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strcmp.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strconcat.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strcpy.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strdel.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strdup.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strequ.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_striter.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_striteri.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strjoin.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strjoinn.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strlcat.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strlen.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strmap.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strmapi.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strncat.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strncmp.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strncpy.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strndup.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strnequ.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strnew.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strnstr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strrchr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strrev.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strsplit.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strstr.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strstrip.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strsub.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_strtrim.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_tolower.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/str/ft_toupper.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_crafttbl.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_itbllen.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_tbladdl.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_tbldel.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_tbldup.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_tbllen.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_tblrepline.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/primitive/tbl/ft_tblrmline.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstadd.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstdel.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstdelone.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstdup.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lsteadd.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstiter.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstlen.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstmap.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstnew.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/libft/src/typedefined/lst/ft_lstnewstak.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/main.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/allocator.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/calloc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/find_block.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/free.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/malloc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/optimize.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/realloc.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/show_alloc_mem.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/struct_init.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/utility.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

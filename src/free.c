@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 13:11:37 by dauie             #+#    #+#             */
-/*   Updated: 2018/06/16 15:30:18 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/06/26 10:58:04 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,20 @@ static void		free_tny_blk(t_mgr *mgr, t_block *ptr)
 		ptr->mgr->tiny_que = mgr->b;
 }
 
+static void		update_block(t_mgr *mgr)
+{
+	mgr->b->avail = TRUE;
+	mgr->freed_bytes += mgr->b->data_size;
+	mgr->total_frees += 1;
+}
+
 void			free(void *ptr)
 {
 	t_mgr		*mgr;
 
 	mgr = NULL;
 	pthread_mutex_lock(&g_mux);
-	if (!ptr || !(mgr = get_mgr(TRUE)))
+	if (!ptr || !(mgr = get_mgr(TRUE)) || !is_allocated(mgr, &ptr))
 	{
 		pthread_mutex_unlock(&g_mux);
 		return ;
@@ -50,9 +57,7 @@ void			free(void *ptr)
 	mgr->b = (t_block*)ptr - 1;
 	if (mgr->b->avail == FALSE)
 	{
-		mgr->b->avail = TRUE;
-		mgr->freed_bytes += mgr->b->data_size;
-		mgr->total_frees += 1;
+		update_block(mgr);
 		if (mgr->b->data_size > SMLSZ)
 			free_lrg_blk(mgr, mgr->b);
 		else if (mgr->b->data_size <= SMLSZ && mgr->b->data_size > TNYSZ)

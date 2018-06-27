@@ -6,31 +6,52 @@ NAME = libft_malloc_$(HOSTTYPE).so
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra
+COMMA = ,
 
-HEADERS = -I./incl -I./libft/incl/
+SRCDIR = src
+
+OBJDIR = obj
+
+CFLAGS  = -Wall -Werror -Wextra -g
+
+OBJFLAGS = -c -fPIC
+
+EXPORT_SYM = malloc free realloc calloc show_alloc_mem
 
 LDFLAGS = -shared -ldl
+LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
 
-SRC = src/allocator.c src/malloc.c src/free.c src/realloc.c src/calloc.c src/struct_init.c src/find_block.c \
-        src/show_alloc_mem.c src/optimize.c src/utility.c
+INCL = -I incl
 
-OBJ = *.o
+LIBFT_INCL = -I./libft/incl
 
-RM = -rm -fr
+SRC = allocator.c malloc.c free.c realloc.c calloc.c struct_init.c find_block.c
+SRC += show_alloc_mem.c optimize.c utility.c
 
-$(NAME):
+OBJS = $(SRC:.c=.o)
+
+SRCFILES = $(addprefix $(SRCDIR)/, $(SRC))
+
+OBJFILES = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
+OBJFILES += libft/libftprintf.a
+
+RM = rm -fr
+
+$(NAME): create_obj_dir
 		$(MAKE) -C ./libft/ re
-		$(CC) -c -fPIC $(CFLAGS) $(SRC)
-		$(CC) $(CFLAGS) $(LDFLAGS) $(HEADERS) -L./libft -lftprintf $(OBJ) -o $(NAME)
+		$(CC) $(OBJFLAGS) $(CFLAGS) $(LIBFT_INCL) $(SRCFILES)
+		mv $(OBJS) $(OBJDIR)
+		$(CC) $(CFLAGS) $(LDFLAGS) $(INCL) $(OBJFILES) -o $(NAME)
 		ln -s $(NAME) libft_malloc.so
 
+create_obj_dir:
+		@mkdir -p $(OBJDIR)
+
 clean:
-		$(RM) $(OBJ)
+		$(RM) $(OBJDIR)
 
 fclean: clean
 		$(RM) $(NAME)
 		$(RM) libft_malloc.so
 
 re: fclean $(NAME)
-

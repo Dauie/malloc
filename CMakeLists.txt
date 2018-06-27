@@ -1,12 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
-project(malloc C)
+cmake_minimum_required(VERSION 3.6)
+project(malloc)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 
-include_directories(incl)
-include_directories(libft/incl)
-
-add_executable(malloc
+set(SOURCE_FILES
         incl/malloc.h
         libft/incl/bool.h
         libft/incl/char.h
@@ -149,3 +146,5 @@ add_executable(malloc
         src/struct_init.c
         src/utility.c
         main.c)
+
+add_executable(malloc ${SOURCE_FILES})

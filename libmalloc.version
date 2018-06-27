@@ -1,0 +1,4 @@
+MALLOC {
+	global: malloc; free; realloc; calloc;
+	local: *
+};
