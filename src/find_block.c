@@ -63,10 +63,8 @@ t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 	mgr->s = find_slab(mgr, size);
 	if (!(mgr->b = check_queue(mgr->s, size)))
 	{
-		if (size <= TNYSZ)
-			mgr->b = mgr->s->tiny;
-		else
-			mgr->b = mgr->s->small;
+		mgr->b = size <= TNYSZ ? mgr->b = mgr->s->tiny :
+				mgr->b = mgr->s->small;
 		while (mgr->b)
 		{
 			if (mgr->b->avail == TRUE)
@@ -79,6 +77,7 @@ t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 			}
 			mgr->b = mgr->b->next;
 		}
+		return (NULL);
 	}
 	return (mgr->b);
 }
