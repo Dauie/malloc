@@ -30,7 +30,7 @@ All requests exceeding the size of our small blocks will be mapped separately an
 
 `make`
 
-now, depending on your OS, you need to tell your system where this shared library is. Usually you will set an environment variable to tell the system where it can find this dynamic library.
+now, depending on your OS, you need to tell your system where this shared library is. A quick option is to set an environment variable to tell the system where it can find this dynamic library.
 
 on Mac it would look something like this:
 
@@ -43,7 +43,3 @@ on Mac it would look something like this:
 on Linux:
 
 `export LD_LIBRARY_PATH=<path-to-lib>/:$LD_LIBRARY_PATH`
-
-then compile your project:
-
-`gcc -Wall -Werror -Wextra -o test main.c libft_malloc.so`
