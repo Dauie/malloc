@@ -46,4 +46,4 @@ on Linux:
 
 then compile your project:
 
-`gcc -L/path/to/lib -lft_malloc -L./libft -lftprintf -Wall -Werror -Wextra -o test main.c`
+`gcc -Wall -Werror -Wextra -o test main.c`
