@@ -46,4 +46,4 @@ on Linux:
 
 then compile your project:
 
-`gcc -Wall -Werror -Wextra -o test main.c`
+`gcc -Wall -Werror -Wextra -o test main.c libft_malloc.so`
