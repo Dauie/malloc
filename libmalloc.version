@@ -1,4 +1,5 @@
-MALLOC {
-	global: malloc; free; realloc; calloc;
-	local: *
+MALLOC_1 {
+	global:
+		malloc; free; realloc; calloc; show_alloc_mem;
+	local: *;
 };

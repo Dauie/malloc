@@ -2,6 +2,8 @@ ifeq ($(HOSTTYPE),)
 HOSTTYPE := $(shell uname -m)_$(shell uname -s)
 endif
 
+OS = $(shell uname)
+
 NAME = libft_malloc_$(HOSTTYPE).so
 
 CC = gcc
@@ -19,8 +21,14 @@ OBJFLAGS = -c -fPIC
 EXPORT_SYM = malloc free realloc calloc show_alloc_mem
 
 LDFLAGS = -shared -ldl
-LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
 
+ifeq ($(OS),Darwin)
+LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
+else
+ifeq ($(OS),Linux)
+LDFLAGS += -fvisibility=hidden -Wl,--version-script=libmalloc.version
+endif
+endif
 INCL = -I incl
 
 LIBFT_INCL = -I./libft/incl
