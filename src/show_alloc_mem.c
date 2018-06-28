@@ -23,10 +23,10 @@ static void		range_print(t_slab *head)
 		return ;
 	while (slb)
 	{
-		sml_end = (void *)(((char*)slb->small + sizeof(t_block)) +
-				((SMLSZ + SBLKSZ) * BLKCNT));
-		tny_end = (void *)(((char*)slb->tiny + sizeof(t_block)) +
-				((TNYSZ + SBLKSZ) * BLKCNT));
+		sml_end = (void *)(((char*)slb->small +
+				((SMLSZ + SBLKSZ) * BLKCNT)));
+		tny_end = (void *)(((char*)slb->tiny +
+				((TNYSZ + SBLKSZ) * BLKCNT)));
 		ft_printf("SMALL - %p\n%p - %p\n", slb->small, slb->small, sml_end);
 		ft_printf("TINY - %p\n%p - %p\n", slb->tiny, slb->tiny, tny_end);
 		slb = slb->next;
@@ -57,4 +57,5 @@ void			show_alloc_mem(void)
 	ft_printf("Total memory requested\t\t%zu\n", m->requested_bytes);
 	ft_printf("Slab count:\t\t\t%d\n", slab_len(head));
 	ft_printf("Memory mapped:\t\t\t%zu\n", m->allocated_bytes);
+	ft_printf("slab: %zu\nsblk: %zu\n", SLBSZ, SBLKSZ);
 }

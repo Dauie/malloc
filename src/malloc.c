@@ -12,27 +12,23 @@
 
 #include "../incl/malloc.h"
 
-static void		update_mgr(t_mgr *mgr, size_t req)
-{
-	mgr->requested_bytes += req;
-	mgr->total_allocs += 1;
-}
-
-static void		*alloc_large(t_mgr *mgr, size_t size)
+void		*alloc_large(t_mgr *mgr, size_t size)
 {
 	t_block	*blk;
 
-	if (!(blk = find_lrgblk(mgr, size)))
+	if (!(blk = make_lrgblk(mgr, size)))
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
+	blk->mgr = mgr->head_slab;
 	mgr->large_cnt += 1;
-	mgr->allocated_bytes += size;
-	update_mgr(mgr, size);
+	mgr->allocated_bytes += (size + SBLKSZ);
+	mgr->requested_bytes += size;
+	mgr->total_allocs += 1;
 	return (blk + 1);
 }
 
-static void		*alloc_block(t_mgr *mgr, size_t size)
+void		*alloc_block(t_mgr *mgr, size_t size)
 {
 	t_block		*blk;
 
@@ -40,7 +36,8 @@ static void		*alloc_block(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	update_mgr(mgr, size);
+	mgr->requested_bytes += size;
+	mgr->total_allocs += 1;
 	return (blk + 1);
 }
 

@@ -15,7 +15,7 @@
 t_mgr	*g_mgr = NULL;
 pthread_mutex_t g_mux = PTHREAD_MUTEX_INITIALIZER;
 
-void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
+static void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 {
 	t_block	*h;
 	t_block	*p;
@@ -25,7 +25,7 @@ void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 	while (count--)
 	{
 		init_block(h);
-		h->next = (t_block *)((char *)h + (size + sizeof(t_block)));
+		h->next = (t_block *)((char *)h + (SBLKSZ + size));
 		h->mgr = slb;
 		if (count == 0)
 			h->next = NULL;
@@ -36,12 +36,11 @@ void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
 	}
 }
 
-void		prep_slab(t_slab *slab)
+static void		prep_slab(t_slab *slab)
 {
 	slab->small = (t_block *)(slab + 1);
 	slab->small_que = slab->small;
-	slab->tiny = (t_block *)(((char *)slab->small + 1) +
-			((SMLSZ + SBLKSZ) * BLKCNT));
+	slab->tiny = (t_block *)((char *)slab->small + 1 + SMLSEC);
 	slab->tiny_que = slab->tiny;
 	link_blocks(slab, slab->small, BLKCNT, SMLSZ);
 	link_blocks(slab, slab->tiny, BLKCNT, TNYSZ);
@@ -62,7 +61,7 @@ t_slab		*create_slab(t_mgr *mgr)
 	prep_slab(n_slab);
 	if (!mgr->head_slab)
 		mgr->head_slab = n_slab;
-	mgr->allocated_bytes += SLBSZ;
+	mgr->allocated_bytes += slbsz;
 	return (n_slab);
 }
 

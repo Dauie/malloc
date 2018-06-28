@@ -22,19 +22,20 @@ EXPORT_SYM = malloc free realloc calloc show_alloc_mem
 
 LDFLAGS = -shared -ldl
 
-ifeq ($(OS),Darwin)
-LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
-else
-ifeq ($(OS),Linux)
-LDFLAGS += -fvisibility=hidden -Wl,--version-script=libmalloc.version
-endif
-endif
+#ifeq ($(OS),Darwin)
+#LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
+#else
+#ifeq ($(OS),Linux)
+#LDFLAGS += -fvisibility=hidden -Wl,--version-script=libmalloc.version
+#endif
+#endif
+
 INCL = -I incl
 
 LIBFT_INCL = -I./libft/incl
 
 SRC = allocator.c malloc.c free.c realloc.c calloc.c struct_init.c find_block.c
-SRC += show_alloc_mem.c optimize.c utility.c
+SRC += show_alloc_mem.c utility.c
 
 OBJS = $(SRC:.c=.o)
 

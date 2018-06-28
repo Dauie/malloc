@@ -12,7 +12,33 @@
 
 #include "../incl/malloc.h"
 
-t_slab			*find_slab(t_mgr *mgr, size_t size)
+static t_block			*check_queue(t_slab *slb, size_t blksz)
+{
+	t_block		*p;
+
+	p = NULL;
+	if (blksz > TNYSZ && blksz <= SMLSZ && slb->small_que)
+	{
+		p = slb->small_que;
+		slb->small_avail -= 1;
+		if (p->next && p->next->avail == TRUE)
+			slb->small_que = p->next;
+		else
+			slb->small_que = NULL;
+	}
+	else if (blksz <= TNYSZ && slb->tiny_que)
+	{
+		p = slb->tiny_que;
+		slb->tiny_avail -= 1;
+		if (p->next && p->next->avail == TRUE)
+			slb->tiny_que = p->next;
+		else
+			slb->tiny_que = NULL;
+	}
+	return (p);
+}
+
+static t_slab			*find_slab(t_mgr *mgr, size_t size)
 {
 	t_slab		*slab;
 
@@ -20,8 +46,6 @@ t_slab			*find_slab(t_mgr *mgr, size_t size)
 	mgr->s = slab;
 	while (slab)
 	{
-		if (size <= TNYSZ && slab->tiny_avail == 0)
-			convert_to_tiny(slab);
 		if (size <= TNYSZ && slab->tiny_avail > 0)
 			return (slab);
 		else if (size > TNYSZ && size <= SMLSZ && slab->small_avail > 0)
@@ -34,7 +58,7 @@ t_slab			*find_slab(t_mgr *mgr, size_t size)
 	return (slab);
 }
 
-t_block			*find_lrgblk(t_mgr *mgr, size_t size)
+t_block			*make_lrgblk(t_mgr *mgr, size_t size)
 {
 	t_block		*p;
 
@@ -42,12 +66,10 @@ t_block			*find_lrgblk(t_mgr *mgr, size_t size)
 	mgr->b = mgr->head_slab->large;
 	while (mgr->b)
 	{
-		if (mgr->b->data_size >= size && mgr->b->avail)
-			return (mgr->b);
 		p = mgr->b;
 		mgr->b = mgr->b->next;
 	}
-	mgr->b = mmap(0, size + SBLKSZ, PROT_READ | PROT_WRITE,
+	mgr->b = mmap(0, SBLKSZ + size, PROT_READ | PROT_WRITE,
 			MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (mgr->b == MAP_FAILED)
 		return (NULL);
@@ -63,8 +85,7 @@ t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 	mgr->s = find_slab(mgr, size);
 	if (!(mgr->b = check_queue(mgr->s, size)))
 	{
-		mgr->b = size <= TNYSZ ? mgr->b = mgr->s->tiny :
-				mgr->b = mgr->s->small;
+		mgr->b = size <= TNYSZ ? mgr->s->tiny : mgr->s->small;
 		while (mgr->b)
 		{
 			if (mgr->b->avail == TRUE)
@@ -77,7 +98,6 @@ t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 			}
 			mgr->b = mgr->b->next;
 		}
-		return (NULL);
 	}
 	return (mgr->b);
 }

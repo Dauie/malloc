@@ -12,7 +12,6 @@
 
 #include "../incl/malloc.h"
 
-
 t_blean is_allocated(t_mgr *mgr, void **ptr)
 {
 	t_block *lrg;
@@ -21,12 +20,12 @@ t_blean is_allocated(t_mgr *mgr, void **ptr)
 	slb = mgr->head_slab;
 	while (slb)
 	{
-		if (*ptr >= (void *)slb && *ptr <= (void *)((char *)slb + SLBSZ))
+		if (*ptr >= (void *)slb->small && *ptr <= (void *)((char *)slb->tiny + TNYSEC))
 			return (TRUE);
 		lrg = slb->large;
 		while (lrg)
 		{
-			if (*ptr >= (void *)lrg && *ptr <= (void *)((char *)lrg + lrg->data_size))
+			if (*ptr == (void *)(lrg + 1))
 				return (TRUE);
 			lrg = lrg->next;
 		}
