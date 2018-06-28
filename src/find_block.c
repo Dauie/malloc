@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/06/26 10:58:04 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/06/16 15:30:39 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,22 +60,12 @@ static t_slab			*find_slab(t_mgr *mgr, size_t size)
 
 t_block			*make_lrgblk(t_mgr *mgr, size_t size)
 {
-	t_block		*p;
-
-	p = NULL;
-	mgr->b = mgr->head_slab->large;
-	while (mgr->b)
-	{
-		p = mgr->b;
-		mgr->b = mgr->b->next;
-	}
+	mgr->b = NULL;
 	mgr->b = mmap(0, SBLKSZ + size, PROT_READ | PROT_WRITE,
 			MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (mgr->b == MAP_FAILED)
 		return (NULL);
 	init_block(mgr->b);
-	if (p)
-		p->next = mgr->b;
 	return (mgr->b);
 }
 

@@ -6,11 +6,33 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/06/26 10:58:04 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/06/16 18:49:55 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
+
+static void add_large(t_block **nlrg, t_slab **head_slab)
+{
+	t_block *head;
+	t_block *tail;
+
+	if (!(*head_slab)->large)
+	{
+		(*head_slab)->large = *nlrg;
+		return ;
+	}
+	head = (*head_slab)->large;
+	tail = head;
+	while (head)
+	{
+		tail = head;
+		head = head->next;
+	}
+	head = *nlrg;
+	head->prev = tail;
+	tail->next = head;
+}
 
 void		*alloc_large(t_mgr *mgr, size_t size)
 {
@@ -20,11 +42,11 @@ void		*alloc_large(t_mgr *mgr, size_t size)
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
-	blk->mgr = mgr->head_slab;
 	mgr->large_cnt += 1;
 	mgr->allocated_bytes += (size + SBLKSZ);
 	mgr->requested_bytes += size;
 	mgr->total_allocs += 1;
+	add_large(&blk, &mgr->head_slab);
 	return (blk + 1);
 }
 
@@ -47,12 +69,7 @@ void			*malloc(size_t size)
 	void		*ret;
 
 	pthread_mutex_lock(&g_mux);
-	if (size <= 0)
-	{
-		pthread_mutex_unlock(&g_mux);
-		return (NULL);
-	}
-	if (!(mgr = get_mgr(FALSE)))
+	if (size <= 0 || !(mgr = get_mgr(FALSE)))
 	{
 		pthread_mutex_unlock(&g_mux);
 		return (NULL);

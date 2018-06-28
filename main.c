@@ -17,7 +17,6 @@ int main()
     addr1 = (char*)malloc(16*M);
     strcpy(addr1, "1Bonjour\n");
     print(addr1);
-	show_alloc_mem();
     addr3 = (char*)realloc(addr1, 128*M);
     addr3[127*M] = 42;
     print(addr3);
