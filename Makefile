@@ -18,7 +18,7 @@ CFLAGS  = -Wall -Werror -Wextra -g
 
 OBJFLAGS = -c -fPIC
 
-EXPORT_SYM = malloc free realloc calloc show_alloc_mem
+EXPORT_SYM = malloc free realloc show_alloc_mem
 
 LDFLAGS = -shared -ldl
 
@@ -34,7 +34,7 @@ INCL = -I incl
 
 LIBFT_INCL = -I./libft/incl
 
-SRC = allocator.c malloc.c free.c realloc.c calloc.c struct_init.c find_block.c
+SRC = allocator.c malloc.c free.c realloc.c struct_init.c find_block.c
 SRC += show_alloc_mem.c utility.c
 
 OBJS = $(SRC:.c=.o)

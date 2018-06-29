@@ -34,13 +34,13 @@ void			*realloc(void *mem, size_t size)
 
 	ret = NULL;
 	pthread_mutex_lock(&g_mux);
-	if (size <= 0 || !(mgr = get_mgr(FALSE)) ||
+	if (!(mgr = get_mgr(FALSE)) ||
 			(mem > NULL && !is_allocated(mgr, &mem)))
 	{
 		pthread_mutex_unlock(&g_mux);
 		return (ret);
 	}
-	if (!mem)
+	if (!mem && size > 0 )
 		ret = size <= SMLSZ ? alloc_block(mgr, size) : alloc_large(mgr, size);
 	else
 	{

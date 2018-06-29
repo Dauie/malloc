@@ -136,8 +136,7 @@ set(SOURCE_FILES
 		libft/src/typedefined/lst/ft_lstnew.c
     libft/src/typedefined/lst/ft_lstnewstak.c
     src/allocator.c
-    src/calloc.c
-    src/find_block.c
+		src/find_block.c
     src/free.c
     src/malloc.c
     src/realloc.c

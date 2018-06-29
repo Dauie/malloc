@@ -119,7 +119,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnew.c.o"
   "CMakeFiles/malloc.dir/libft/src/typedefined/lst/ft_lstnewstak.c.o"
   "CMakeFiles/malloc.dir/src/allocator.c.o"
-  "CMakeFiles/malloc.dir/src/calloc.c.o"
   "CMakeFiles/malloc.dir/src/find_block.c.o"
   "CMakeFiles/malloc.dir/src/free.c.o"
   "CMakeFiles/malloc.dir/src/malloc.c.o"
