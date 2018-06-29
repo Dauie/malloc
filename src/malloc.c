@@ -12,10 +12,10 @@
 
 #include "../incl/malloc.h"
 
-static void add_large(t_block **nlrg, t_slab **head_slab)
+static void		add_large(t_block **nlrg, t_slab **head_slab)
 {
-	t_block *head;
-	t_block *tail;
+	t_block		*head;
+	t_block		*tail;
 
 	if (!(*head_slab)->large)
 	{
@@ -34,7 +34,7 @@ static void add_large(t_block **nlrg, t_slab **head_slab)
 	tail->next = head;
 }
 
-void		*alloc_large(t_mgr *mgr, size_t size)
+void			*alloc_large(t_mgr *mgr, size_t size)
 {
 	t_block	*blk;
 
@@ -50,7 +50,7 @@ void		*alloc_large(t_mgr *mgr, size_t size)
 	return (blk + 1);
 }
 
-void		*alloc_block(t_mgr *mgr, size_t size)
+void			*alloc_block(t_mgr *mgr, size_t size)
 {
 	t_block		*blk;
 

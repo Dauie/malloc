@@ -40,14 +40,14 @@ void			*realloc(void *mem, size_t size)
 		pthread_mutex_unlock(&g_mux);
 		return (ret);
 	}
-	if (!mem && size > 0 )
+	if (!mem && size > 0)
 		ret = size <= SMLSZ ? alloc_block(mgr, size) : alloc_large(mgr, size);
 	else
 	{
 		mgr->b = (t_block *)mem - 1;
 		if (mgr->b->avail == FALSE)
 			ret = size <= SMLSZ ? findncopy(&mem, size, &mgr, &alloc_block) :
-				  findncopy(&mem, size, &mgr, &alloc_large);
+				findncopy(&mem, size, &mgr, &alloc_large);
 		else
 			ret = NULL;
 	}

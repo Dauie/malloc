@@ -22,13 +22,13 @@ EXPORT_SYM = malloc free realloc show_alloc_mem
 
 LDFLAGS = -shared -ldl
 
-#ifeq ($(OS),Darwin)
-#LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
-#else
-#ifeq ($(OS),Linux)
-#LDFLAGS += -fvisibility=hidden -Wl,--version-script=libmalloc.version
-#endif
-#endif
+ifeq ($(OS),Darwin)
+LDFLAGS += $(addprefix -Wl$(COMMA)-exported_symbol$(COMMA)_,$(EXPORT_SYM))
+else
+ifeq ($(OS),Linux)
+LDFLAGS += -fvisibility=hidden -Wl,--version-script=libmalloc.version
+endif
+endif
 
 INCL = -I incl
 

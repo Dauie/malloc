@@ -12,6 +12,37 @@
 
 #include "../incl/malloc.h"
 
+static void		print_large_blocks(t_block **large)
+{
+	t_block		*blk;
+	void		*data_start;
+	void		*data_end;
+
+	blk = *large;
+	while (blk)
+	{
+		if (blk->avail == FALSE)
+		{
+			data_start = (void *)(blk + 1);
+			data_end = (void *)((char*)(blk + 1) + blk->data_size);
+			ft_printf("LARGE : %p\n%p - %p : %zu\n", blk, data_start,
+					data_end, blk->data_size);
+		}
+		blk = blk->next;
+	}
+}
+
+static void		print_slab_blocks(t_block *blk)
+{
+	while (blk)
+	{
+		if (blk->avail == FALSE)
+			ft_printf("%p - %p : %zu\n", blk + 1,
+					(char*)(blk + 1) + blk->data_size, blk->data_size);
+		blk = blk->next;
+	}
+}
+
 static void		range_print(t_slab *head)
 {
 	t_slab		*slb;
@@ -23,14 +54,15 @@ static void		range_print(t_slab *head)
 		return ;
 	while (slb)
 	{
-		sml_end = (void *)(((char*)slb->small + sizeof(t_block)) +
-				((SMLSZ + SBLKSZ) * BLKCNT));
-		tny_end = (void *)(((char*)slb->tiny + sizeof(t_block)) +
-				((TNYSZ + SBLKSZ) * BLKCNT));
-		ft_printf("SMALL - %p\n%p - %p\n", slb->small, slb->small, sml_end);
-		ft_printf("TINY - %p\n%p - %p\n", slb->tiny, slb->tiny, tny_end);
+		sml_end = (void *)((char*)slb->small + SMLSEC);
+		tny_end = (void *)((char*)slb->tiny + TNYSEC);
+		ft_printf("SMALL : %p\n%p - %p\n", slb->small, slb->small, sml_end);
+		print_slab_blocks(slb->small);
+		ft_printf("TINY : %p\n%p - %p\n", slb->tiny, slb->tiny, tny_end);
+		print_slab_blocks(slb->tiny);
 		slb = slb->next;
 	}
+	print_large_blocks(&head->large);
 }
 
 void			show_alloc_mem(void)

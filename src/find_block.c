@@ -12,7 +12,7 @@
 
 #include "../incl/malloc.h"
 
-static t_block			*check_queue(t_slab *slb, size_t blksz)
+static t_block	*check_queue(t_slab *slb, size_t blksz)
 {
 	t_block		*p;
 
@@ -38,7 +38,7 @@ static t_block			*check_queue(t_slab *slb, size_t blksz)
 	return (p);
 }
 
-static t_slab			*find_slab(t_mgr *mgr, size_t size)
+static t_slab	*find_slab(t_mgr *mgr, size_t size)
 {
 	t_slab		*slab;
 

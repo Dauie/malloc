@@ -15,7 +15,8 @@
 t_mgr	*g_mgr = NULL;
 pthread_mutex_t g_mux = PTHREAD_MUTEX_INITIALIZER;
 
-static void		link_blocks(t_slab *slb, t_block *group, size_t count, size_t size)
+static void		link_blocks(t_slab *slb, t_block *group,
+							size_t count, size_t size)
 {
 	t_block	*h;
 	t_block	*p;
@@ -46,10 +47,10 @@ static void		prep_slab(t_slab *slab)
 	link_blocks(slab, slab->tiny, BLKCNT, TNYSZ);
 }
 
-t_slab		*create_slab(t_mgr *mgr)
+t_slab			*create_slab(t_mgr *mgr)
 {
-	t_slab	*n_slab;
-	size_t	slbsz;
+	t_slab		*n_slab;
+	size_t		slbsz;
 
 	slbsz = SLBSZ;
 	slbsz += slbsz % getpagesize();
@@ -65,7 +66,7 @@ t_slab		*create_slab(t_mgr *mgr)
 	return (n_slab);
 }
 
-t_mgr		*get_mgr(t_blean debug)
+t_mgr			*get_mgr(t_blean debug)
 {
 	if (!g_mgr && !debug)
 	{

@@ -12,15 +12,16 @@
 
 #include "../incl/malloc.h"
 
-t_blean is_allocated(t_mgr *mgr, void **ptr)
+t_blean		is_allocated(t_mgr *mgr, void **ptr)
 {
-	t_block *lrg;
-	t_slab 	*slb;
+	t_block	*lrg;
+	t_slab	*slb;
 
 	slb = mgr->head_slab;
 	while (slb)
 	{
-		if (*ptr >= (void *)slb->small && *ptr <= (void *)((char *)slb->tiny + TNYSEC))
+		if (*ptr >= (void *)slb->small &&
+				*ptr <= (void *)((char *)slb->tiny + TNYSEC))
 			return (TRUE);
 		lrg = slb->large;
 		while (lrg)
@@ -34,9 +35,9 @@ t_blean is_allocated(t_mgr *mgr, void **ptr)
 	return (FALSE);
 }
 
-int		slab_len(t_slab *list)
+int			slab_len(t_slab *list)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (list && ++i)
