@@ -23,15 +23,15 @@ t_blean		is_allocated(t_mgr *mgr, void **ptr)
 		if (*ptr >= (void *)slb->small &&
 				*ptr <= (void *)((char *)slb->tiny + TNYSEC))
 			return (TRUE);
-		lrg = slb->large;
-		while (lrg)
-		{
-			if (*ptr == (void *)(lrg + 1))
-				return (TRUE);
-			lrg = lrg->next;
-		}
-		slb = slb->next;
+        slb = slb->next;
 	}
+    lrg = mgr->large;
+    while (lrg)
+    {
+        if (*ptr == (void *)(lrg + 1))
+            return (TRUE);
+        lrg = lrg->next;
+    }
 	return (FALSE);
 }
 

@@ -15,8 +15,6 @@
 void		init_mgr(t_mgr *mgr)
 {
 	mgr->head_slab = NULL;
-	mgr->b = NULL;
-	mgr->s = NULL;
 	mgr->large_frees = 0;
 	mgr->large_cnt = 0;
 	mgr->total_frees = 0;
@@ -25,6 +23,7 @@ void		init_mgr(t_mgr *mgr)
 	mgr->total_frees = 0;
 	mgr->allocated_bytes = 0;
 	mgr->requested_bytes = 0;
+    mgr->large = NULL;
 }
 
 void		init_block(t_block *blk)

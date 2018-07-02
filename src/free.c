@@ -12,44 +12,47 @@
 
 #include "../incl/malloc.h"
 
-static void		free_lrg_blk(t_mgr *mgr)
+static void		free_lrg_blk(t_mgr *mgr, t_block *blk)
 {
-	if (!mgr->head_slab->large || !mgr->b)
+	if (!mgr->large || !blk)
 		return ;
-	if (mgr->head_slab->large == mgr->b)
-		mgr->head_slab->large = mgr->b->next;
-	if (mgr->b->next)
-		mgr->b->next->prev = mgr->b->prev;
-	if (mgr->b->prev)
-		mgr->b->prev->next = mgr->b->next;
-	munmap(mgr->b, mgr->b->data_size);
+	if (mgr->large == blk)
+		mgr->large = blk->next;
+	if (blk->next)
+        blk->next->prev = blk->prev;
+	if (blk->prev)
+        blk->prev->next = blk->next;
+	munmap(blk, blk->data_size);
 	mgr->large_frees += 1;
 }
 
-static void		free_sml_blk(t_mgr *mgr)
+static void		free_slb_blk(t_block *blk)
 {
-	mgr->b->mgr->small_avail += 1;
-	if (!mgr->b->mgr->small_que)
-		mgr->b->mgr->small_que = mgr->b;
+    if (blk->data_size <= SMLSZ)
+    {
+        blk->mgr->small_avail += 1;
+        if (!blk->mgr->small_que)
+            blk->mgr->small_que = blk;
+    }
+    else
+    {
+        blk->mgr->tiny_avail += 1;
+        if (!blk->mgr->tiny_que)
+            blk->mgr->tiny_que = blk;
+    }
 }
 
-static void		free_tny_blk(t_mgr *mgr)
+static void		update_block(t_mgr *mgr, t_block *blk)
 {
-	mgr->b->mgr->tiny_avail += 1;
-	if (!mgr->b->mgr->tiny_que)
-		mgr->b->mgr->tiny_que = mgr->b;
-}
-
-static void		update_block(t_mgr *mgr)
-{
-	mgr->b->avail = TRUE;
-	mgr->freed_bytes += mgr->b->data_size;
+    blk->avail = TRUE;
+	mgr->freed_bytes += blk->data_size;
 	mgr->total_frees += 1;
 }
 
 void			free(void *ptr)
 {
 	t_mgr		*mgr;
+    t_block     *blk;
 
 	mgr = NULL;
 	pthread_mutex_lock(&g_mux);
@@ -58,16 +61,15 @@ void			free(void *ptr)
 		pthread_mutex_unlock(&g_mux);
 		return ;
 	}
-	mgr->b = (t_block*)ptr - 1;
-	if (mgr->b->avail == FALSE)
+    blk = (t_block*)ptr - 1;
+	if (blk->avail == FALSE)
 	{
-		update_block(mgr);
-		if (mgr->b->data_size > SMLSZ)
-			free_lrg_blk(mgr);
-		else if (mgr->b->data_size <= SMLSZ && mgr->b->data_size > TNYSZ)
-			free_sml_blk(mgr);
-		else if (mgr->b->data_size <= TNYSZ)
-			free_tny_blk(mgr);
+		update_block(mgr, blk);
+		if (blk->data_size > SMLSZ)
+			free_lrg_blk(mgr, blk);
+		else if (blk->data_size <= SMLSZ)
+			free_slb_blk(blk);
+        clean_allocations(mgr);
 	}
 	pthread_mutex_unlock(&g_mux);
 }

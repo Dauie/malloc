@@ -16,11 +16,12 @@ static void		*findncopy(void **mem, size_t size, t_mgr **mgr,
 							void *(fn(t_mgr *, size_t)))
 {
 	t_block		*dst;
+    t_block     *old;
 
 	if (!(dst = fn(*mgr, size)))
 		return (*mem);
-	(*mgr)->b = (t_block *)*mem - 1;
-	ft_memcpy(dst, *mem, (*mgr)->b->data_size);
+	old = (t_block *)*mem - 1;
+	ft_memcpy(dst, *mem, old->data_size);
 	pthread_mutex_unlock(&g_mux);
 	free(*mem);
 	pthread_mutex_lock(&g_mux);
@@ -30,6 +31,7 @@ static void		*findncopy(void **mem, size_t size, t_mgr **mgr,
 void			*realloc(void *mem, size_t size)
 {
 	t_mgr		*mgr;
+    t_block     *blk;
 	void		*ret;
 
 	ret = NULL;
@@ -44,8 +46,8 @@ void			*realloc(void *mem, size_t size)
 		ret = size <= SMLSZ ? alloc_block(mgr, size) : alloc_large(mgr, size);
 	else
 	{
-		mgr->b = (t_block *)mem - 1;
-		if (mgr->b->avail == FALSE)
+		blk = (t_block *)mem - 1;
+		if (blk->avail == FALSE)
 			ret = size <= SMLSZ ? findncopy(&mem, size, &mgr, &alloc_block) :
 				findncopy(&mem, size, &mgr, &alloc_large);
 		else

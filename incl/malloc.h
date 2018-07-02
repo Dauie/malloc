@@ -37,8 +37,6 @@ typedef struct		s_slab
 	struct s_block	*small;
 	struct s_block	*small_que;
 	size_t			small_avail;
-	struct s_block	*large;
-
 }					t_slab;
 
 typedef struct		s_block
@@ -53,8 +51,7 @@ typedef struct		s_block
 typedef struct		s_mgr
 {
 	t_slab			*head_slab;
-	t_block			*b;
-	t_slab			*s;
+    struct s_block	*large;
 	size_t			large_cnt;
 	size_t			total_frees;
 	size_t			large_frees;
@@ -67,7 +64,7 @@ typedef struct		s_mgr
 void				free(void *ptr);
 void				*malloc(size_t size);
 void				*realloc(void *ptr, size_t size);
-void				*calloc(size_t count, size_t size);
+void                clean_allocations(t_mgr *mgr);
 void				show_alloc_mem(void);
 void				*alloc_large(t_mgr *mgr, size_t size);
 void				*alloc_block(t_mgr *mgr, size_t size);
@@ -77,7 +74,7 @@ void				init_slab(t_slab *slab);
 void				init_block(t_block *blk);
 t_slab				*create_slab(t_mgr *mgr);
 t_block				*find_slb_blk(t_mgr *mgr, size_t size);
-t_block				*make_lrgblk(t_mgr *mgr, size_t size);
+t_block				*make_lrgblk(size_t size);
 int					slab_len(t_slab *list);
 t_blean				is_allocated(t_mgr *mgr, void **ptr);
 

@@ -12,17 +12,17 @@
 
 #include "../incl/malloc.h"
 
-static void		add_large(t_block **nlrg, t_slab **head_slab)
+static void		add_large(t_block **nlrg, t_block **lrg_head)
 {
 	t_block		*head;
 	t_block		*tail;
 
-	if (!(*head_slab)->large)
+	if (!(*lrg_head))
 	{
-		(*head_slab)->large = *nlrg;
+        *lrg_head = *nlrg;
 		return ;
 	}
-	head = (*head_slab)->large;
+	head = *lrg_head;
 	tail = head;
 	while (head)
 	{
@@ -38,7 +38,7 @@ void			*alloc_large(t_mgr *mgr, size_t size)
 {
 	t_block	*blk;
 
-	if (!(blk = make_lrgblk(mgr, size)))
+	if (!(blk = make_lrgblk(size)))
 		return (NULL);
 	blk->avail = FALSE;
 	blk->data_size = size;
@@ -46,7 +46,7 @@ void			*alloc_large(t_mgr *mgr, size_t size)
 	mgr->allocated_bytes += (size + SBLKSZ);
 	mgr->requested_bytes += size;
 	mgr->total_allocs += 1;
-	add_large(&blk, &mgr->head_slab);
+	add_large(&blk, &mgr->large);
 	return (blk + 1);
 }
 

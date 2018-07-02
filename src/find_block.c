@@ -41,53 +41,57 @@ static t_block	*check_queue(t_slab *slb, size_t blksz)
 static t_slab	*find_slab(t_mgr *mgr, size_t size)
 {
 	t_slab		*slab;
+    t_slab      *prev;
 
 	slab = mgr->head_slab;
-	mgr->s = slab;
+	prev = slab;
 	while (slab)
 	{
 		if (size <= TNYSZ && slab->tiny_avail > 0)
 			return (slab);
 		else if (size > TNYSZ && size <= SMLSZ && slab->small_avail > 0)
 			return (slab);
-		mgr->s = slab;
+		prev = slab;
 		slab = slab->next;
 	}
 	slab = create_slab(mgr);
-	mgr->s->next = slab;
+	prev->next = slab;
 	return (slab);
 }
 
-t_block			*make_lrgblk(t_mgr *mgr, size_t size)
+t_block			*make_lrgblk(size_t size)
 {
-	mgr->b = NULL;
-	mgr->b = mmap(0, SBLKSZ + size, PROT_READ | PROT_WRITE,
+    t_block     *blk;
+
+	blk = mmap(0, SBLKSZ + size, PROT_READ | PROT_WRITE,
 			MAP_ANON | MAP_PRIVATE, -1, 0);
-	if (mgr->b == MAP_FAILED)
+	if (blk == MAP_FAILED)
 		return (NULL);
-	init_block(mgr->b);
-	return (mgr->b);
+	init_block(blk);
+	return (blk);
 }
 
 t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 {
-	mgr->b = NULL;
-	mgr->s = find_slab(mgr, size);
-	if (!(mgr->b = check_queue(mgr->s, size)))
+    t_block     *blk;
+    t_slab      *slb;
+
+	slb = mgr->head_slab ? find_slab(mgr, size) : create_slab(mgr);
+	if (!(blk = check_queue(slb, size)))
 	{
-		mgr->b = size <= TNYSZ ? mgr->s->tiny : mgr->s->small;
-		while (mgr->b)
+        blk = size <= TNYSZ ? slb->tiny : slb->small;
+		while (blk)
 		{
-			if (mgr->b->avail == TRUE)
+			if (blk->avail == TRUE)
 			{
 				if (size <= TNYSZ)
-					mgr->b->mgr->tiny_avail -= 1;
+                    blk->mgr->tiny_avail -= 1;
 				else
-					mgr->b->mgr->small_avail -= 1;
-				return (mgr->b);
+                    blk->mgr->small_avail -= 1;
+				return (blk);
 			}
-			mgr->b = mgr->b->next;
+            blk = blk->next;
 		}
 	}
-	return (mgr->b);
+	return (blk);
 }

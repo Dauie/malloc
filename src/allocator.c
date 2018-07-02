@@ -75,7 +75,6 @@ t_mgr			*get_mgr(t_blean debug)
 		if (g_mgr == MAP_FAILED)
 			return (NULL);
 		init_mgr(g_mgr);
-		g_mgr->head_slab = create_slab(g_mgr);
 	}
 	return (g_mgr);
 }

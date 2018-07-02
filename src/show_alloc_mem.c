@@ -43,7 +43,7 @@ static void		print_slab_blocks(t_block *blk)
 	}
 }
 
-static void		range_print(t_slab *head)
+static void		range_print(t_mgr *mgr, t_slab *head)
 {
 	t_slab		*slb;
 	void		*sml_end;
@@ -62,7 +62,7 @@ static void		range_print(t_slab *head)
 		print_slab_blocks(slb->tiny);
 		slb = slb->next;
 	}
-	print_large_blocks(&head->large);
+	print_large_blocks(&mgr->large);
 }
 
 void			show_alloc_mem(void)
@@ -76,9 +76,7 @@ void			show_alloc_mem(void)
 		return ;
 	}
 	head = m->head_slab;
-	m->s = m->head_slab;
-	m->b = m->head_slab->large;
-	range_print(head);
+	range_print(m, head);
 	ft_printf("Total allocations:\t\t%zu\n"
 			"Total frees:\t\t\t%zu\nTotal leaks:\t\t\t%zu\n"
 			"Total unfreed bytes:\t\t%zu\nTotal freed bytes:\t\t%zu\n",

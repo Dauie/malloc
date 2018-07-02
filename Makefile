@@ -35,7 +35,7 @@ INCL = -I incl
 LIBFT_INCL = -I./libft/incl
 
 SRC = allocator.c malloc.c free.c realloc.c struct_init.c find_block.c
-SRC += show_alloc_mem.c utility.c
+SRC += show_alloc_mem.c utility.c clean.c
 
 OBJS = $(SRC:.c=.o)
 
