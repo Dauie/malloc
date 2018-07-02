@@ -1,5 +1,5 @@
 MALLOC_1 {
 	global:
-		malloc; free; realloc; calloc; show_alloc_mem;
+		malloc; free; realloc; show_alloc_mem;
 	local: *;
 };

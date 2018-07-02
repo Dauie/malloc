@@ -1,6 +1,6 @@
 # Malloc
 
-This is a personal implementation of the functions: malloc(), free(), realloc(), and calloc()
+This is a personal implementation of the functions: malloc(), free(), and realloc().
 
 ## The design
 
@@ -11,8 +11,6 @@ On the first call to malloc() a "slab" sized chunk of memory will be mapped to t
 segmented into 'tiny' and 'small' blocks, and each block with have a portion of meta-data at its head to manage the block.
 Sequential calls to malloc() will return pointers to sufficiently sized blocks in said slab. Once the slab has run out of
 blocks to allocate, a new slab will be mapped, segmented, and a block from the new slab will be given.
-
-If all tiny blocks from a slab have been allocated, and small blocks still remain, a small block will be segmented into tiny blocks to avoid mapping a new slab.
 
 The manager of these slabs keeps a reference to the next tiny and small blocks that can be given, to increase speed. And when a block is returned from the user, that block will be queued for the next allocation.
 
