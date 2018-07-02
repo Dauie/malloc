@@ -60,6 +60,7 @@ t_slab			*create_slab(t_mgr *mgr)
 		return (NULL);
 	init_slab(n_slab);
 	prep_slab(n_slab);
+    n_slab->size = slbsz;
 	if (!mgr->head_slab)
 		mgr->head_slab = n_slab;
 	mgr->allocated_bytes += slbsz;

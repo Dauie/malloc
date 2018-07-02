@@ -481,6 +481,9 @@
 		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/allocator.c">
 			<Option target="malloc"/>
 		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/clean.c">
+			<Option target="malloc"/>
+		</Unit>
 		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/find_block.c">
 			<Option target="malloc"/>
 		</Unit>

@@ -44,4 +44,5 @@ void		init_slab(t_slab *slab)
 	slab->small = NULL;
 	slab->small_que = NULL;
 	slab->small_avail = BLKCNT;
+    slab->size = 0;
 }

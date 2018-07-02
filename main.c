@@ -46,11 +46,29 @@ int main()
 //            addr = malloc(1000);
 //    }
     void *mal;
+    void *mal2;
+    void **center;
 
-    for (int i = 0; i < 40; i++)
+    for (int i = 0; i < 128; i++)
     {
         mal = malloc(24);
-        free(mal);
     }
+    center = malloc(sizeof(void *) * BLKCNT);
+    for (int i = 0; i < 128; i++)
+    {
+        center[i] = malloc(24);
+    }
+    for (int i = 0; i < 128; i++)
+    {
+        mal = malloc(24);
+    }
+    for (int i = 0; i < 128; i++)
+        free(center[i]);
+    free(center);
+    mal = malloc(24);
+    mal2 = malloc(24);
+    free(mal);
+    free(mal2);
+    show_alloc_mem();
     return (0);
 }

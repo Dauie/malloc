@@ -28,17 +28,17 @@ static void		free_lrg_blk(t_mgr *mgr, t_block *blk)
 
 static void		free_slb_blk(t_block *blk)
 {
-    if (blk->data_size <= SMLSZ)
-    {
-        blk->mgr->small_avail += 1;
-        if (!blk->mgr->small_que)
-            blk->mgr->small_que = blk;
-    }
-    else
+    if (blk->data_size <= TNYSZ)
     {
         blk->mgr->tiny_avail += 1;
         if (!blk->mgr->tiny_que)
             blk->mgr->tiny_que = blk;
+    }
+    else
+    {
+        blk->mgr->small_avail += 1;
+        if (!blk->mgr->small_que)
+            blk->mgr->small_que = blk;
     }
 }
 

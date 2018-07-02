@@ -37,6 +37,7 @@ typedef struct		s_slab
 	struct s_block	*small;
 	struct s_block	*small_que;
 	size_t			small_avail;
+    size_t          size;
 }					t_slab;
 
 typedef struct		s_block

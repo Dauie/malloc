@@ -3390,6 +3390,33 @@ src/allocator.c.s:
 	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/src/allocator.c.s
 .PHONY : src/allocator.c.s
 
+src/clean.o: src/clean.c.o
+
+.PHONY : src/clean.o
+
+# target to build an object file
+src/clean.c.o:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/src/clean.c.o
+.PHONY : src/clean.c.o
+
+src/clean.i: src/clean.c.i
+
+.PHONY : src/clean.i
+
+# target to preprocess a source file
+src/clean.c.i:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/src/clean.c.i
+.PHONY : src/clean.c.i
+
+src/clean.s: src/clean.c.s
+
+.PHONY : src/clean.s
+
+# target to generate assembly for a file
+src/clean.c.s:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/src/clean.c.s
+.PHONY : src/clean.c.s
+
 src/find_block.o: src/find_block.c.o
 
 .PHONY : src/find_block.o
@@ -3951,6 +3978,9 @@ help:
 	@echo "... src/allocator.o"
 	@echo "... src/allocator.i"
 	@echo "... src/allocator.s"
+	@echo "... src/clean.o"
+	@echo "... src/clean.i"
+	@echo "... src/clean.s"
 	@echo "... src/find_block.o"
 	@echo "... src/find_block.i"
 	@echo "... src/find_block.s"
