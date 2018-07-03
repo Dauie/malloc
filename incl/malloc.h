@@ -16,9 +16,9 @@
 # include <pthread.h>
 # include <sys/mman.h>
 # include "../libft/incl/printf.h"
-
-# define TNYSZ 88
-# define SMLSZ 1048
+ /*2, 4, 8, 16, 32, 64, 128, 256, 512*/
+# define TNYSZ 32
+# define SMLSZ 480
 # define BLKCNT 128
 # define SBLKSZ sizeof(t_block)
 # define SSLBSZ sizeof(t_slab)
@@ -45,8 +45,8 @@ typedef struct		s_block
 	struct s_block	*next;
 	struct s_block	*prev;
 	struct s_slab	*mgr;
-	t_blean			avail;
-	size_t			data_size;
+	short			avail;
+	short			data_size;
 }					t_block;
 
 typedef struct		s_mgr
