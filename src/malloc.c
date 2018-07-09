@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:47:35 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/09 13:54:23 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,10 @@ t_block			*get_block(t_lslab **slb, size_t size, t_blean *new)
 	return (blk);
 }
 
-// make function to place blocks in large section.
 t_lslab			*find_lrgslb(t_mgr *mgr, size_t size)
 {
 	t_lslab		*slb;
 	t_lslab		*tail;
-
 
 	if (!mgr->large)
 		mgr->large = make_lrgslb(mgr, size);
@@ -54,8 +52,8 @@ t_lslab			*find_lrgslb(t_mgr *mgr, size_t size)
 	tail = slb;
 	while (slb)
 	{
-		if (slb->availbytes > size + SBLKSZ)
-			break;
+		if (slb->blkfree > slb->blkcnt || slb->availbytes > size + SBLKSZ)
+			break ;
 		tail = slb;
 		slb = slb->next;
 	}
@@ -84,10 +82,11 @@ void			*alloc_large(t_mgr *mgr, size_t size)
 		slb->availbytes -= (size + SBLKSZ);
 		slb->blkcnt += 1;
 	}
+	else
+		slb->blkfree -= 1;
 	blk->avail = FALSE;
 	blk->data_size = size;
 	blk->mgr.lslb = slb;
-	/* TODO: May need altering */
 	mgr->requested_bytes += size;
 	mgr->total_allocs += 1;
 	mgr->large_cnt += 1;

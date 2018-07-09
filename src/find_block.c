@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:47:35 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/09 13:50:35 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_lslab			*make_lrgslb(t_mgr *mgr, size_t size)
 	size += SLSLBSZ;
 	size += (pgsz - size % pgsz);
 	slb = mmap(0, size, PROT_READ | PROT_WRITE,
-			   MAP_ANON | MAP_PRIVATE, -1, 0);
+			MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (slb == MAP_FAILED)
 		return (NULL);
 	init_lslab(slb);
@@ -57,11 +57,10 @@ t_lslab			*make_lrgslb(t_mgr *mgr, size_t size)
 	return (slb);
 }
 
-
 static t_slab	*find_slab(t_mgr *mgr, size_t size)
 {
 	t_slab		*slab;
-    t_slab      *prev;
+	t_slab		*prev;
 
 	slab = mgr->head_slab;
 	prev = slab;
@@ -79,27 +78,26 @@ static t_slab	*find_slab(t_mgr *mgr, size_t size)
 	return (slab);
 }
 
-
 t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 {
-    t_block     *blk;
-    t_slab      *slb;
+	t_block		*blk;
+	t_slab		*slb;
 
 	slb = mgr->head_slab ? find_slab(mgr, size) : create_slab(mgr);
 	if (!(blk = check_queue(slb, size)))
 	{
-        blk = size <= TNYSZ ? slb->tiny : slb->small;
+		blk = size <= TNYSZ ? slb->tiny : slb->small;
 		while (blk)
 		{
 			if (blk->avail == TRUE)
 			{
 				if (size <= TNYSZ)
-                    blk->mgr.slb->tiny_avail -= 1;
+					blk->mgr.slb->tiny_avail -= 1;
 				else
-                    blk->mgr.slb->small_avail -= 1;
+					blk->mgr.slb->small_avail -= 1;
 				return (blk);
 			}
-            blk = blk->next;
+			blk = blk->next;
 		}
 	}
 	return (blk);

@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/16 18:47:36 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:58:57 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void		*findncopy(void **mem, size_t size, t_mgr **mgr,
 void			*realloc(void *mem, size_t size)
 {
 	t_mgr		*mgr;
-    t_block     *blk;
+	t_block		*blk;
 	void		*ret;
 
 	ret = NULL;

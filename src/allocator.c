@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 21:48:05 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:51:58 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:58:57 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ t_slab			*create_slab(t_mgr *mgr)
 		return (NULL);
 	init_slab(n_slab);
 	prep_slab(n_slab);
-    n_slab->size = slbsz;
+	n_slab->size = slbsz;
 	if (!mgr->head_slab)
 		mgr->head_slab = n_slab;
 	mgr->allocated_bytes += slbsz;

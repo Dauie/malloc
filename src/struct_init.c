@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 11:30:11 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/09 13:55:44 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,8 @@ void		init_lslab(t_lslab *slab)
 {
 	slab->next = NULL;
 	slab->large = NULL;
-	slab->large_end = NULL;
-	slab->totbytes	= 0;
+	slab->totbytes = 0;
 	slab->availbytes = 0;
 	slab->blkcnt = 0;
 	slab->blkfree = 0;
-
 }

@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:17:53 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:35:19 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/09 13:57:54 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static void		print_large_blocks(t_lslab **large)
 		{
 			if (blk->avail == FALSE)
 			{
-				data_start = (void *) (blk + 1);
-				data_end = (void *) ((char *) (blk + 1) + blk->data_size);
+				data_start = (void *)(blk + 1);
+				data_end = (void *)((char *)(blk + 1) + blk->data_size);
 				ft_printf("LARGE : %p\n%p - %p : %zu\n", blk, data_start,
-						  data_end, blk->data_size);
+						data_end, blk->data_size);
 			}
 			blk = blk->next;
 		}
