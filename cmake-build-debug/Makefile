@@ -3606,6 +3606,87 @@ src/utility.c.s:
 	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/src/utility.c.s
 .PHONY : src/utility.c.s
 
+test0.o: test0.c.o
+
+.PHONY : test0.o
+
+# target to build an object file
+test0.c.o:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test0.c.o
+.PHONY : test0.c.o
+
+test0.i: test0.c.i
+
+.PHONY : test0.i
+
+# target to preprocess a source file
+test0.c.i:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test0.c.i
+.PHONY : test0.c.i
+
+test0.s: test0.c.s
+
+.PHONY : test0.s
+
+# target to generate assembly for a file
+test0.c.s:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test0.c.s
+.PHONY : test0.c.s
+
+test1.o: test1.c.o
+
+.PHONY : test1.o
+
+# target to build an object file
+test1.c.o:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test1.c.o
+.PHONY : test1.c.o
+
+test1.i: test1.c.i
+
+.PHONY : test1.i
+
+# target to preprocess a source file
+test1.c.i:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test1.c.i
+.PHONY : test1.c.i
+
+test1.s: test1.c.s
+
+.PHONY : test1.s
+
+# target to generate assembly for a file
+test1.c.s:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test1.c.s
+.PHONY : test1.c.s
+
+test2.o: test2.c.o
+
+.PHONY : test2.o
+
+# target to build an object file
+test2.c.o:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test2.c.o
+.PHONY : test2.c.o
+
+test2.i: test2.c.i
+
+.PHONY : test2.i
+
+# target to preprocess a source file
+test2.c.i:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test2.c.i
+.PHONY : test2.c.i
+
+test2.s: test2.c.s
+
+.PHONY : test2.s
+
+# target to generate assembly for a file
+test2.c.s:
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test2.c.s
+.PHONY : test2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -4002,6 +4083,15 @@ help:
 	@echo "... src/utility.o"
 	@echo "... src/utility.i"
 	@echo "... src/utility.s"
+	@echo "... test0.o"
+	@echo "... test0.i"
+	@echo "... test0.s"
+	@echo "... test1.o"
+	@echo "... test1.i"
+	@echo "... test1.s"
+	@echo "... test2.o"
+	@echo "... test2.i"
+	@echo "... test2.s"
 .PHONY : help
 
 

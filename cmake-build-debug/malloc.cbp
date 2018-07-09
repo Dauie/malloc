@@ -505,6 +505,15 @@
 		<Unit filename="/nfs/2016/r/rlutt/code/malloc/src/utility.c">
 			<Option target="malloc"/>
 		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/test0.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/test1.c">
+			<Option target="malloc"/>
+		</Unit>
+		<Unit filename="/nfs/2016/r/rlutt/code/malloc/test2.c">
+			<Option target="malloc"/>
+		</Unit>
 		<Unit filename="/nfs/2016/r/rlutt/code/malloc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

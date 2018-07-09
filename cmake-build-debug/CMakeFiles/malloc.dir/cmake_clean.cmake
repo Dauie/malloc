@@ -128,6 +128,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/malloc.dir/src/struct_init.c.o"
   "CMakeFiles/malloc.dir/src/utility.c.o"
   "CMakeFiles/malloc.dir/main.c.o"
+  "CMakeFiles/malloc.dir/test0.c.o"
+  "CMakeFiles/malloc.dir/test1.c.o"
+  "CMakeFiles/malloc.dir/test2.c.o"
   "malloc.pdb"
   "malloc"
 )

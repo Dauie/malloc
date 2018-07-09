@@ -12,23 +12,29 @@
 
 #include "../incl/malloc.h"
 
-static void		print_large_blocks(t_block **large)
+static void		print_large_blocks(t_lslab **large)
 {
+	t_lslab		*slb;
 	t_block		*blk;
 	void		*data_start;
 	void		*data_end;
 
-	blk = *large;
-	while (blk)
+	slb = *large;
+	while (slb)
 	{
-		if (blk->avail == FALSE)
+		blk = slb->large;
+		while (blk)
 		{
-			data_start = (void *)(blk + 1);
-			data_end = (void *)((char*)(blk + 1) + blk->data_size);
-			ft_printf("LARGE : %p\n%p - %p : %zu\n", blk, data_start,
-					data_end, blk->data_size);
+			if (blk->avail == FALSE)
+			{
+				data_start = (void *) (blk + 1);
+				data_end = (void *) ((char *) (blk + 1) + blk->data_size);
+				ft_printf("LARGE : %p\n%p - %p : %zu\n", blk, data_start,
+						  data_end, blk->data_size);
+			}
+			blk = blk->next;
 		}
-		blk = blk->next;
+		slb = slb->next;
 	}
 }
 

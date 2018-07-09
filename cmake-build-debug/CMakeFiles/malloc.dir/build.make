@@ -3153,6 +3153,78 @@ CMakeFiles/malloc.dir/main.c.o.provides: CMakeFiles/malloc.dir/main.c.o.requires
 CMakeFiles/malloc.dir/main.c.o.provides.build: CMakeFiles/malloc.dir/main.c.o
 
 
+CMakeFiles/malloc.dir/test0.c.o: CMakeFiles/malloc.dir/flags.make
+CMakeFiles/malloc.dir/test0.c.o: ../test0.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/malloc.dir/test0.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/test0.c.o   -c /nfs/2016/r/rlutt/code/malloc/test0.c
+
+CMakeFiles/malloc.dir/test0.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc.dir/test0.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/r/rlutt/code/malloc/test0.c > CMakeFiles/malloc.dir/test0.c.i
+
+CMakeFiles/malloc.dir/test0.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc.dir/test0.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/r/rlutt/code/malloc/test0.c -o CMakeFiles/malloc.dir/test0.c.s
+
+CMakeFiles/malloc.dir/test0.c.o.requires:
+
+.PHONY : CMakeFiles/malloc.dir/test0.c.o.requires
+
+CMakeFiles/malloc.dir/test0.c.o.provides: CMakeFiles/malloc.dir/test0.c.o.requires
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test0.c.o.provides.build
+.PHONY : CMakeFiles/malloc.dir/test0.c.o.provides
+
+CMakeFiles/malloc.dir/test0.c.o.provides.build: CMakeFiles/malloc.dir/test0.c.o
+
+
+CMakeFiles/malloc.dir/test1.c.o: CMakeFiles/malloc.dir/flags.make
+CMakeFiles/malloc.dir/test1.c.o: ../test1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/malloc.dir/test1.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/test1.c.o   -c /nfs/2016/r/rlutt/code/malloc/test1.c
+
+CMakeFiles/malloc.dir/test1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc.dir/test1.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/r/rlutt/code/malloc/test1.c > CMakeFiles/malloc.dir/test1.c.i
+
+CMakeFiles/malloc.dir/test1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc.dir/test1.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/r/rlutt/code/malloc/test1.c -o CMakeFiles/malloc.dir/test1.c.s
+
+CMakeFiles/malloc.dir/test1.c.o.requires:
+
+.PHONY : CMakeFiles/malloc.dir/test1.c.o.requires
+
+CMakeFiles/malloc.dir/test1.c.o.provides: CMakeFiles/malloc.dir/test1.c.o.requires
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test1.c.o.provides.build
+.PHONY : CMakeFiles/malloc.dir/test1.c.o.provides
+
+CMakeFiles/malloc.dir/test1.c.o.provides.build: CMakeFiles/malloc.dir/test1.c.o
+
+
+CMakeFiles/malloc.dir/test2.c.o: CMakeFiles/malloc.dir/flags.make
+CMakeFiles/malloc.dir/test2.c.o: ../test2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/malloc.dir/test2.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/malloc.dir/test2.c.o   -c /nfs/2016/r/rlutt/code/malloc/test2.c
+
+CMakeFiles/malloc.dir/test2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/malloc.dir/test2.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/r/rlutt/code/malloc/test2.c > CMakeFiles/malloc.dir/test2.c.i
+
+CMakeFiles/malloc.dir/test2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/malloc.dir/test2.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/r/rlutt/code/malloc/test2.c -o CMakeFiles/malloc.dir/test2.c.s
+
+CMakeFiles/malloc.dir/test2.c.o.requires:
+
+.PHONY : CMakeFiles/malloc.dir/test2.c.o.requires
+
+CMakeFiles/malloc.dir/test2.c.o.provides: CMakeFiles/malloc.dir/test2.c.o.requires
+	$(MAKE) -f CMakeFiles/malloc.dir/build.make CMakeFiles/malloc.dir/test2.c.o.provides.build
+.PHONY : CMakeFiles/malloc.dir/test2.c.o.provides
+
+CMakeFiles/malloc.dir/test2.c.o.provides.build: CMakeFiles/malloc.dir/test2.c.o
+
+
 # Object files for target malloc
 malloc_OBJECTS = \
 "CMakeFiles/malloc.dir/libft/src/ft_printf/ft_printf.c.o" \
@@ -3283,7 +3355,10 @@ malloc_OBJECTS = \
 "CMakeFiles/malloc.dir/src/show_alloc_mem.c.o" \
 "CMakeFiles/malloc.dir/src/struct_init.c.o" \
 "CMakeFiles/malloc.dir/src/utility.c.o" \
-"CMakeFiles/malloc.dir/main.c.o"
+"CMakeFiles/malloc.dir/main.c.o" \
+"CMakeFiles/malloc.dir/test0.c.o" \
+"CMakeFiles/malloc.dir/test1.c.o" \
+"CMakeFiles/malloc.dir/test2.c.o"
 
 # External object files for target malloc
 malloc_EXTERNAL_OBJECTS =
@@ -3417,9 +3492,12 @@ malloc: CMakeFiles/malloc.dir/src/show_alloc_mem.c.o
 malloc: CMakeFiles/malloc.dir/src/struct_init.c.o
 malloc: CMakeFiles/malloc.dir/src/utility.c.o
 malloc: CMakeFiles/malloc.dir/main.c.o
+malloc: CMakeFiles/malloc.dir/test0.c.o
+malloc: CMakeFiles/malloc.dir/test1.c.o
+malloc: CMakeFiles/malloc.dir/test2.c.o
 malloc: CMakeFiles/malloc.dir/build.make
 malloc: CMakeFiles/malloc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Linking C executable malloc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/r/rlutt/code/malloc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Linking C executable malloc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/malloc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -3556,6 +3634,9 @@ CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/src/show_alloc_mem.c.o.req
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/src/struct_init.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/src/utility.c.o.requires
 CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/main.c.o.requires
+CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/test0.c.o.requires
+CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/test1.c.o.requires
+CMakeFiles/malloc.dir/requires: CMakeFiles/malloc.dir/test2.c.o.requires
 
 .PHONY : CMakeFiles/malloc.dir/requires
 
