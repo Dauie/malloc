@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 13:11:37 by dauie             #+#    #+#             */
-/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:47:35 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,15 @@ static void		free_slb_blk(t_block *blk)
 {
     if (blk->data_size <= TNYSZ)
     {
-        blk->mgr->tiny_avail += 1;
-        if (!blk->mgr->tiny_que)
-            blk->mgr->tiny_que = blk;
+        blk->mgr.slb->tiny_avail += 1;
+        if (!blk->mgr.slb->tiny_que)
+            blk->mgr.slb->tiny_que = blk;
     }
     else
     {
-        blk->mgr->small_avail += 1;
-        if (!blk->mgr->small_que)
-            blk->mgr->small_que = blk;
+        blk->mgr.slb->small_avail += 1;
+        if (!blk->mgr.slb->small_que)
+            blk->mgr.slb->small_que = blk;
     }
 }
 
@@ -81,7 +81,7 @@ void			free(void *ptr)
 	{
 		update_block(mgr, blk);
 		if (blk->data_size > SMLSZ)
-			free_lrg_blk(mgr, blk);
+			free_lrg_blk(mgr, &blk);
 		else if (blk->data_size <= SMLSZ)
 			free_slb_blk(blk);
         clean_allocations(mgr);

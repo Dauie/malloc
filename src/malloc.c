@@ -6,23 +6,11 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:35:19 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:47:35 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
-
-//static void		add_large(t_block **nlrg, t_block **lrg, t_block **lrg_end)
-//{
-//	if (!(*lrg))
-//	{
-//		*lrg = *nlrg;
-//		*lrg_end = *lrg;
-//		return ;
-//	}
-//	(*lrg_end)->next = *nlrg;
-//	(*lrg_end) = (*lrg_end)->next;
-//}
 
 t_block			*get_block(t_lslab **slb, size_t size, t_blean *new)
 {

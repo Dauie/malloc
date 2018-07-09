@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 21:48:05 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:51:58 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,17 @@ static void		link_blocks(t_slab *slb, t_block *group,
 							size_t count, size_t size)
 {
 	t_block	*h;
-	t_block	*p;
 
 	h = group;
-	p = NULL;
 	while (count--)
 	{
 		init_block(h);
 		h->next = (t_block *)((char *)h + (SBLKSZ + size));
-		h->mgr = slb;
+		h->mgr.slb = slb;
 		if (count == 0)
 			h->next = NULL;
 		else
 			h = h->next;
-		h->prev = p;
-		p = h;
 	}
 }
 

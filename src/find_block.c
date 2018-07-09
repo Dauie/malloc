@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/07 18:41:40 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/08 17:37:13 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:47:35 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ t_block			*find_slb_blk(t_mgr *mgr, size_t size)
 			if (blk->avail == TRUE)
 			{
 				if (size <= TNYSZ)
-                    blk->mgr->tiny_avail -= 1;
+                    blk->mgr.slb->tiny_avail -= 1;
 				else
-                    blk->mgr->small_avail -= 1;
+                    blk->mgr.slb->small_avail -= 1;
 				return (blk);
 			}
             blk = blk->next;
