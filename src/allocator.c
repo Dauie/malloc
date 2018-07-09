@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 21:48:05 by rlutt             #+#    #+#             */
-/*   Updated: 2018/06/16 15:29:34 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,11 @@ t_slab			*create_slab(t_mgr *mgr)
 {
 	t_slab		*n_slab;
 	size_t		slbsz;
+	int			pgsz;
 
+	pgsz = getpagesize();
 	slbsz = SLBSZ;
-	slbsz += slbsz % getpagesize();
+	slbsz += (pgsz - slbsz % pgsz);
 	n_slab = mmap(0, slbsz, PROT_READ | PROT_WRITE,
 			MAP_ANON | MAP_PRIVATE, -1, 0);
 	if (n_slab == MAP_FAILED)

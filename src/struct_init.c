@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 11:30:11 by rlutt             #+#    #+#             */
-/*   Updated: 2018/06/16 15:31:40 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void		init_mgr(t_mgr *mgr)
 {
+	mgr->large = NULL;
 	mgr->head_slab = NULL;
 	mgr->large_frees = 0;
 	mgr->large_cnt = 0;
@@ -23,14 +24,13 @@ void		init_mgr(t_mgr *mgr)
 	mgr->total_frees = 0;
 	mgr->allocated_bytes = 0;
 	mgr->requested_bytes = 0;
-    mgr->large = NULL;
 }
 
 void		init_block(t_block *blk)
 {
 	blk->next = NULL;
-	blk->prev = NULL;
-	blk->mgr = NULL;
+	blk->mgr.lslb = NULL;
+	blk->mgr.slb = NULL;
 	blk->avail = TRUE;
 	blk->data_size = 0;
 }
@@ -44,5 +44,17 @@ void		init_slab(t_slab *slab)
 	slab->small = NULL;
 	slab->small_que = NULL;
 	slab->small_avail = BLKCNT;
-    slab->size = 0;
+	slab->size = 0;
+}
+
+void		init_lslab(t_lslab *slab)
+{
+	slab->next = NULL;
+	slab->large = NULL;
+	slab->large_end = NULL;
+	slab->totbytes	= 0;
+	slab->availbytes = 0;
+	slab->blkcnt = 0;
+	slab->blkfree = 0;
+
 }

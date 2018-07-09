@@ -6,24 +6,39 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 13:11:37 by dauie             #+#    #+#             */
-/*   Updated: 2018/06/16 15:30:18 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:35:18 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
 
-static void		free_lrg_blk(t_mgr *mgr, t_block *blk)
+static void		free_lrg_blk(t_mgr *mgr, t_block **blk)
 {
-	if (!mgr->large || !blk)
-		return ;
-	if (mgr->large == blk)
-		mgr->large = blk->next;
-	if (blk->next)
-        blk->next->prev = blk->prev;
-	if (blk->prev)
-        blk->prev->next = blk->next;
-	munmap(blk, blk->data_size);
-	mgr->large_frees += 1;
+	t_lslab		*head;
+	t_lslab		*tail;
+
+	(*blk)->mgr.lslb->blkfree += 1;
+	if ((*blk)->mgr.lslb->blkfree == (*blk)->mgr.lslb->blkcnt)
+	{
+		if ((*blk)->mgr.lslb == mgr->large)
+			mgr->large = mgr->large->next;
+		else
+		{
+			head = mgr->large;
+			tail = NULL;
+			while (head)
+			{
+				if (head == (*blk)->mgr.lslb)
+				{
+					tail->next = head->next;
+					break;
+				}
+				tail = head;
+				head = head->next;
+			}
+		}
+		munmap((*blk)->mgr.lslb, (*blk)->mgr.lslb->totbytes);
+	}
 }
 
 static void		free_slb_blk(t_block *blk)

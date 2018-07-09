@@ -6,47 +6,103 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/05 19:56:34 by rlutt             #+#    #+#             */
-/*   Updated: 2018/06/16 18:49:55 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/08 17:35:19 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/malloc.h"
 
-static void		add_large(t_block **nlrg, t_block **lrg_head)
+//static void		add_large(t_block **nlrg, t_block **lrg, t_block **lrg_end)
+//{
+//	if (!(*lrg))
+//	{
+//		*lrg = *nlrg;
+//		*lrg_end = *lrg;
+//		return ;
+//	}
+//	(*lrg_end)->next = *nlrg;
+//	(*lrg_end) = (*lrg_end)->next;
+//}
+
+t_block			*get_block(t_lslab **slb, size_t size, t_blean *new)
 {
-	t_block		*head;
+	t_block		*blk;
 	t_block		*tail;
 
-	if (!(*lrg_head))
+	if (!(*slb)->large)
 	{
-        *lrg_head = *nlrg;
-		return ;
+		blk = (t_block *)((*slb) + 1);
+		(*slb)->large = blk;
+		*new = TRUE;
 	}
-	head = *lrg_head;
-	tail = head;
-	while (head)
+	else
 	{
-		tail = head;
-		head = head->next;
+		blk = (*slb)->large;
+		tail = NULL;
+		while (blk)
+		{
+			if (blk->avail == TRUE && blk->data_size >= size)
+				return (blk);
+			tail = blk;
+			blk = blk->next;
+		}
+		blk = (t_block *)((char *)tail + (SBLKSZ + tail->data_size));
+		tail->next = blk;
+		*new = TRUE;
 	}
-	head = *nlrg;
-	head->prev = tail;
-	tail->next = head;
+	return (blk);
+}
+
+// make function to place blocks in large section.
+t_lslab			*find_lrgslb(t_mgr *mgr, size_t size)
+{
+	t_lslab		*slb;
+	t_lslab		*tail;
+
+
+	if (!mgr->large)
+		mgr->large = make_lrgslb(mgr, size);
+	slb = mgr->large;
+	tail = slb;
+	while (slb)
+	{
+		if (slb->availbytes > size + SBLKSZ)
+			break;
+		tail = slb;
+		slb = slb->next;
+	}
+	if (!slb)
+	{
+		tail->next = make_lrgslb(mgr, size);
+		return (tail->next);
+	}
+	return (slb);
 }
 
 void			*alloc_large(t_mgr *mgr, size_t size)
 {
-	t_block	*blk;
+	t_lslab		*slb;
+	t_block		*blk;
+	t_blean		new;
 
-	if (!(blk = make_lrgblk(size)))
+	new = FALSE;
+	if (!(slb = find_lrgslb(mgr, size)))
 		return (NULL);
+	if (!(blk = get_block(&slb, size, &new)))
+		return (NULL);
+	init_block(blk);
+	if (new == TRUE)
+	{
+		slb->availbytes -= (size + SBLKSZ);
+		slb->blkcnt += 1;
+	}
 	blk->avail = FALSE;
 	blk->data_size = size;
-	mgr->large_cnt += 1;
-	mgr->allocated_bytes += (size + SBLKSZ);
+	blk->mgr.lslb = slb;
+	/* TODO: May need altering */
 	mgr->requested_bytes += size;
 	mgr->total_allocs += 1;
-	add_large(&blk, &mgr->large);
+	mgr->large_cnt += 1;
 	return (blk + 1);
 }
 
