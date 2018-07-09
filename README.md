@@ -18,7 +18,7 @@ The manager of these slabs keeps a reference to the next tiny and small blocks t
 
 All requests exceeding the size of our small blocks will be mapped separately and stored together as a linked list. When returned from the user, the resource will be immediately given back to the system.
 
-## How to compile and include:
+## How to compile:
 
 `git clone https://github.com/dauie/malloc.git`
 
@@ -27,17 +27,3 @@ All requests exceeding the size of our small blocks will be mapped separately an
 `git clone https://github.com/dauie/libft.git`
 
 `make`
-
-now, depending on your OS, you need to tell your system where this shared library is. A quick option is to set an environment variable to tell the system where it can find this dynamic library.
-
-on Mac it would look something like this:
-
-`export DYLD_LIBRARY_PATH="<path-to-lib>"`
-
-`export DYLD_INSERT_LIBRARIES="<path-to-lib>/libft_malloc.so"`
-
-`export DYLD_FORCE_FLAT_NAMESPACE=1`
-
-on Linux:
-
-`export LD_LIBRARY_PATH=<path-to-lib>/:$LD_LIBRARY_PATH`
