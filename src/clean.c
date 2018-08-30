@@ -6,7 +6,7 @@
 /*   By: rlutt <rlutt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 19:23:42 by rlutt             #+#    #+#             */
-/*   Updated: 2018/07/09 13:54:39 by rlutt            ###   ########.fr       */
+/*   Updated: 2018/07/10 20:21:11 by rlutt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void		clean_allocations(t_mgr *mgr)
 		{
 			if (tail)
 				tail->next = head->next;
+			else
+				mgr->head_slab = head->next;
 			munmap(head, head->size);
 			head = mgr->head_slab;
 		}
